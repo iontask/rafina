@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Résidence Rafina — Ain Sebaa | Portail Digital des Résidents</title>
+  <meta name="description" content="Portail d'information officiel et règlement intérieur de la Résidence Rafina — Ain Sebaa (Les Pavillons Verts).">
+  <!-- Google Fonts: Cairo pour l'arabe -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ==========================================================================
+       1. VARIABLES CSS & REINITIALISATION
+       ========================================================================== */
+    :root {
+      --navy-900: #1e3a8a;
+      --navy-800: #1e40af;
+      --navy-700: #2563eb;
+      --navy-50: #eff6ff;
+      --bg-main: #f1f5f9;
+      --bg-card: #ffffff;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      
+      --accent-red: #ef4444;
+      --accent-orange: #f59e0b;
+      --accent-green: #10b981;
+
+      --danger-bg: #fef2f2;
+      --danger-border: #fecaca;
+      --warning-bg: #fffbeb;
+      --warning-border: #fde68a;
+      --success-bg: #f0fdf4;
+      --success-border: #bbf7d0;
+
+      --border-color: #e2e8f0;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --font-sans: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+      font-size: 16px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Police Cairo pour l'arabe et mode RTL */
+    html[dir="rtl"], body[dir="rtl"], [lang="ar"] {
+      font-family: 'Cairo', system-ui, -apple-system, sans-serif !important;
+      text-align: right;
+    }
+
+    /* ==========================================================================
+       2. EN-TÊTE (HEADER) & BOUTON SWITCH LANGUE BIEN VISIBLE
+       ========================================================================== */
+    .app-header {
+      background-color: var(--navy-900);
+      color: #ffffff;
+      padding: 1.25rem 1rem;
+      border-bottom: 4px solid var(--accent-green);
+      position: relative;
+      z-index: 20;
+    }
+
+    .header-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #e2e8f0;
+    }
+
+    .brand-badge svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
+    /* Bouton Switch de Langue Très Visible */
+    .lang-switch-btn {
+      background: #10b981;
+      color: #ffffff;
+      border: 2px solid #34d399;
+      padding: 0.45rem 1rem;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 2px 10px rgba(16, 185, 129, 0.35);
+      transition: var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .lang-switch-btn:hover {
+      background: #059669;
+      border-color: #6ee7b7;
+      transform: translateY(-1px);
+    }
+
+    .today-status-chip {
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #d1fae5;
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .header-title-group h1 {
+      font-size: 1.65rem;
+      font-weight: 800;
+      line-height: 1.25;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    .header-subtitle {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.25rem;
+    }
+
+    .search-box {
+      position: relative;
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .search-input {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: var(--radius-md);
+      padding: 0.55rem 0.85rem 0.55rem 2.4rem;
+      color: #ffffff;
+      font-size: 0.85rem;
+      outline: none;
+      transition: var(--transition-fast);
+    }
+
+    html[dir="rtl"] .search-input {
+      padding: 0.55rem 2.4rem 0.55rem 0.85rem;
+    }
+
+    .search-input::placeholder {
+      color: #cbd5e1;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      stroke: #cbd5e1;
+      fill: none;
+    }
+
+    html[dir="rtl"] .search-icon {
+      left: auto;
+      right: 0.75rem;
+    }
+
+    .header-action-btn {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+      padding: 0.55rem 0.9rem;
+      border-radius: var(--radius-md);
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .header-action-btn:hover {
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    /* Bouton Menu en boîte pour mobile */
+    .box-menu-toggle-btn {
+      background: #2563eb;
+      color: #ffffff;
+      border: 1px solid #60a5fa;
+      padding: 0.55rem 0.9rem;
+      border-radius: var(--radius-md);
+      font-size: 0.825rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .box-menu-toggle-btn:hover {
+      background: #1d4ed8;
+    }
+
+    /* ==========================================================================
+       3. NAVIGATION DES ONGLETS & MENU EN BOÎTE
+       ========================================================================== */
+    .tabs-wrapper {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 15;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    }
+
+    .tabs-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding: 0.5rem 1rem;
+      gap: 0.5rem;
+    }
+
+    .tabs-container::-webkit-scrollbar { display: none; }
+
+    .tab-button {
+      background: transparent;
+      border: 1px solid transparent;
+      padding: 0.6rem 0.9rem;
+      border-radius: 6px;
+      font-size: 0.825rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      white-space: nowrap;
+      transition: var(--transition-fast);
+    }
+
+    .tab-button.active {
+      background: var(--navy-900);
+      color: #ffffff;
+    }
+
+    .tab-button:hover:not(.active) {
+      background: #f1f5f9;
+      color: var(--navy-900);
+    }
+
+    .tab-icon {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    .tab-badge {
+      background: rgba(0,0,0,0.08);
+      color: inherit;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 800;
+    }
+
+    .tab-button.active .tab-badge {
+      background: rgba(255,255,255,0.25);
+    }
+
+    /* ==========================================================================
+       4. CONTENU PRINCIPAL & CARTE DE REGLES
+       ========================================================================== */
+    .main-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.25rem 1rem 2.5rem 1rem;
+      width: 100%;
+      flex: 1;
+    }
+
+    .tab-panel {
+      display: none;
+    }
+
+    .tab-panel.active {
+      display: block;
+      animation: fadeIn 0.2s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-banner {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-left: 4px solid var(--navy-900);
+      border-radius: var(--radius-md);
+      padding: 1.15rem 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    html[dir="rtl"] .section-banner {
+      border-left: 1px solid var(--border-color);
+      border-right: 4px solid var(--navy-900);
+    }
+
+    .section-banner h2 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--navy-900);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-banner p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.15rem;
+    }
+
+    @media (min-width: 768px) {
+      .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .info-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+
+    .info-card.border-danger { border-top: 3px solid var(--accent-red); }
+    .info-card.border-warning { border-top: 3px solid var(--accent-orange); }
+    .info-card.border-success { border-top: 3px solid var(--accent-green); }
+
+    .card-header-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .card-icon-box {
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .card-icon-box.red { background: var(--danger-bg); color: var(--accent-red); }
+    .card-icon-box.orange { background: var(--warning-bg); color: var(--accent-orange); }
+    .card-icon-box.green { background: var(--success-bg); color: var(--accent-green); }
+
+    .card-title-wrap h3 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--navy-900);
+      line-height: 1.3;
+    }
+
+    .rule-number-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-bottom: 0.25rem;
+    }
+
+    .rule-number-badge.red { background: var(--danger-bg); color: var(--accent-red); }
+    .rule-number-badge.orange { background: var(--warning-bg); color: #b45309; }
+    .rule-number-badge.green { background: var(--success-bg); color: #15803d; }
+
+    .card-body-text {
+      font-size: 0.875rem;
+      color: var(--text-main);
+      line-height: 1.5;
+    }
+
+    .highlight-box {
+      background: #f8fafc;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 0.65rem 0.85rem;
+      font-size: 0.825rem;
+      color: var(--navy-900);
+      font-weight: 600;
+    }
+
+    /* Planning Espace Bien-être */
+    .hours-card {
+      background: var(--navy-900);
+      color: #ffffff;
+      border-radius: 8px;
+      padding: 1.15rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 3px solid var(--accent-green);
+    }
+
+    .hours-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .schedule-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .schedule-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .schedule-card.active-day {
+      border: 2px solid var(--navy-900);
+      background: var(--navy-50);
+    }
+
+    .schedule-badge {
+      padding: 0.35rem 0.65rem;
+      border-radius: 4px;
+      font-weight: 800;
+      font-size: 0.75rem;
+      white-space: nowrap;
+    }
+
+    .schedule-badge.femmes { background: #fce7f3; color: #be185d; }
+    .schedule-badge.hommes { background: #e0f2fe; color: #0369a1; }
+    .schedule-badge.mixte { background: #f3e8ff; color: #7e22ce; }
+
+    /* Kids Badges */
+    .kids-badges-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    @media (min-width: 640px) {
+      .kids-badges-row { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .kids-badge-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 0.75rem;
+      text-align: center;
+    }
+
+    .kids-badge-title {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--navy-900);
+      text-transform: uppercase;
+    }
+
+    .kids-badge-desc {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* Checklist */
+    .checklist-card {
+      margin-top: 1.5rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+
+    .checklist-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--navy-900);
+      margin-bottom: 0.75rem;
+    }
+
+    .checklist-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+
+    .check-checkbox {
+      margin-top: 0.2rem;
+      accent-color: var(--navy-900);
+    }
+
+    /* ==========================================================================
+       5. MODALES (CONTACT & MENU EN BOÎTE POUR MOBILE)
+       ========================================================================== */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: var(--transition-fast);
+    }
+
+    .modal-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card {
+      background: #ffffff;
+      border-radius: 12px;
+      max-width: 500px;
+      width: 100%;
+      padding: 1.5rem;
+      position: relative;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: #f1f5f9;
+      border: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-weight: 800;
+      color: var(--text-muted);
+    }
+
+    html[dir="rtl"] .modal-close-btn {
+      right: auto;
+      left: 1rem;
+    }
+
+    /* Modal Grid Menu / Menu en boîte */
+    .box-menu-card {
+      max-width: 580px;
+      border-radius: 16px;
+    }
+
+    .box-menu-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.85rem;
+      margin-top: 1rem;
+    }
+
+    @media (min-width: 520px) {
+      .box-menu-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .box-menu-item {
+      background: #f8fafc;
+      border: 2px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1rem 0.65rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.4rem;
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+
+    .box-menu-item:hover, .box-menu-item:active {
+      border-color: var(--navy-900);
+      background: var(--navy-50);
+      transform: translateY(-2px);
+    }
+
+    .box-menu-icon {
+      font-size: 1.6rem;
+      line-height: 1;
+    }
+
+    .box-menu-title {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--navy-900);
+    }
+
+    .box-menu-count {
+      font-size: 0.7rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      background: #e2e8f0;
+      padding: 1px 6px;
+      border-radius: 4px;
+    }
+
+    /* ==========================================================================
+       6. PIED DE PAGE (FOOTER)
+       ========================================================================== */
+    .app-footer {
+      background: #ffffff;
+      color: var(--text-muted);
+      padding: 1.5rem 1rem;
+      margin-top: auto;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .footer-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      align-items: center;
+    }
+
+    .footer-quote {
+      font-size: 0.85rem;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+
+    .footer-syndic {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #f8fafc;
+      border: 1px solid var(--border-color);
+      padding: 0.35rem 0.85rem;
+      border-radius: 4px;
+      font-size: 0.78rem;
+      color: var(--navy-900);
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .footer-copyright {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       EN-TÊTE DU PORTAIL CONSECUTIF AVEC BOUTON SWITCH LANGUE
+       ========================================================================== -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="header-top">
+        <div class="brand-badge">
+          <svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg>
+          <span id="txt-brand">Les Pavillons Verts</span>
+        </div>
+
+        <!-- Bouton Switch de Langue Visible -->
+        <button class="lang-switch-btn" id="langToggleBtn" onclick="toggleLanguage()" aria-label="Changer de langue / تغيير اللغة">
+          <span id="langFlag">🇲🇦</span>
+          <span id="langText">العربية</span>
+        </button>
+
+        <div class="today-status-chip" id="todayStatusChip">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span id="currentDayText">Accès Spa/Sport : Chargement...</span>
+        </div>
+      </div>
+
+      <div class="header-title-group">
+        <h1 id="txt-title">Résidence Rafina — Ain Sebaa</h1>
+        <p class="header-subtitle" id="txt-subtitle">Portail Digital d'Information & Guide Pratique des Résidents</p>
+      </div>
+
+      <div class="header-controls">
+        <div class="search-box">
+          <svg class="search-icon" viewBox="0 0 24 24" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="searchInput" class="search-input" placeholder="Rechercher une règle (ex: travaux, parking)..." onkeyup="filterRules()">
+        </div>
+
+        <button class="box-menu-toggle-btn" onclick="openBoxMenu()" id="btn-box-menu">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <span id="txt-boxmenu-btn">Menu 🔲</span>
+        </button>
+
+        <button class="header-action-btn" onclick="openContactModal()" id="btn-contact">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span id="txt-contact-btn">Contact Syndic</span>
+        </button>
+
+        <button class="header-action-btn" onclick="window.print()" id="btn-print">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          <span id="txt-print-btn">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       BARRE D'ONGLETS HORIZONTALE SCROLLABLE
+       ========================================================================== -->
+  <nav class="tabs-wrapper" aria-label="Catégories du règlement">
+    <div class="tabs-container">
+      <button class="tab-button active" onclick="switchTab('parking', this)" id="tab-btn-parking">
+        <svg class="tab-icon" viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-2.4 4.5C1 12.8 1 13.4 1 14v2c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+        <span id="txt-tab-parking">Circulation & Parking</span>
+        <span class="tab-badge">3</span>
+      </button>
+
+      <button class="tab-button" onclick="switchTab('travaux', this)" id="tab-btn-travaux">
+        <svg class="tab-icon" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        <span id="txt-tab-travaux">Travaux & Voisinage</span>
+        <span class="tab-badge">2</span>
+      </button>
+
+      <button class="tab-button" onclick="switchTab('bienetre', this)" id="tab-btn-bienetre">
+        <svg class="tab-icon" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        <span id="txt-tab-bienetre">Spa & Sport</span>
+        <span class="tab-badge">Planning</span>
+      </button>
+
+      <button class="tab-button" onclick="switchTab('kids', this)" id="tab-btn-kids">
+        <svg class="tab-icon" viewBox="0 0 24 24"><path d="M12 2a5 5 0 0 1 5 5c0 3.5-3 8-5 11-2-3-5-7.5-5-11a5 5 0 0 1 5-5z"/><circle cx="12" cy="7" r="2"/></svg>
+        <span id="txt-tab-kids">Kids Club</span>
+        <span class="tab-badge">0-6 ans</span>
+      </button>
+
+      <button class="tab-button" onclick="switchTab('hygiene', this)" id="tab-btn-hygiene">
+        <svg class="tab-icon" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>
+        <span id="txt-tab-hygiene">Propreté & Hygiène</span>
+        <span class="tab-badge">4</span>
+      </button>
+
+      <button class="tab-button" onclick="switchTab('toutes', this)" id="tab-btn-toutes">
+        <svg class="tab-icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        <span id="txt-tab-toutes">Vue Globale</span>
+        <span class="tab-badge">Tout</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       CONTENU PRINCIPAL DES SECTIONS
+       ========================================================================== -->
+  <main class="main-container">
+
+    <!-- ONGLET 1 : CIRCULATION & PARKING -->
+    <section id="panel-parking" class="tab-panel active searchable-section">
+      <div class="section-banner">
+        <h2 id="banner-parking-title">Règlement de Circulation & Stationnement</h2>
+        <p id="banner-parking-sub">Consignes de sécurité obligatoires et respect des espaces réservés en sous-sol</p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="info-card border-danger search-item">
+          <div class="card-header-row">
+            <div class="card-icon-box red">🚫</div>
+            <div class="card-title-wrap">
+              <span class="rule-number-badge red" id="park1-badge">Consigne Sécurité 1</span>
+              <h3 id="park1-title">Interdiction de Sortir par l'Entrée du Parking</h3>
+            </div>
+          </div>
+          <p class="card-body-text" id="park1-body">
+            <strong>Règle stricte :</strong> La sortie du parking se fait exclusivement par la voie dédiée à la sortie. Il est formellement interdit d'emprunter la voie "Entrée" pour quitter la résidence afin d'éviter tout choc frontal.
+          </p>
+          <div class="highlight-box" id="park1-high">
+            👉 <strong>Signalisation :</strong> Utilisez obligatoirement la voie de sortie signalée et attendez l'ouverture complète du portail.
+          </div>
+        </article>
+
+        <article class="info-card border-danger search-item">
+          <div class="card-header-row">
+            <div class="card-icon-box red">🚫</div>
+            <div class="card-title-wrap">
+              <span class="rule-number-badge red" id="park2-badge">Consigne Sécurité 2</span>
+              <h3 id="park2-title">Interdiction d'Entrer par la Sortie du Parking</h3>
+            </div>
+          </div>
+          <p class="card-body-text" id="park2-body">
+            <strong>Règle stricte :</strong> L'accès des véhicules à l'intérieur du parking s'effectue uniquement par l'accès dûment signalé "Entrée". Ne forcez jamais le passage par le portail de sortie.
+          </p>
+          <div class="highlight-box" id="park2-high">
+            👉 <strong>Accès sécurisé :</strong> L'accès se fait uniquement par l'accès signalé avec votre badge ou télécommande.
+          </div>
+        </article>
+
+        <article class="info-card border-danger search-item">
+          <div class="card-header-row">
+            <div class="card-icon-box red">⬆️</div>
+            <div class="card-title-wrap">
+              <span class="rule-number-badge red" id="park3-badge">Consigne Sécurité 3</span>
+              <h3 id="park3-title">Interdiction de Circuler en Sens Interdit au 2ème Sous-Sol</h3>
+            </div>
+          </div>
+          <p class="card-body-text" id="park3-body">
+            <strong>Règle stricte :</strong> Respectez impérativement le sens de circulation indiqué au 2ème sous-sol (-2). La conduite en sens inverse est une infraction majeure.
+          </p>
+          <div class="highlight-box" id="park3-high">
+            👉 <strong>Visibilité :</strong> Suivez les flèches blanches peintes au sol et les panneaux muraux.
+          </div>
+        </article>
+
+        <article class="info-card border-orange search-item">
+          <div class="card-header-row">
+            <div class="card-icon-box orange">🅿️</div>
+            <div class="card-title-wrap">
+              <span class="rule-number-badge orange" id="park4-badge">Stationnement Privé</span>
+              <h3 id="park4-title">Respect des Places Attribuées & Numérotées</h3>
+            </div>
+          </div>
+          <p class="card-body-text" id="park4-body">
+            <strong>Interdiction absolue :</strong> Il est strictly interdit de stationner son véhicule sur les emplacements réservés appartenant aux autres résidents ou sur les zones de manœuvre.
+          </p>
+          <div class="highlight-box" id="park4-high">
+            🅿️ <strong>Numéro de place :</strong> Merci de respecter rigoureusement les numéros de place attribués.
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ONGLET 2 : TRAVAUX & VOISINAGE -->
+    <section id="panel-travaux" class="tab-panel searchable-section">
+      <div class="section-banner">
+        <h2 id="banner-travaux-title">Règlement des Travaux & Tranquillité</h2>
+        <p id="banner-travaux-sub">Prescriptions relatives aux aménagements, bruit et sérénité de la copropriété</p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="info-card border-danger search-item">
+          <div class="card-header-row">
+            <div class="card-icon-box red">🔨</div>
+            <div class="card-title-wrap">
+              <span class="rule-number-badge red" id="trav1-badge">Interdiction Dimanche</span>
+              <h3 id="trav1-title">Travaux Stricte Interdiction le Dimanche</h3>
+            </div>
+          </div>
+          <p class="card-body-text" id="trav1-body">
+            <strong>Rappel impératif :</strong> Les travaux de bricolage, rénovation bruyante (perçage, marteaux) et autres aménagements lourds sont <strong>STRICTEMENT INTERDITS TOUS LES DIMANCHES</strong>.
+          </p>
+          <div class="highlight-box" id="trav1-high">
+            🚫 <strong>Jour de repos :</strong> Le dimanche est réservé au repos et au calme de l'ensemble des résidents.
+          </div>
+        </article>
+
+        <article class="info-card border-warning search-item">
+          <div class="card-header-row">
+            <div class="card-icon-box orange">🤝</div>
+            <div class="card-title-wrap">
+              <span class="rule-number-badge orange" id="trav2-badge">Tranquillité Publique</span>
+              <h3 id="trav2-title">Respect du Voisinage en Semaine et Samedi</h3>
+            </div>
+          </div>
+          <p class="card-body-text" id="trav2-body">
+            Afin de préserver le confort de tous, planifiez vos aménagements du lundi au samedi, dans le respect strict des horaires habituels de copropriété.
+          </p>
+          <div class="highlight-box" id="trav2-high">
+            🤝 <strong>Civisme :</strong> Pensez à informer vos voisins à l'avance et veillez au nettoyage des parties communes.
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ONGLET 3 : SPA & SPORT -->
+    <section id="panel-bienetre" class="tab-panel searchable-section">
+      <div class="section-banner">
+        <h2 id="banner-bienetre-title">Espace Bien-être (Spa & Salle de Sport)</h2>
+        <p id="banner-bienetre-sub">Profitez de vos équipements de manière optimale : Planning d'accès et consignes</p>
+      </div>
+
+      <div class="hours-card">
+        <div class="hours-icon">⏰</div>
+        <div>
+          <h4 id="hours-title">Horaires d'Ouverture Globaux</h4>
+          <p id="hours-sub">Tous les jours de 06h30 à 22h30 dans le respect du calendrier ci-dessous</p>
+        </div>
+      </div>
+
+      <h3 style="font-size:1rem; font-weight:800; color:var(--navy-900); margin-bottom:0.75rem;" id="sched-heading">Planning Hebdomadaire d'Accès</h3>
+
+      <div class="schedule-grid">
+        <div class="schedule-card" id="sched-femmes">
+          <div>
+            <h4 id="sched-femmes-title">Lundi, Mercredi, Vendredi</h4>
+            <p class="schedule-days-list" id="sched-femmes-sub">Créneaux réservés</p>
+          </div>
+          <span class="schedule-badge femmes" id="sched-femmes-badge">Accès Femmes</span>
+        </div>
+
+        <div class="schedule-card" id="sched-hommes">
+          <div>
+            <h4 id="sched-hommes-title">Mardi, Jeudi, Samedi</h4>
+            <p class="schedule-days-list" id="sched-hommes-sub">Créneaux réservés</p>
+          </div>
+          <span class="schedule-badge hommes" id="sched-hommes-badge">Accès Hommes</span>
+        </div>
+
+        <div class="schedule-card" id="sched-mixte">
+          <div>
+            <h4 id="sched-mixte-title">Dimanche</h4>
+            <p class="schedule-days-list" id="sched-mixte-sub">Journée entière</p>
+          </div>
+          <span class="schedule-badge mixte" id="sched-mixte-badge">Accès Mixte</span>
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        <article class="info-card border-danger search-item">
+          <span class="rule-number-badge red" id="spa1-badge">Restriction d'Accès</span>
+          <h3 id="spa1-title">Réservé aux Plus de 18 Ans</h3>
+          <p class="card-body-text" id="spa1-body">Cet équipement est strictement réservé aux résidents âgés de plus de 18 ans.</p>
+        </article>
+
+        <article class="info-card border-warning search-item">
+          <span class="rule-number-badge orange" id="spa2-badge">Règles d'Hygiène</span>
+          <h3 id="spa2-title">Tenue de Sport & Serviette Exigées</h3>
+          <p class="card-body-text" id="spa2-body">Une tenue de sport appropriée et une serviette individuelle sont obligatoires.</p>
+        </article>
+
+        <article class="info-card border-success search-item">
+          <span class="rule-number-badge green" id="spa3-badge">Entretien & Civisme</span>
+          <h3 id="spa3-title">Rangement Systématique du Matériel</h3>
+          <p class="card-body-text" id="spa3-body">Merci de ranger systématiquement le matériel de sport à sa place après chaque utilisation.</p>
+        </article>
+
+        <article class="info-card border-success search-item">
+          <span class="rule-number-badge green" id="spa4-badge">Propreté des Lieux</span>
+          <h3 id="spa4-title">Maintien de la Propreté</h3>
+          <p class="card-body-text" id="spa4-body">Merci de veiller à laisser l'espace propre et sec après votre passage.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ONGLET 4 : KIDS CLUB -->
+    <section id="panel-kids" class="tab-panel searchable-section">
+      <div class="section-banner">
+        <h2 id="banner-kids-title">Bienvenue au Kids Club de la Résidence Rafina</h2>
+        <p id="banner-kids-sub">Règlement intérieur et consignes d'accès à l'espace enfants</p>
+      </div>
+
+      <div class="kids-badges-row">
+        <div class="kids-badge-item">
+          <div class="kids-badge-title" id="kids1-title">Ouverture</div>
+          <div class="kids-badge-desc" id="kids1-desc">Tous les jours</div>
+        </div>
+        <div class="kids-badge-item">
+          <div class="kids-badge-title" id="kids2-title">Tranche d'Âge</div>
+          <div class="kids-badge-desc" id="kids2-desc">6 ans Maximum</div>
+        </div>
+        <div class="kids-badge-item">
+          <div class="kids-badge-title" id="kids3-title">Surveillance</div>
+          <div class="kids-badge-desc" id="kids3-desc">Parentale Continue</div>
+        </div>
+        <div class="kids-badge-item">
+          <div class="kids-badge-title" id="kids4-title">Matériel</div>
+          <div class="kids-badge-desc" id="kids4-desc">Rangement Obligatoire</div>
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        <article class="info-card border-danger search-item">
+          <span class="rule-number-badge red" id="kidsrule1-badge">Responsabilité</span>
+          <h3 id="kidsrule1-title">Présence Parentale Obligatoire</h3>
+          <p class="card-body-text" id="kidsrule1-body">
+            <strong>Aucun animateur présent :</strong> Les enfants demeurent sous la surveillance permanente de leurs parents.
+          </p>
+          <div class="highlight-box" id="kidsrule1-high">
+            ⚠️ <i>Le Syndic décline toute responsabilité en cas d'accident.</i>
+          </div>
+        </article>
+
+        <article class="info-card border-warning search-item">
+          <span class="rule-number-badge orange" id="kidsrule2-badge">Règles de Bonne Conduite</span>
+          <h3 id="kidsrule2-title">Consignes Détaillées pour les Enfants</h3>
+          <p class="card-body-text">
+            • <span id="kidsbullet1">Retirer obligatoirement les chaussures à l'entrée.</span><br>
+            • <span id="kidsbullet2">Interdiction de manger ou boire dans la zone de jeux.</span><br>
+            • <span id="kidsbullet3">Remettre les jouets et livres en ordre après usage.</span><br>
+            • <span id="kidsbullet4">Respecter les autres enfants et la propreté du lieu.</span>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ONGLET 5 : PROPRETÉ & HYGIÈNE -->
+    <section id="panel-hygiene" class="tab-panel searchable-section">
+      <div class="section-banner">
+        <h2 id="banner-hygiene-title">Règlement de Propreté & d'Hygiène</h2>
+        <p id="banner-hygiene-sub">4 recommandations primordiales pour un parking propre, salubre et sans mauvaise odeur</p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="info-card border-danger search-item">
+          <span class="rule-number-badge red" id="hyg1-badge">Action 1</span>
+          <h3 id="hyg1-title">Fermeture Hermétique des Sacs Poubelles</h3>
+          <p class="card-body-text" id="hyg1-body">Attacher et fermer solidement vos sacs poubelles avant de les déposer dans les bacs.</p>
+        </article>
+
+        <article class="info-card border-danger search-item">
+          <span class="rule-number-badge red" id="hyg2-badge">Action 2</span>
+          <h3 id="hyg2-title">Interdiction Stricte des Dépôts au Sol</h3>
+          <p class="card-body-text" id="hyg2-body">Ne déposez aucun déchet, ni sac, à côté ou au-dessus des bacs à ordures.</p>
+        </article>
+
+        <article class="info-card border-warning search-item">
+          <span class="rule-number-badge orange" id="hyg3-badge">Action 3</span>
+          <h3 id="hyg3-title">Gestion Rigoureuse des Liquides</h3>
+          <p class="card-body-text" id="hyg3-body">Interdiction de vider des restes de liquides (soupes, huiles) dans les sacs poubelles.</p>
+        </article>
+
+        <article class="info-card border-warning search-item">
+          <span class="rule-number-badge orange" id="hyg4-badge">Action 4</span>
+          <h3 id="hyg4-title">Pliage Obligatoire des Cartons Volumineux</h3>
+          <p class="card-body-text" id="hyg4-body">Aplatir et plier systématiquement les grands cartons avant de les déposer dans les bacs.</p>
+        </article>
+      </div>
+
+      <div class="checklist-card">
+        <h3 class="checklist-title" id="checklist-title">Checklist Résident Eco-Responsable</h3>
+        <div class="checklist-list">
+          <label class="check-item"><input type="checkbox" class="check-checkbox"><span id="check1-text">Mon sac poubelle est hermétiquement noué avant dépôt.</span></label>
+          <label class="check-item"><input type="checkbox" class="check-checkbox"><span id="check2-text">J'ai bien aplati tous mes cartons de livraison.</span></label>
+          <label class="check-item"><input type="checkbox" class="check-checkbox"><span id="check3-text">Je vérifie que ma voiture est bien garée au centre de ma place.</span></label>
+          <label class="check-item"><input type="checkbox" class="check-checkbox"><span id="check4-text">J'ai rangé mon matériel de sport après ma séance au Spa/Sport.</span></label>
+        </div>
+      </div>
+    </section>
+
+    <!-- ONGLET 6 : VUE GLOBALE -->
+    <section id="panel-toutes" class="tab-panel">
+      <div class="section-banner">
+        <h2 id="banner-toutes-title">Vue d'Ensemble du Règlement Intérieur</h2>
+        <p id="banner-toutes-sub">Consultez l'ensemble des règles de copropriété sur une seule page récapitulative</p>
+      </div>
+      <div id="allPanelsContainer"></div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       MODALE CONTACT SYNDIC
+       ========================================================================== -->
+  <div class="modal-backdrop" id="contactModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeContactModal()">✕</button>
+      <h3 style="font-size:1.15rem; font-weight:800; color:var(--navy-900); margin-bottom:0.5rem;" id="modal-title">Administration & Syndic</h3>
+      <p style="font-size:0.875rem; color:var(--text-muted); margin-bottom:1.25rem;" id="modal-sub">
+        Syndic Résidence Rafina — Les Pavillons Verts, Ain Sebaa.
+      </p>
+      
+      <div style="display:flex; flex-direction:column; gap:0.75rem; font-size:0.875rem;">
+        <div style="background:#f8fafc; padding:0.75rem; border-radius:8px; border:1px solid var(--border-color);" id="modal-office">
+          <strong>🏢 Bureau du Syndic :</strong> Accueil Résidence Rafina, Ain Sebaa
+        </div>
+        <div style="background:#f8fafc; padding:0.75rem; border-radius:8px; border:1px solid var(--border-color);" id="modal-hours">
+          <strong>⏰ Horaires d'Ouverture :</strong> Lundi au Vendredi (09h00 - 18h00)
+        </div>
+        <div style="background:#f0fdf4; padding:0.75rem; border-radius:8px; border:1px solid #bbf7d0; color:#166534;" id="modal-commitment">
+          <strong>🌱 Engagement Commun :</strong> Ensemble pour un cadre de vie propre, sécurisé et harmonieux pour tous nos résidents.
+        </div>
+      </div>
+      
+      <button onclick="closeContactModal()" style="margin-top:1.25rem; width:100%; padding:0.75rem; background:var(--navy-900); color:#fff; border:none; border-radius:8px; font-weight:800; cursor:pointer;" id="modal-close-btn">
+        Fermer
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODALE MENU EN BOÎTE POUR MOBILE
+       ========================================================================== -->
+  <div class="modal-backdrop" id="boxMenuModal">
+    <div class="modal-card box-menu-card">
+      <button class="modal-close-btn" onclick="closeBoxMenu()">✕</button>
+      <h3 style="font-size:1.15rem; font-weight:800; color:var(--navy-900);" id="boxmenu-modal-title">🔲 Menu des Sections</h3>
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;" id="boxmenu-modal-sub">Accès rapide aux catégories du règlement intérieur :</p>
+
+      <div class="box-menu-grid">
+        <button class="box-menu-item" onclick="selectBoxTab('parking')">
+          <span class="box-menu-icon">🚗</span>
+          <span class="box-menu-title" id="bm-parking">Circulation & Parking</span>
+          <span class="box-menu-count">3 rules</span>
+        </button>
+
+        <button class="box-menu-item" onclick="selectBoxTab('travaux')">
+          <span class="box-menu-icon">🛠️</span>
+          <span class="box-menu-title" id="bm-travaux">Travaux & Voisinage</span>
+          <span class="box-menu-count">2 rules</span>
+        </button>
+
+        <button class="box-menu-item" onclick="selectBoxTab('bienetre')">
+          <span class="box-menu-icon">🧘</span>
+          <span class="box-menu-title" id="bm-bienetre">Spa & Sport</span>
+          <span class="box-menu-count">Planning</span>
+        </button>
+
+        <button class="box-menu-item" onclick="selectBoxTab('kids')">
+          <span class="box-menu-icon">🎈</span>
+          <span class="box-menu-title" id="bm-kids">Kids Club</span>
+          <span class="box-menu-count">0-6 ans</span>
+        </button>
+
+        <button class="box-menu-item" onclick="selectBoxTab('hygiene')">
+          <span class="box-menu-icon">🧹</span>
+          <span class="box-menu-title" id="bm-hygiene">Propreté & Hygiène</span>
+          <span class="box-menu-count">4 actions</span>
+        </button>
+
+        <button class="box-menu-item" onclick="selectBoxTab('toutes')">
+          <span class="box-menu-icon">📊</span>
+          <span class="box-menu-title" id="bm-toutes">Vue Globale</span>
+          <span class="box-menu-count">Tout</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       PIED DE PAGE (FOOTER)
+       ========================================================================== -->
+  <footer class="app-footer">
+    <div class="footer-container">
+      <p class="footer-quote" id="footer-quote">
+        « Ensemble pour un environnement propre et harmonieux »
+      </p>
+      <div class="footer-syndic" id="footer-syndic">
+        Syndic Résidence Rafina — Les Pavillons Verts
+      </div>
+      <p class="footer-copyright" id="footer-copyright">
+        © 2026 Résidence Rafina Ain Sebaa. Tous droits réservés. Portail officiel d'information des copropriétaires.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       JAVASCRIPT TRADUCTION & SYSTEME DYNAMIQUE
+       ========================================================================== -->
+  <script>
+    let currentLang = 'fr';
+
+    const I18N = {
+      fr: {
+        flag: "🇲🇦",
+        langBtnText: "العربية",
+        brand: "Les Pavillons Verts",
+        title: "Résidence Rafina — Ain Sebaa",
+        subtitle: "Portail Digital d'Information & Guide Pratique des Résidents",
+        searchPlaceholder: "Rechercher une règle (ex: travaux, parking)...",
+        contactBtn: "Contact Syndic",
+        printBtn: "Imprimer",
+        boxmenuBtn: "Menu 🔲",
+
+        tabParking: "Circulation & Parking",
+        tabTravaux: "Travaux & Voisinage",
+        tabBienetre: "Spa & Sport",
+        tabKids: "Kids Club",
+        tabHygiene: "Propreté & Hygiène",
+        tabToutes: "Vue Globale",
+
+        days: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+        spaFemmesText: "Aujourd'hui ({day}) : Accès Femmes 🌸",
+        spaHommesText: "Aujourd'hui ({day}) : Accès Hommes 👔",
+        spaMixteText: "Aujourd'hui (Dimanche) : Accès Mixte 🤝",
+
+        bannerParkingTitle: "Règlement de Circulation & Stationnement",
+        bannerParkingSub: "Consignes de sécurité obligatoires et respect des espaces réservés en sous-sol",
+        bannerTravauxTitle: "Règlement des Travaux & Tranquillité",
+        bannerTravauxSub: "Prescriptions relatives aux aménagements, bruit et sérénité de la copropriété",
+        bannerBienetreTitle: "Espace Bien-être (Spa & Salle de Sport)",
+        bannerBienetreSub: "Profitez de vos équipements de manière optimale : Planning d'accès et consignes",
+        bannerKidsTitle: "Bienvenue au Kids Club de la Résidence Rafina",
+        bannerKidsSub: "Règlement intérieur et consignes d'accès à l'espace enfants",
+        bannerHygieneTitle: "Règlement de Propreté & d'Hygiène",
+        bannerHygieneSub: "4 recommandations primordiales pour un parking propre, salubre et sans mauvaise odeur",
+        bannerToutesTitle: "Vue d'Ensemble du Règlement Intérieur",
+        bannerToutesSub: "Consultez l'ensemble des règles de copropriété sur une seule page récapitulative",
+
+        park1Badge: "Consigne Sécurité 1",
+        park1Title: "Interdiction de Sortir par l'Entrée du Parking",
+        park1Body: "<strong>Règle stricte :</strong> La sortie du parking se fait exclusivement par la voie dédiée à la sortie. Il est formellement interdit d'emprunter la voie \"Entrée\" pour quitter la résidence afin d'éviter tout choc frontal.",
+        park1High: "👉 <strong>Signalisation :</strong> Utilisez obligatoirement la voie de sortie signalée et attendez l'ouverture complète du portail.",
+
+        park2Badge: "Consigne Sécurité 2",
+        park2Title: "Interdiction d'Entrer par la Sortie du Parking",
+        park2Body: "<strong>Règle stricte :</strong> L'accès des véhicules à l'intérieur du parking s'effectue uniquement par l'accès dûment signalé \"Entrée\". Ne forcez jamais le passage par le portail de sortie.",
+        park2High: "👉 <strong>Accès sécurisé :</strong> L'accès se fait uniquement par l'accès signalé avec votre badge ou télécommande.",
+
+        park3Badge: "Consigne Sécurité 3",
+        park3Title: "Interdiction de Circuler en Sens Interdit au 2ème Sous-Sol",
+        park3Body: "<strong>Règle stricte :</strong> Respectez impérativement le sens de circulation indiqué au 2ème sous-sol (-2). La conduite en sens inverse est une infraction majeure.",
+        park3High: "👉 <strong>Visibilité :</strong> Suivez les flèches blanches peintes au sol et les panneaux muraux.",
+
+        park4Badge: "Stationnement Privé",
+        park4Title: "Respect des Places Attribuées & Numérotées",
+        park4Body: "<strong>Interdiction absolue :</strong> Il est strictement interdit de stationner son véhicule sur les emplacements réservés appartenant aux autres résidents ou sur les zones de manœuvre.",
+        park4High: "🅿️ <strong>Numéro de place :</strong> Merci de respecter rigoureusement les numéros de place attribués.",
+
+        trav1Badge: "Interdiction Dimanche",
+        trav1Title: "Travaux Stricte Interdiction le Dimanche",
+        trav1Body: "<strong>Rappel impératif :</strong> Les travaux de bricolage, rénovation bruyante (perçage, marteaux) et autres aménagements lourds sont <strong>STRICTEMENT INTERDITS TOUS LES DIMANCHES</strong>.",
+        trav1High: "🚫 <strong>Jour de repos :</strong> Le dimanche est réservé au repos et au calme de l'ensemble des résidents.",
+
+        trav2Badge: "Tranquillité Publique",
+        trav2Title: "Respect du Voisinage en Semaine et Samedi",
+        trav2Body: "Afin de préserver le confort de tous, planifiez vos aménagements du lundi au samedi, dans le respect strict des horaires habituels de copropriété.",
+        trav2High: "🤝 <strong>Civisme :</strong> Pensez à informer vos voisins à l'avance et veillez au nettoyage des parties communes.",
+
+        hoursTitle: "Horaires d'Ouverture Globaux",
+        hoursSub: "Tous les jours de 06h30 à 22h30 dans le respect du calendrier ci-dessous",
+        schedHeading: "Planning Hebdomadaire d'Accès",
+        schedFemmesTitle: "Lundi, Mercredi, Vendredi",
+        schedFemmesSub: "Créneaux réservés",
+        schedFemmesBadge: "Accès Femmes",
+        schedHommesTitle: "Mardi, Jeudi, Samedi",
+        schedHommesSub: "Créneaux réservés",
+        schedHommesBadge: "Accès Hommes",
+        schedMixteTitle: "Dimanche",
+        schedMixteSub: "Journée entière",
+        schedMixteBadge: "Accès Mixte",
+
+        spa1Badge: "Restriction d'Accès",
+        spa1Title: "Réservé aux Plus de 18 Ans",
+        spa1Body: "Cet équipement est strictement réservé aux résidents âgés de plus de 18 ans.",
+
+        spa2Badge: "Règles d'Hygiène",
+        spa2Title: "Tenue de Sport & Serviette Exigées",
+        spa2Body: "Une tenue de sport appropriée et une serviette individuelle sont obligatoires.",
+
+        spa3Badge: "Entretien & Civisme",
+        spa3Title: "Rangement Systématique du Matériel",
+        spa3Body: "Merci de ranger systématiquement le matériel de sport à sa place après chaque utilisation.",
+
+        spa4Badge: "Propreté des Lieux",
+        spa4Title: "Maintien de la Propreté",
+        spa4Body: "Merci de veiller à laisser l'espace propre et sec après votre passage.",
+
+        kids1Title: "Ouverture",
+        kids1Desc: "Tous les jours",
+        kids2Title: "Tranche d'Âge",
+        kids2Desc: "6 ans Maximum",
+        kids3Title: "Surveillance",
+        kids3Desc: "Parentale Continue",
+        kids4Title: "Matériel",
+        kids4Desc: "Rangement Obligatoire",
+
+        kidsrule1Badge: "Responsabilité",
+        kidsrule1Title: "Présence Parentale Obligatoire",
+        kidsrule1Body: "<strong>Aucun animateur présent :</strong> Les enfants demeurent sous la surveillance permanente de leurs parents.",
+        kidsrule1High: "⚠️ <i>Le Syndic décline toute responsabilité en cas d'accident.</i>",
+
+        kidsrule2Badge: "Règles de Bonne Conduite",
+        kidsrule2Title: "Consignes Détaillées pour les Enfants",
+        kidsbullet1: "Retirer obligatoirement les chaussures à l'entrée.",
+        kidsbullet2: "Interdiction de manger ou boire dans la zone de jeux.",
+        kidsbullet3: "Remettre les jouets et livres en ordre après usage.",
+        kidsbullet4: "Respecter les autres enfants et la propreté du lieu.",
+
+        hyg1Badge: "Action 1",
+        hyg1Title: "Fermeture Hermétique des Sacs Poubelles",
+        hyg1Body: "Attacher et fermer solidement vos sacs poubelles avant de les déposer dans les bacs.",
+
+        hyg2Badge: "Action 2",
+        hyg2Title: "Interdiction Stricte des Dépôts au Sol",
+        hyg2Body: "Ne déposez aucun déchet, ni sac, à côté ou au-dessus des bacs à ordures.",
+
+        hyg3Badge: "Action 3",
+        hyg3Title: "Gestion Rigoureuse des Liquides",
+        hyg3Body: "Interdiction de vider des restes de liquides (soupes, huiles) dans les sacs poubelles.",
+
+        hyg4Badge: "Action 4",
+        hyg4Title: "Pliage Obligatoire des Cartons Volumineux",
+        hyg4Body: "Aplatir et plier systématiquement les grands cartons avant de les déposer dans les bacs.",
+
+        checklistTitle: "Checklist Résident Eco-Responsable",
+        check1: "Mon sac poubelle est hermétiquement noué avant dépôt.",
+        check2: "J'ai bien aplati tous mes cartons de livraison.",
+        check3: "Je vérifie que ma voiture est bien garée au centre de ma place.",
+        check4: "J'ai rangé mon matériel de sport après ma séance au Spa/Sport.",
+
+        boxmenuModalTitle: "🔲 Menu des Sections",
+        boxmenuModalSub: "Accès rapide aux catégories du règlement intérieur :",
+
+        modalTitle: "Administration & Syndic",
+        modalSub: "Syndic Résidence Rafina — Les Pavillons Verts, Ain Sebaa.",
+        modalOffice: "<strong>🏢 Bureau du Syndic :</strong> Accueil Résidence Rafina, Ain Sebaa",
+        modalHours: "<strong>⏰ Horaires d'Ouverture :</strong> Lundi au Vendredi (09h00 - 18h00)",
+        modalCommitment: "<strong>🌱 Engagement Commun :</strong> Ensemble pour un cadre de vie propre, sécurisé et harmonieux pour tous nos résidents.",
+        modalCloseBtn: "Fermer",
+
+        footerQuote: "« Ensemble pour un environnement propre et harmonieux »",
+        footerSyndic: "Syndic Résidence Rafina — Les Pavillons Verts",
+        footerCopyright: "© 2026 Résidence Rafina Ain Sebaa. Tous droits réservés. Portail officiel d'information des copropriétaires."
+      },
+
+      ar: {
+        flag: "🇫🇷",
+        langBtnText: "Français",
+        brand: "المباني الخضراء",
+        title: "إقامة رافينا — عين السبع",
+        subtitle: "البوابة الرقمية والمعلوماتية لدليل السكان والأنظمة الداخلية",
+        searchPlaceholder: "ابحث عن قانون (مثال: أشغال، موقف، نظافة)...",
+        contactBtn: "التواصل مع السنديك",
+        printBtn: "طباعة",
+        boxmenuBtn: "الأقسام 🔲",
+
+        tabParking: "المرور والمواقف",
+        tabTravaux: "الأشغال والجوار",
+        tabBienetre: "النادي الصحي والرياضة",
+        tabKids: "نادي الأطفال",
+        tabHygiene: "النظافة والبيئة",
+        tabToutes: "نظرة عامة",
+
+        days: ['الأحد', 'الاثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'],
+        spaFemmesText: "اليوم ({day}) : مخصص للنساء 🌸",
+        spaHommesText: "اليوم ({day}) : مخصص للرجال 👔",
+        spaMixteText: "اليوم (الأحد) : دخول مشترك 🤝",
+
+        bannerParkingTitle: "قانون المرور والتوقف بالموقف",
+        bannerParkingSub: "تعليمات السلامة الإجبارية واحترام الأماكن المخصصة بالقبو",
+        bannerTravauxTitle: "قانون الأشغال وراحة الجيران",
+        bannerTravauxSub: "ضوابط الإصلاحات والتجهيزات والحفاظ على سكينة الإقامة",
+        bannerBienetreTitle: "الفضاء الرياضي والصحي (Spa & Sport)",
+        bannerBienetreSub: "الاستفادة المثلى من التجهيزات: جدول المواعيد وشروط الاستعمال",
+        bannerKidsTitle: "مرحباً بكم في نادي الأطفال - إقامة رافينا",
+        bannerKidsSub: "القانون الداخلي وتعليمات استخدام فضاء الأطفال",
+        bannerHygieneTitle: "دليل النظافة والبيئة",
+        bannerHygieneSub: "4 خطوات أساسية لنظافة الموقف ومنع الرائحة الكريهة",
+        bannerToutesTitle: "نظرة عامة على القانون الداخلي",
+        bannerToutesSub: "اطّلع على جميع قوانين الإقامة في صفحة واحدة شاملة",
+
+        park1Badge: "تعليمات السلامة 1",
+        park1Title: "يمنع الخروج من مدخل السيارات",
+        park1Body: "<strong>قانون صارم:</strong> الخروج من موقف السيارات يكون حصرياً عبر الممر المخصص للخروج. يمنع منعاً باتاً استعمال ممر \"المدخل\" للخروج تجنباً لاصطدام السيارات.",
+        park1High: "👉 <strong>التشوير:</strong> استخدم ممر الخروج المشار إليه وانتظر الفتح الكامل للبوابة.",
+
+        park2Badge: "تعليمات السلامة 2",
+        park2Title: "يمنع الدخول من مخرج السيارات",
+        park2Body: "<strong>قانون صارم:</strong> دخول السيارات إلى داخل الموقف يتم فقط عبر الممر المشار إليه بـ \"المدخل\". لا تحاول أبداً المرور عبر بوابة الخروج.",
+        park2High: "👉 <strong>دخول آمن:</strong> الدخول يتم فقط باستخدام الشارة (Badge) أو جهاز التحكم عن بُعد.",
+
+        park3Badge: "تعليمات السلامة 3",
+        park3Title: "يمنع السير في الاتجاه الممنوع بالقبو الثاني (-2)",
+        park3Body: "<strong>قانون صارم:</strong> يرجى احترام اتجاه السير المحدد بالقبو الثاني (-2). السياقة في الاتجاه المعاكس مخالفة خطيرة.",
+        park3High: "👉 <strong>الوضوح:</strong> اتبع الأسهم البيضاء المرسومة على الأرض واللوحات الحائطية.",
+
+        park4Badge: "موقفي الخاص",
+        park4Title: "احترام الأماكن المخصصة والمرقمة",
+        park4Body: "<strong>منع كلي:</strong> يمنع منعاً باتاً ركن السيارة في الأماكن المخصصة للسكان الآخرين أو في مناطق المناورة.",
+        park4High: "🅿️ <strong>رقم الموقف:</strong> يرجى احترام أرقام المواقف بدقة.",
+
+        trav1Badge: "منع يوم الأحد",
+        trav1Title: "يمنع القيام بالأشغال يوم الأحد",
+        trav1Body: "<strong>تذكير هام:</strong> أعمال الإصلاح والتثقيب المزعجة يُمنع القيام بها منعاً باتاً كل يوم أحد بدون أي استثناء.",
+        trav1High: "🚫 <strong>يوم راحة:</strong> يوم الأحد مخصص لراحة وسكينة جميع العائلات والجيران.",
+
+        trav2Badge: "السكينة العامة",
+        trav2Title: "احترام الجيران خلال أيام الأسبوع والسبت",
+        trav2Body: "سكاننا الأعزاء، للحفاظ على راحة والسكينة، نرجو منكم برمجة أشغالكم من الاثنين إلى السبت مع احترام الأوقات المعمول بها.",
+        trav2High: "🤝 <strong>سلوك حضاري:</strong> يرجى إخبار الجيران المباشرين مسبقاً عند القيام بأشغال والتنظيف اليومي للممرات المشتركة.",
+
+        hoursTitle: "أوقات الافتتاح العامة",
+        hoursSub: "يومياً من 06:30 صباحاً إلى 10:30 مساءً حسب البرنامج التالي",
+        schedHeading: "جدول المواعيد الأسبوعي",
+        schedFemmesTitle: "الاثنين، الأربعاء، الجمعة",
+        schedFemmesSub: "حصة مخصصة",
+        schedFemmesBadge: "مخصص للنساء",
+        schedHommesTitle: "الثلاثاء، الخميس، السبت",
+        schedHommesSub: "حصة مخصصة",
+        schedHommesBadge: "مخصص للرجال",
+        schedMixteTitle: "الأحد",
+        schedMixteSub: "اليوم بأكمله",
+        schedMixteBadge: "دخول مشترك",
+
+        spa1Badge: "شروط الدخول",
+        spa1Title: "للبالغين فقط (+18 سنة)",
+        spa1Body: "هذا الفضاء مخصص حصرياً للسكان البالغين أكثر من 18 سنة.",
+
+        spa2Badge: "قواعد النظافة",
+        spa2Title: "اللباس الرياضي والمنشفة إجباريان",
+        spa2Body: "ارتداء ملابس رياضية مناسبة وحذاء رياضي مع إحضار منشفة شخصية أمر إجباري.",
+
+        spa3Badge: "ترتيب المعدات",
+        spa3Title: "إعادة المعدات إلى مكانها",
+        spa3Body: "نرجو منكم استعمال الأجهزة بحرص وإعادة كل المعدات إلى مكانها بعد الاستعمال.",
+
+        spa4Badge: "نظافة الفضاء",
+        spa4Title: "الحفاظ على النظافة",
+        spa4Body: "يرجى ترك الفضاء نظيفاً وجافاً بعد حصتكم احتراماً للسكان القادمين بعدكم.",
+
+        kids1Title: "مفتوح",
+        kids1Desc: "كل الأيام",
+        kids2Title: "الفئة العمرية",
+        kids2Desc: "6 سنوات كأقصى حد",
+        kids3Title: "المراقبة",
+        kids3Desc: "مرافقة الوالدين دائمة",
+        kids4Title: "الألعاب",
+        kids4Desc: "ترتيب إجباري",
+
+        kidsrule1Badge: "المسؤولية",
+        kidsrule1Title: "حضور الوالدين إجباري",
+        kidsrule1Body: "<strong>لا يوجد مؤطر:</strong> الأطفال يظلون تحت المسؤولية المباشرة والمراقبة الدائمة لوالديهم.",
+        kidsrule1High: "⚠️ <i>السنديك غير مسؤول عن أي حادث.</i>",
+
+        kidsrule2Badge: "قواعد السلوك",
+        kidsrule2Title: "تعليمات مهمة للأطفال",
+        kidsbullet1: "نزع الأحذية عند مدخل القاعة إجباري.",
+        kidsbullet2: "يمنع منعاً باتاً الأكل أو الشرب داخل منطقة الألعاب.",
+        kidsbullet3: "إعادة الألعاب والكتب إلى مكانها بعد اللعب.",
+        kidsbullet4: "احترام الأطفال الآخرين والحفاظ على نظافة المكان.",
+
+        hyg1Badge: "الخطوة 1",
+        hyg1Title: "إغلاق أكياس النفايات بإحكام",
+        hyg1Body: "ربط وإغلاق أكياس النفايات جيداً قبل وضعها في الحاويات.",
+
+        hyg2Badge: "الخطوة 2",
+        hyg2Title: "يمنع رمي أكياس القمامة على الأرض",
+        hyg2Body: "لا تضع أي نفايات أو أكياس بجانب أو فوق الحاويات.",
+
+        hyg3Badge: "الخطوة 3",
+        hyg3Title: "التخلص السليم من السوائل",
+        hyg3Body: "يمنع صب بقايا السوائل (حساء، زيوت) في الأكياس أو الحاويات.",
+
+        hyg4Badge: "الخطوة 4",
+        hyg4Title: "طي الصناديق الكرتونية الكبيرة",
+        hyg4Body: "طي وتقليص حجم الصناديق الكرتونية الكبيرة قبل رميها لتوفير المساحة.",
+
+        checklistTitle: "قائمة التزام الساكن القدوة",
+        check1: "كيس القمامة الخاص بي مربوط ومغلق بإحكام قبل الرمي.",
+        check2: "قمت بطي وتصغير جميع الصناديق الكرتونية.",
+        check3: "تأكدت من ركن سيارتي بشكل جيد في منتصف موقفي.",
+        check4: "قمت بترتيب المعدات الرياضية بعد انتهائي من التمرين.",
+
+        boxmenuModalTitle: "🔲 قائمة أقسام الدليل",
+        boxmenuModalSub: "اختر القسم المطلوب للانتقال السريع والسهل:",
+
+        modalTitle: "إدارة الإقامة والسنديك",
+        modalSub: "سنديك إقامة رافينا — المباني الخضراء، عين السبع.",
+        modalOffice: "<strong>🏢 مكتب السنديك :</strong> استقبال إقامة رافينا، عين السبع",
+        modalHours: "<strong>⏰ أوقات العمل :</strong> من الاثنين إلى الجمعة (09:00 - 18:00)",
+        modalCommitment: "<strong>🌱 التزام مشترك :</strong> معاً من أجل محيط نظيف، آمن ومريح لجميع السكان.",
+        modalCloseBtn: "إغلاق",
+
+        footerQuote: "« معاً من أجل بيئة نظيفة ومحيط مريح »",
+        footerSyndic: "سنديك إقامة رافينا — المباني الخضراء",
+        footerCopyright: "© 2026 إقامة رافينا عين السبع. جميع الحقوق محفوظة. البوابة الرسمية لسكان الإقامة."
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initTodayScheduleStatus();
+      populateVueGlobale();
+    });
+
+    function toggleLanguage() {
+      currentLang = (currentLang === 'fr') ? 'ar' : 'fr';
+      const data = I18N[currentLang];
+
+      document.documentElement.lang = currentLang;
+      document.documentElement.dir = (currentLang === 'ar') ? 'rtl' : 'ltr';
+      document.body.dir = (currentLang === 'ar') ? 'rtl' : 'ltr';
+
+      document.getElementById('langFlag').textContent = data.flag;
+      document.getElementById('langText').textContent = data.langBtnText;
+
+      document.getElementById('txt-brand').textContent = data.brand;
+      document.getElementById('txt-title').textContent = data.title;
+      document.getElementById('txt-subtitle').textContent = data.subtitle;
+
+      document.getElementById('searchInput').placeholder = data.searchPlaceholder;
+      document.getElementById('txt-contact-btn').textContent = data.contactBtn;
+      document.getElementById('txt-print-btn').textContent = data.printBtn;
+      document.getElementById('txt-boxmenu-btn').textContent = data.boxmenuBtn;
+
+      document.getElementById('txt-tab-parking').textContent = data.tabParking;
+      document.getElementById('txt-tab-travaux').textContent = data.tabTravaux;
+      document.getElementById('txt-tab-bienetre').textContent = data.tabBienetre;
+      document.getElementById('txt-tab-kids').textContent = data.tabKids;
+      document.getElementById('txt-tab-hygiene').textContent = data.tabHygiene;
+      document.getElementById('txt-tab-toutes').textContent = data.tabToutes;
+
+      document.getElementById('bm-parking').textContent = data.tabParking;
+      document.getElementById('bm-travaux').textContent = data.tabTravaux;
+      document.getElementById('bm-bienetre').textContent = data.tabBienetre;
+      document.getElementById('bm-kids').textContent = data.tabKids;
+      document.getElementById('bm-hygiene').textContent = data.tabHygiene;
+      document.getElementById('bm-toutes').textContent = data.tabToutes;
+
+      document.getElementById('banner-parking-title').textContent = data.bannerParkingTitle;
+      document.getElementById('banner-parking-sub').textContent = data.bannerParkingSub;
+      document.getElementById('banner-travaux-title').textContent = data.bannerTravauxTitle;
+      document.getElementById('banner-travaux-sub').textContent = data.bannerTravauxSub;
+      document.getElementById('banner-bienetre-title').textContent = data.bannerBienetreTitle;
+      document.getElementById('banner-bienetre-sub').textContent = data.bannerBienetreSub;
+      document.getElementById('banner-kids-title').textContent = data.bannerKidsTitle;
+      document.getElementById('banner-kids-sub').textContent = data.bannerKidsSub;
+      document.getElementById('banner-hygiene-title').textContent = data.bannerHygieneTitle;
+      document.getElementById('banner-hygiene-sub').textContent = data.bannerHygieneSub;
+      document.getElementById('banner-toutes-title').textContent = data.bannerToutesTitle;
+      document.getElementById('banner-toutes-sub').textContent = data.bannerToutesSub;
+
+      document.getElementById('park1-badge').textContent = data.park1Badge;
+      document.getElementById('park1-title').textContent = data.park1Title;
+      document.getElementById('park1-body').innerHTML = data.park1Body;
+      document.getElementById('park1-high').innerHTML = data.park1High;
+
+      document.getElementById('park2-badge').textContent = data.park2Badge;
+      document.getElementById('park2-title').textContent = data.park2Title;
+      document.getElementById('park2-body').innerHTML = data.park2Body;
+      document.getElementById('park2-high').innerHTML = data.park2High;
+
+      document.getElementById('park3-badge').textContent = data.park3Badge;
+      document.getElementById('park3-title').textContent = data.park3Title;
+      document.getElementById('park3-body').innerHTML = data.park3Body;
+      document.getElementById('park3-high').innerHTML = data.park3High;
+
+      document.getElementById('park4-badge').textContent = data.park4Badge;
+      document.getElementById('park4-title').textContent = data.park4Title;
+      document.getElementById('park4-body').innerHTML = data.park4Body;
+      document.getElementById('park4-high').innerHTML = data.park4High;
+
+      document.getElementById('trav1-badge').textContent = data.trav1Badge;
+      document.getElementById('trav1-title').textContent = data.trav1Title;
+      document.getElementById('trav1-body').innerHTML = data.trav1Body;
+      document.getElementById('trav1-high').innerHTML = data.trav1High;
+
+      document.getElementById('trav2-badge').textContent = data.trav2Badge;
+      document.getElementById('trav2-title').textContent = data.trav2Title;
+      document.getElementById('trav2-body').innerHTML = data.trav2Body;
+      document.getElementById('trav2-high').innerHTML = data.trav2High;
+
+      document.getElementById('hours-title').textContent = data.hoursTitle;
+      document.getElementById('hours-sub').textContent = data.hoursSub;
+      document.getElementById('sched-heading').textContent = data.schedHeading;
+
+      document.getElementById('sched-femmes-title').textContent = data.schedFemmesTitle;
+      document.getElementById('sched-femmes-sub').textContent = data.schedFemmesSub;
+      document.getElementById('sched-femmes-badge').textContent = data.schedFemmesBadge;
+
+      document.getElementById('sched-hommes-title').textContent = data.schedHommesTitle;
+      document.getElementById('sched-hommes-sub').textContent = data.schedHommesSub;
+      document.getElementById('sched-hommes-badge').textContent = data.schedHommesBadge;
+
+      document.getElementById('sched-mixte-title').textContent = data.schedMixteTitle;
+      document.getElementById('sched-mixte-sub').textContent = data.schedMixteSub;
+      document.getElementById('sched-mixte-badge').textContent = data.schedMixteBadge;
+
+      document.getElementById('spa1-badge').textContent = data.spa1Badge;
+      document.getElementById('spa1-title').textContent = data.spa1Title;
+      document.getElementById('spa1-body').textContent = data.spa1Body;
+
+      document.getElementById('spa2-badge').textContent = data.spa2Badge;
+      document.getElementById('spa2-title').textContent = data.spa2Title;
+      document.getElementById('spa2-body').textContent = data.spa2Body;
+
+      document.getElementById('spa3-badge').textContent = data.spa3Badge;
+      document.getElementById('spa3-title').textContent = data.spa3Title;
+      document.getElementById('spa3-body').textContent = data.spa3Body;
+
+      document.getElementById('spa4-badge').textContent = data.spa4Badge;
+      document.getElementById('spa4-title').textContent = data.spa4Title;
+      document.getElementById('spa4-body').textContent = data.spa4Body;
+
+      document.getElementById('kids1-title').textContent = data.kids1Title;
+      document.getElementById('kids1-desc').textContent = data.kids1Desc;
+      document.getElementById('kids2-title').textContent = data.kids2Title;
+      document.getElementById('kids2-desc').textContent = data.kids2Desc;
+      document.getElementById('kids3-title').textContent = data.kids3Title;
+      document.getElementById('kids3-desc').textContent = data.kids3Desc;
+      document.getElementById('kids4-title').textContent = data.kids4Title;
+      document.getElementById('kids4-desc').textContent = data.kids4Desc;
+
+      document.getElementById('kidsrule1-badge').textContent = data.kidsrule1Badge;
+      document.getElementById('kidsrule1-title').textContent = data.kidsrule1Title;
+      document.getElementById('kidsrule1-body').innerHTML = data.kidsrule1Body;
+      document.getElementById('kidsrule1-high').innerHTML = data.kidsrule1High;
+
+      document.getElementById('kidsrule2-badge').textContent = data.kidsrule2Badge;
+      document.getElementById('kidsrule2-title').textContent = data.kidsrule2Title;
+      document.getElementById('kidsbullet1').textContent = data.kidsbullet1;
+      document.getElementById('kidsbullet2').textContent = data.kidsbullet2;
+      document.getElementById('kidsbullet3').textContent = data.kidsbullet3;
+      document.getElementById('kidsbullet4').textContent = data.kidsbullet4;
+
+      document.getElementById('hyg1-badge').textContent = data.hyg1Badge;
+      document.getElementById('hyg1-title').textContent = data.hyg1Title;
+      document.getElementById('hyg1-body').textContent = data.hyg1Body;
+
+      document.getElementById('hyg2-badge').textContent = data.hyg2Badge;
+      document.getElementById('hyg2-title').textContent = data.hyg2Title;
+      document.getElementById('hyg2-body').textContent = data.hyg2Body;
+
+      document.getElementById('hyg3-badge').textContent = data.hyg3Badge;
+      document.getElementById('hyg3-title').textContent = data.hyg3Title;
+      document.getElementById('hyg3-body').textContent = data.hyg3Body;
+
+      document.getElementById('hyg4-badge').textContent = data.hyg4Badge;
+      document.getElementById('hyg4-title').textContent = data.hyg4Title;
+      document.getElementById('hyg4-body').textContent = data.hyg4Body;
+
+      document.getElementById('checklist-title').textContent = data.checklistTitle;
+      document.getElementById('check1-text').textContent = data.check1;
+      document.getElementById('check2-text').textContent = data.check2;
+      document.getElementById('check3-text').textContent = data.check3;
+      document.getElementById('check4-text').textContent = data.check4;
+
+      document.getElementById('boxmenu-modal-title').textContent = data.boxmenuModalTitle;
+      document.getElementById('boxmenu-modal-sub').textContent = data.boxmenuModalSub;
+
+      document.getElementById('modal-title').textContent = data.modalTitle;
+      document.getElementById('modal-sub').textContent = data.modalSub;
+      document.getElementById('modal-office').innerHTML = data.modalOffice;
+      document.getElementById('modal-hours').innerHTML = data.modalHours;
+      document.getElementById('modal-commitment').innerHTML = data.modalCommitment;
+      document.getElementById('modal-close-btn').textContent = data.modalCloseBtn;
+
+      document.getElementById('footer-quote').textContent = data.footerQuote;
+      document.getElementById('footer-syndic').textContent = data.footerSyndic;
+      document.getElementById('footer-copyright').textContent = data.footerCopyright;
+
+      initTodayScheduleStatus();
+      populateVueGlobale();
+    }
+
+    function switchTab(tabId, element) {
+      document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+
+      if (element) {
+        element.classList.add('active');
+      } else {
+        const btn = document.getElementById(`tab-btn-${tabId}`);
+        if (btn) btn.classList.add('active');
+      }
+
+      const targetPanel = document.getElementById(`panel-${tabId}`);
+      if (targetPanel) {
+        targetPanel.classList.add('active');
+      }
+
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      }
+    }
+
+    function initTodayScheduleStatus() {
+      const data = I18N[currentLang];
+      const now = new Date();
+      const dayIndex = now.getDay();
+      const dayName = data.days[dayIndex];
+
+      const currentDayText = document.getElementById('currentDayText');
+      let todayAccess = "";
+      let cardIdToHighlight = "";
+
+      if (dayIndex === 1 || dayIndex === 3 || dayIndex === 5) {
+        todayAccess = data.spaFemmesText.replace('{day}', dayName);
+        cardIdToHighlight = "sched-femmes";
+      } else if (dayIndex === 2 || dayIndex === 4 || dayIndex === 6) {
+        todayAccess = data.spaHommesText.replace('{day}', dayName);
+        cardIdToHighlight = "sched-hommes";
+      } else if (dayIndex === 0) {
+        todayAccess = data.spaMixteText;
+        cardIdToHighlight = "sched-mixte";
+      }
+
+      if (currentDayText) currentDayText.textContent = todayAccess;
+
+      document.querySelectorAll('.schedule-card').forEach(c => c.classList.remove('active-day'));
+      if (cardIdToHighlight) {
+        const activeCard = document.getElementById(cardIdToHighlight);
+        if (activeCard) activeCard.classList.add('active-day');
+      }
+    }
+
+    function populateVueGlobale() {
+      const container = document.getElementById('allPanelsContainer');
+      if (!container) return;
+
+      const panels = ['parking', 'travaux', 'bienetre', 'kids', 'hygiene'];
+      let html = '';
+
+      panels.forEach(pId => {
+        const panelEl = document.getElementById(`panel-${pId}`);
+        if (panelEl) {
+          html += `<div style="margin-bottom:2rem;">${panelEl.innerHTML}</div>`;
+        }
+      });
+
+      container.innerHTML = html;
+    }
+
+    function filterRules() {
+      const query = document.getElementById('searchInput').value.toLowerCase().trim();
+      const items = document.querySelectorAll('.search-item');
+
+      items.forEach(item => {
+        if (query === "" || item.textContent.toLowerCase().includes(query)) {
+          item.style.display = "";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    }
+
+    function openContactModal() {
+      document.getElementById('contactModal').classList.add('open');
+    }
+
+    function closeContactModal() {
+      document.getElementById('contactModal').classList.remove('open');
+    }
+
+    function openBoxMenu() {
+      document.getElementById('boxMenuModal').classList.add('open');
+    }
+
+    function closeBoxMenu() {
+      document.getElementById('boxMenuModal').classList.remove('open');
+    }
+
+    function selectBoxTab(tabId) {
+      switchTab(tabId);
+      closeBoxMenu();
+    }
+  </script>
+</body>
+</html>

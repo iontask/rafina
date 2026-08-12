@@ -1,0 +1,6 @@
+{
+  "name": "Résidence Rafina — Ain Sebaa",
+  "description": "Portail Digital d'Information et Règlement de Copropriété des Résidents",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
