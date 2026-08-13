@@ -29,21 +29,21 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-4">
         
         {/* LOGO BLOCK */}
-        <a href="#" className="flex items-center gap-3 group">
+        <a href="#" className="flex items-center gap-2 sm:gap-3 group min-w-0">
           {/* House with leaf icon */}
-          <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-teal-500/20 to-emerald-500/10 border border-teal-500/40 flex items-center justify-center text-teal-400 group-hover:border-teal-400 transition-colors shadow-lg shadow-teal-500/10">
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-teal-500/20 to-emerald-500/10 border border-teal-500/40 flex items-center justify-center text-teal-400 group-hover:border-teal-400 transition-colors shadow-lg shadow-teal-500/10 flex-shrink-0">
+            <svg className="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
               <path d="M9 22V12h6v10" />
               <path d="M12 11c0-1.5 1-2.5 2.5-2.5s2.5 1 2.5 2.5" className="stroke-teal-300" />
             </svg>
           </div>
           
-          <div className="flex flex-col">
-            <span className="font-['Great_Vibes',cursive] text-2xl sm:text-3xl text-teal-400 leading-none tracking-wide text-shadow-teal">
+          <div className="flex flex-col justify-center min-w-0">
+            <span className="font-['Great_Vibes',cursive] text-lg sm:text-2xl lg:text-3xl text-teal-400 leading-tight tracking-wide whitespace-nowrap">
               {t.residenceTitle}
             </span>
-            <span className="text-[10px] sm:text-xs font-semibold text-slate-300 tracking-wider uppercase">
+            <span className="text-[8px] sm:text-[10px] md:text-xs font-semibold text-slate-300 tracking-wider uppercase whitespace-nowrap overflow-hidden text-ellipsis">
               {t.residenceSub}
             </span>
           </div>
@@ -81,15 +81,16 @@ export const Header: React.FC<HeaderProps> = ({
         </nav>
 
         {/* RIGHT CONTROLS */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex items-center gap-1.5 sm:gap-3 flex-shrink-0">
           {/* Language Switcher */}
           <button
             onClick={onToggleLang}
-            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-slate-200 text-xs font-bold hover:bg-slate-700/80 transition-all cursor-pointer"
+            className="flex items-center gap-1 px-2 sm:px-2.5 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-slate-200 text-xs font-bold hover:bg-slate-700/80 transition-all cursor-pointer flex-shrink-0"
             title="Changer la langue / تغيير اللغة"
           >
             <span>{currentLang === 'fr' ? '🇲🇦' : '🇫🇷'}</span>
-            <span>{currentLang === 'fr' ? 'العربية' : 'Français'}</span>
+            <span className="sm:hidden text-[10px]">{currentLang === 'fr' ? 'AR' : 'FR'}</span>
+            <span className="hidden sm:inline">{currentLang === 'fr' ? 'العربية' : 'Français'}</span>
           </button>
 
           {/* Bell / Bulletin Board Shortcut Icon */}

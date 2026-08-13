@@ -150,7 +150,7 @@ export const Hero: React.FC<HeroProps> = ({
           <div className="lg:col-span-5 relative">
             <div
               onClick={() => setIsLightboxOpen(true)}
-              className="relative rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl group cursor-pointer"
+              className="relative rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl group cursor-pointer bg-[#040c18]"
               title="Agrandir l'image de la résidence"
             >
               <img
@@ -159,30 +159,43 @@ export const Hero: React.FC<HeroProps> = ({
                 className="w-full h-64 sm:h-80 lg:h-88 object-cover group-hover:scale-105 transition-transform duration-700 brightness-95"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/25 to-slate-950/20"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/40"></div>
               
-              {/* SCRIPT BRANDING OVERLAY IN CYAN TOP-RIGHT MATCHING ATTACHED IMAGE */}
-              <div className="absolute top-4 right-5 text-right pointer-events-none">
-                <span className="font-['Great_Vibes',cursive] text-3xl sm:text-4xl text-teal-300 drop-shadow-[0_2px_12px_rgba(34,211,238,0.9)] block">
-                  {t.residenceTitle}
+              {/* TOP RIGHT CALLIGRAPHIC CYAN SCRIPT — MATCHING USER IMAGE */}
+              <div className="absolute top-3 right-4 text-right pointer-events-none z-10">
+                <span className="font-['Great_Vibes',cursive] text-2xl sm:text-3xl lg:text-4xl text-teal-300 drop-shadow-[0_2px_12px_rgba(34,211,238,0.95)] block whitespace-nowrap">
+                  Les Pavillons Verts
                 </span>
-                <span className="text-[11px] uppercase font-bold tracking-widest text-teal-200 drop-shadow-md">
-                  {t.residenceSub}
+              </div>
+
+              {/* BOTTOM RIGHT CALLIGRAPHIC CYAN SCRIPT — MATCHING USER IMAGE */}
+              <div className="absolute bottom-3 right-5 text-right pointer-events-none z-10">
+                <span className="font-['Great_Vibes',cursive] text-xl sm:text-2xl lg:text-3xl text-teal-300 drop-shadow-[0_2px_10px_rgba(34,211,238,0.9)] block whitespace-nowrap">
+                  Aïn Sebaa
                 </span>
+              </div>
+
+              {/* BOTTOM-LEFT NEON CYAN DIAGONAL ACCENT LINES — MATCHING USER IMAGE */}
+              <div className="absolute bottom-0 left-0 w-24 h-24 pointer-events-none overflow-hidden z-10">
+                <div className="absolute bottom-[-10px] left-[-20px] w-32 h-1 bg-teal-400 rotate-[-35deg] shadow-[0_0_10px_#22d3ee]"></div>
+                <div className="absolute bottom-[-20px] left-[-20px] w-32 h-1 bg-teal-400/60 rotate-[-35deg]"></div>
+              </div>
+
+              {/* BOTTOM-RIGHT NEON CYAN DIAGONAL ACCENT LINES — MATCHING USER IMAGE */}
+              <div className="absolute bottom-0 right-0 w-24 h-24 pointer-events-none overflow-hidden z-10">
+                <div className="absolute bottom-[-10px] right-[-20px] w-32 h-1 bg-teal-400 rotate-[35deg] shadow-[0_0_10px_#22d3ee]"></div>
+                <div className="absolute bottom-[-20px] right-[-20px] w-32 h-1 bg-teal-400/60 rotate-[35deg]"></div>
               </div>
 
               {/* MAGNIFY HOVER ICON */}
-              <div className="absolute top-4 left-4 p-2 rounded-xl bg-slate-900/70 border border-slate-700 text-slate-200 group-hover:text-teal-300 transition-colors opacity-0 group-hover:opacity-100">
+              <div className="absolute top-4 left-4 p-2 rounded-xl bg-slate-900/70 border border-slate-700 text-slate-200 group-hover:text-teal-300 transition-colors opacity-0 group-hover:opacity-100 z-10">
                 <Maximize2 className="w-4 h-4" />
               </div>
 
-              {/* STATUS PILL AT BOTTOM */}
-              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs bg-slate-900/85 backdrop-blur-md p-3 rounded-xl border border-slate-700">
-                <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                  <span className="font-semibold text-slate-200">{t.securedBadge}</span>
-                </div>
-                <span className="text-teal-400 font-bold">{t.cityBadge}</span>
+              {/* STATUS PILL AT BOTTOM LEFT */}
+              <div className="absolute bottom-3 left-4 flex items-center gap-2 text-[11px] bg-slate-900/85 backdrop-blur-md px-3 py-1.5 rounded-xl border border-slate-700/80 z-10">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span className="font-semibold text-slate-200">{t.securedBadge}</span>
               </div>
             </div>
           </div>
