@@ -94,9 +94,9 @@ export const Hero: React.FC<HeroProps> = ({
             {/* 3 QUICK ACTION GLASS CARDS */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
               
-              {/* Card 1: Bulletin Board */}
-              <button
-                onClick={onOpenBulletinBoard}
+              {/* Card 1: Bulletin Board & Dashboard */}
+              <a
+                href="#dashboard-section"
                 className="flex items-center sm:flex-col sm:items-start gap-3 p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-teal-500/50 hover:bg-slate-800/60 transition-all group backdrop-blur-md text-left rtl:text-right cursor-pointer"
               >
                 <div className="w-10 h-10 rounded-lg bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 group-hover:scale-105 transition-transform flex-shrink-0">
@@ -104,11 +104,11 @@ export const Hero: React.FC<HeroProps> = ({
                 </div>
                 <div>
                   <div className="text-xs font-bold text-white group-hover:text-teal-300 transition-colors">
-                    {t.cardRuleTitle}
+                    {currentLang === 'ar' ? 'لوحة القيادة والإعلانات' : 'Tableau d\'Affichage'}
                   </div>
-                  <div className="text-[11px] text-slate-400">{t.cardRuleSub}</div>
+                  <div className="text-[11px] text-slate-400">{currentLang === 'ar' ? '5 إعلانات رسمية وتوقيت اليوم' : '5 Affiches & Direct'}</div>
                 </div>
-              </button>
+              </a>
 
               {/* Card 2: Services & Security */}
               <button

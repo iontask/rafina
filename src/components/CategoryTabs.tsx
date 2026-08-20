@@ -16,14 +16,14 @@ export const CategoryTabs: React.FC<CategoryTabsProps> = ({
   const t = uiTranslations[currentLang];
 
   const tabs = [
-    { id: 'security' as const, label: t.catSecurity, icon: '🔒' },
-    { id: 'admin' as const, label: t.catAdmin, icon: '📑' },
-    { id: 'parking' as const, label: t.catParking, icon: '🚗' },
-    { id: 'cadre' as const, label: t.catCadre, icon: '🏢' },
-    { id: 'travaux' as const, label: t.catTravaux, icon: '🛠️' },
-    { id: 'hygiene' as const, label: t.catHygiene, icon: '🧹' },
-    { id: 'sports' as const, label: t.catSports, icon: '🏃' },
-    { id: 'kids' as const, label: t.catKids, icon: '🎈' },
+    { id: 'titre1' as const, label: t.catTitre1, icon: '📋' },
+    { id: 'titre2' as const, label: t.catTitre2, icon: '🏠' },
+    { id: 'titre3' as const, label: t.catTitre3, icon: '⚖️' },
+    { id: 'titre4' as const, label: t.catTitre4, icon: '🏢' },
+    { id: 'titre5' as const, label: t.catTitre5, icon: '🚪' },
+    { id: 'titre6' as const, label: t.catTitre6, icon: '🚨' },
+    { id: 'titre7' as const, label: t.catTitre7, icon: '🚗' },
+    { id: 'titre8' as const, label: t.catTitre8, icon: '💳' },
   ];
 
   return (

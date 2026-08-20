@@ -32,14 +32,14 @@ export const MobileMenuModal: React.FC<MobileMenuModalProps> = ({
 
   const categories = [
     { id: 'all' as const, label: t.catAll, icon: '📜' },
-    { id: 'security' as const, label: t.catSecurity, icon: '🔒' },
-    { id: 'admin' as const, label: t.catAdmin, icon: '📑' },
-    { id: 'parking' as const, label: t.catParking, icon: '🚗' },
-    { id: 'cadre' as const, label: t.catCadre, icon: '🏢' },
-    { id: 'travaux' as const, label: t.catTravaux, icon: '🛠️' },
-    { id: 'hygiene' as const, label: t.catHygiene, icon: '🧹' },
-    { id: 'sports' as const, label: t.catSports, icon: '🏃' },
-    { id: 'kids' as const, label: t.catKids, icon: '🎈' },
+    { id: 'titre1' as const, label: t.catTitre1, icon: '📋' },
+    { id: 'titre2' as const, label: t.catTitre2, icon: '🏠' },
+    { id: 'titre3' as const, label: t.catTitre3, icon: '⚖️' },
+    { id: 'titre4' as const, label: t.catTitre4, icon: '🏢' },
+    { id: 'titre5' as const, label: t.catTitre5, icon: '🚪' },
+    { id: 'titre6' as const, label: t.catTitre6, icon: '🚨' },
+    { id: 'titre7' as const, label: t.catTitre7, icon: '🚗' },
+    { id: 'titre8' as const, label: t.catTitre8, icon: '💳' },
   ];
 
   return (
@@ -111,19 +111,17 @@ export const MobileMenuModal: React.FC<MobileMenuModalProps> = ({
               Menu principal
             </div>
 
-            <button
-              onClick={() => {
-                onClose();
-                if (onOpenBulletinBoard) onOpenBulletinBoard();
-              }}
+            <a
+              href="#dashboard-section"
+              onClick={onClose}
               className="w-full flex items-center justify-between py-3 px-3.5 rounded-xl text-xs font-bold transition-all bg-teal-500/15 border border-teal-500/40 text-teal-300 cursor-pointer"
             >
               <div className="flex items-center gap-3">
                 <Sparkles className="w-4 h-4 text-teal-400" />
-                <span>Panneau d'Affichage Officiel</span>
+                <span>{currentLang === 'ar' ? 'لوحة القيادة والإعلانات' : 'Tableau de Bord & Affichage'}</span>
               </div>
               <ChevronRight className="w-4 h-4 text-slate-500" />
-            </button>
+            </a>
 
             <button
               onClick={() => {

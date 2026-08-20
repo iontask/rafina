@@ -19,98 +19,111 @@ export const uiTranslations = {
     residenceSub: "Résidence Rafina — Aïn Sebaa",
     navHome: "Accueil",
     navResidence: "La Résidence",
-    navRules: "Règlements",
+    navRules: "Règlement Intérieur (39 Articles)",
     navServices: "Services & Équipements",
     navLife: "Vie Pratique",
-    navSecurity: "Sécurité & Gardiennage",
+    navSecurity: "Sécurité & Urgences",
     navContact: "Contact Syndic",
     residentArea: "Espace Résident",
     
     // Hero
-    heroBadge: "✦ SYNDIC & PANNEAU D'AFFICHAGE OFFICIEL",
-    heroTitle: "Règlement Intérieur & Notices de la Copropriété Rafina",
-    heroSubtitle: "Portail officiel d'information du Syndic : dispositions de la Loi n° 18-00, consignes de sécurité, règles du parking, horaires de la salle de sport, Kids Club et tranquillité des Pavillons Verts (Aïn Sebaa).",
-    cardRuleTitle: "Affiches Officielle",
-    cardRuleSub: "Panneau d'affichage du syndic",
+    heroBadge: "✦ SYNDIC & RÈGLEMENT OFFICIEL DE COPROPRIÉTÉ",
+    heroTitle: "Règlement Intérieur Officiel — Résidence Les Pavillons Verts",
+    heroSubtitle: "Document officiel régissant la vie commune, la sécurité, l'usage des équipements et la gestion des 5 pavillons de la Résidence Rafina Aïn Sebaa, conformément aux lois n° 18-00 et 106-12.",
+    cardRuleTitle: "39 Articles Officiels",
+    cardRuleSub: "Règlement en 8 Titres",
     cardSecurityTitle: "Sécurité 24/7",
-    cardSecuritySub: "Gardiennage & Vidéosurveillance",
+    cardSecuritySub: "Gardiennage & CCTV",
     cardReportTitle: "Signaler un Incident",
     cardReportSub: "Informer le Syndic",
-    searchPlaceholder: "Rechercher une règle, une affiche, un mot-clé (ex: travaux dimanche, parking 2ème sous-sol, salle de sport, kids club, sacs poubelle)...",
+    searchPlaceholder: "Rechercher un article, un mot-clé (ex: travaux bruyants, parking sous-sol, salle de sport, kids club, Aïd, bornes électriques, charges)...",
     securedBadge: "Résidence Sécurisée 24h/24 & 7j/7",
     cityBadge: "Aïn Sebaa — Casablanca",
 
-    // Bulletin Board Section (Panneau d'Affichage)
-    bulletinBoardTitle: "Panneau d'Affichage Officiel du Syndic",
-    bulletinBoardSub: "Consultation numérique des consignes affichées à l'entrée de la Résidence Rafina",
+    // Bulletin Board & Dashboard Section (Panneau d'Affichage & Tableau de Bord)
+    dashboardBadge: "✦ TABLEAU DE BORD & VIE PRATIQUE",
+    dashboardTitle: "Tableau de Bord & Affichage Officiel de la Copropriété",
+    dashboardSub: "Informations en direct, affiches du Syndic, plannings des équipements et consignes pour les 5 pavillons de la Résidence Rafina Aïn Sebaa.",
+    bulletinBoardTitle: "Panneau d'Affichage & Consignes Officielles",
+    bulletinBoardSub: "Notices d'information du Syndic de la Résidence Les Pavillons Verts (Rafina Aïn Sebaa)",
     openBulletinBoard: "Ouvrir le Tableau d'Affichage",
-    tabKidsClub: "Kids Club",
-    tabParkingCirculation: "Circulation Parking",
-    tabGym: "Salle de Sport",
-    tabHygiene: "Propreté & Bacs",
-    tabTravaux: "Travaux Dimanche",
+    printAllPosters: "Imprimer les Affiches",
+    shareOnWhatsApp: "Partager l'affiche",
+    todayBadge: "AUJOURD'HUI",
+    liveStatus: "En direct",
+    gymScheduleTitle: "Salle de Sport (6h30 - 22h30)",
+    kidsClubWidgetTitle: "Espace Kids Club (≤ 6 ans)",
+    parkingWidgetTitle: "Circulation & Vitesse (10 km/h)",
+    quietWidgetTitle: "Tranquillité & Propreté",
+    callHotline: "Appeler le Poste de Garde",
+    openResidentSpace: "Espace Résident & Téléchargements",
+    tabKidsClub: "Kids Club (≤ 6 ans)",
+    tabParkingCirculation: "Circulation (10 km/h)",
+    tabGym: "Salle de Sport (Planning)",
+    tabHygiene: "Propreté & Poubelles",
+    tabTravaux: "Travaux & Horaires",
 
     // Quick Live Status Widget
-    gymTodayTitle: "Planning Salle de Sport Aujourd'hui",
-    kidsClubStatusTitle: "Kids Club (Aire de jeux)",
+    gymTodayTitle: "Planning Salle de Sport",
+    kidsClubStatusTitle: "Espace Kids Club",
     reportIncidentBtn: "Signaler un Incident au Syndic",
 
-    // Categories
-    catAll: "Toutes les règles (18 Articles)",
-    catSecurity: "Sécurité & Accès",
-    catAdmin: "Gestion & Charges",
-    catParking: "Circulation & Parking",
-    catCadre: "Cadre de Vie & Façades",
-    catTravaux: "Travaux & Nuisances",
-    catHygiene: "Propreté & Bacs",
-    catSports: "Salle de Sport",
-    catKids: "Kids Club",
+    // Categories (8 Titres Officiels)
+    catAll: "Tous les 39 Articles",
+    catTitre1: "Titre I : Préambule & Descriptif",
+    catTitre2: "Titre II : Parties Privatives",
+    catTitre3: "Titre III : Dispositions Particulières",
+    catTitre4: "Titre IV : Fonctionnement du Site",
+    catTitre5: "Titre V : Gestion des Accès",
+    catTitre6: "Titre VI : Procédures d'Urgence",
+    catTitre7: "Titre VII : Parking, Toitures & Bornes",
+    catTitre8: "Titre VIII : Charges de Copropriété",
 
     // Main Section
-    sectionTitle: "Dispositions du Règlement Intérieur (18 Articles)",
-    sectionSub: "Extrait officiel du texte régissant la vie commune des 209 appartements de la Résidence Rafina",
+    sectionTitle: "Texte Intégral du Règlement Intérieur (39 Articles)",
+    sectionSub: "Consultez les 8 Titres officiels de la Résidence Les Pavillons Verts — Rafina Aïn Sebaa",
     emergencyTitle: "En cas d'urgence",
     emergencyPhone: "06 00 00 24 7/7",
     noRulesFound: "Aucun article ne correspond à votre recherche",
     resetFilters: "Réinitialiser la recherche",
-    viewAllRules: "Afficher tous les articles",
+    viewAllRules: "Afficher tous les 39 articles",
 
     // Cards & Modals
-    details: "Consulter l'article",
+    details: "Consulter le texte complet",
     share: "Partager sur WhatsApp",
-    back: "Retour aux articles",
-    stricteHeader: "Disposition Stricte / Consigne Affichée",
+    back: "Retour au sommaire",
+    stricteHeader: "Obligation / Règle Stricte",
     signalisationHeader: "Consignes d'Application",
     objectiveHeader: "Objectif Réglementaire",
-    goodPracticesHeader: "Bonnes Pratiques Recommandées",
+    goodPracticesHeader: "Bonnes Pratiques & Recommandations",
     docsHeader: "Document Officiel Associé",
     shareRuleHeader: "Partager cet article de copropriété",
     prevRule: "Article précédent",
     nextRule: "Article suivant",
     needAssistance: "Besoin d'une assistance immédiate ?",
     teamAvailable: "L'équipe de gardiennage et le syndic sont à votre service 24h/24",
-    urgencySecurity: "URGENCE & SÉCURITÉ RESIDENCE",
-    pdfDefault: "Règlement Intérieur Copropriété Rafina",
+    urgencySecurity: "URGENCE & SÉCURITÉ RÉSIDENCE",
+    pdfDefault: "Règlement Intérieur — Les Pavillons Verts Rafina",
 
     // Features
-    feat1Title: "Signalement Simple & Rapide",
-    feat1Desc: "Informez directement le syndic de tout dysfonctionnement ou incident",
+    feat1Title: "Cadre Juridique Loi 18-00 & 106-12",
+    feat1Desc: "Règlementation officielle pour la protection du patrimoine et du vivre-ensemble",
     feat2Title: "Sécurité & Gardiennage 24/7",
-    feat2Desc: "Agents de sécurité qualifiés et vidéo-protection continue",
-    feat3Title: "Conformité Loi n° 18-00",
-    feat3Desc: "Gestion rigoureuse et convocations régulières du Conseil Syndical",
-    feat4Title: "209 Copropriétaires Engagés",
-    feat4Desc: "Engagés ensemble pour préserver la valeur et la quiétude de notre résidence",
+    feat2Desc: "Poste de garde permanent, contrôle des accès et vidéosurveillance",
+    feat3Title: "Équipements Haut de Gamme",
+    feat3Desc: "Salle de sport, Kids Club, parkings sous-sol, espaces verts et mosquée",
+    feat4Title: "Gestion Transparente",
+    feat4Desc: "Conseil syndical, assemblées générales et entretien régulier des 5 pavillons",
 
     // Footer
-    footerAbout: "Résidence Rafina Aïn Sebaa — Une copropriété haut de gamme de 209 appartements où sécurité, sérénité et vivre-ensemble se conjuguent au quotidien.",
+    footerAbout: "Résidence Les Pavillons Verts (Rafina Aïn Sebaa) — Ensemble immobilier d'habitation haut de gamme composé de 5 pavillons. Un cadre de vie paisible, sécurisé et harmonieux au cœur d'Aïn Sebaa.",
     navHeader: "Navigation",
-    infoHeader: "Informations Pratiques",
+    infoHeader: "Sommaire du Règlement",
     contactHeader: "Contact & Urgences",
-    newsletterHeader: "Bulletin de la Résidence",
-    newsletterDesc: "Abonnez-vous aux circulaires d'information du syndic",
+    newsletterHeader: "Circulaires du Syndic",
+    newsletterDesc: "Recevez les avis et convocations officielles de la copropriété",
     emailPlaceholder: "Votre adresse e-mail",
-    copyright: "© 2026 Résidence Rafina — Les Pavillons Verts. Tous droits réservés.",
+    copyright: "© 2026 Résidence Les Pavillons Verts — Rafina Aïn Sebaa (Rafina Group). Tous droits réservés.",
     legal: "Mentions légales",
     privacy: "Politique de confidentialité",
   },
@@ -121,372 +134,715 @@ export const uiTranslations = {
     residenceSub: "إقامة رافينا — عين السبع",
     navHome: "الرئيسية",
     navResidence: "عن الإقامة",
-    navRules: "النظام الداخلي",
+    navRules: "النظام الداخلي (39 مادة)",
     navServices: "الخدمات والتجهيزات",
     navLife: "الحياة اليومية",
-    navSecurity: "الأمن والحراسة",
+    navSecurity: "الأمن والطوارئ",
     navContact: "اتصل بالسنديك",
     residentArea: "فضاء الساكنة",
 
     // Hero
-    heroBadge: "✦ ميثاق السنديك وسبورة الإعلانات الرسمية",
-    heroTitle: "النظام الداخلي والبلاغات الرسمية لإقامة رافينا",
-    heroSubtitle: "البوابة الرسمية لإعلام الساكنة: مقتضيات القانون رقم 18-00، تعليمات السلامة، قواعد المرور بالقبو، أوقات القاعة الرياضية، نادي الأطفال وراحة بال جميع السكان بـ Les Pavillons Verts (عين السبع).",
-    cardRuleTitle: "الإعلانات الرسمية",
-    cardRuleSub: "لوحة إعلانات السنديك",
-    cardSecurityTitle: "الأمن والحراسة 24/7",
-    cardSecuritySub: "مراقبة وحراسة مستمرة",
+    heroBadge: "✦ النظام الداخلي الرسمي لاتحاد الملاك المشتركين",
+    heroTitle: "النظام الداخلي الرسمي — إقامة Les Pavillons Verts",
+    heroSubtitle: "الوثيقة الرسمية المنظمة للحياة المشتركة، الأمن، استخدام المرافق وتسيير الأجنحة الخمسة لإقامة رافينا عين السبع، طبقاً لمقتضيات القانون 18-00 المعدل بالقانون 106-12.",
+    cardRuleTitle: "39 مادة قانونية",
+    cardRuleSub: "النظام في 8 أبواب",
+    cardSecurityTitle: "حراسة 24/7",
+    cardSecuritySub: "أمن ومراقبة بالكاميرات",
     cardReportTitle: "الإبلاغ عن حادث",
     cardReportSub: "إشعار السنديك فوراً",
-    searchPlaceholder: "البحث عن مادة، إعلان، أو كلمة مفتاحية (مثل: أشغال الأحد، موقف القبو 2، القاعة الرياضية، أكياس الأزبال)...",
-    securedBadge: "إقامة مؤمنة على مدار 24/7",
+    searchPlaceholder: "ابحث عن مادة، كلمة مفتاحية (مثل: الأشغال المزعجة، المرآب، القاعة الرياضية، نادي الأطفال، عيد الأضحى، شواحن السيارات، الواجبات)...",
+    securedBadge: "إقامة محروسة 24/24 و 7/7",
     cityBadge: "عين السبع — الدار البيضاء",
 
-    // Bulletin Board Section
-    bulletinBoardTitle: "لوحة الإعلانات الرسمية للسنديك",
-    bulletinBoardSub: "اطلاع رقمي مباشر على الملصقات المعلقة بمدخل إقامة رافينا",
-    openBulletinBoard: "فتح لوحة الإعلانات الرسمية",
-    tabKidsClub: "نادي الأطفال",
-    tabParkingCirculation: "سير السيارات بالقبو",
-    tabGym: "القاعة الرياضية",
-    tabHygiene: "النظافة وحاويات الأزبال",
-    tabTravaux: "أشغال يوم الأحد",
+    // Bulletin Board & Dashboard Section (لوحة الإعلانات ولوحة القيادة)
+    dashboardBadge: "✦ لوحة القيادة والحياة اليومية",
+    dashboardTitle: "لوحة القيادة ولوحة الإعلانات الرسمية للإقامة",
+    dashboardSub: "المعلومات الآنية، بلاغات السنديك، برامج التجهيزات والتعليمات الرسمية للأجنحة الخمسة لإقامة رافينا عين السبع.",
+    bulletinBoardTitle: "لوحة الإعلانات والتعليمات الرسمية",
+    bulletinBoardSub: "بلاغات وإشعارات السنديك لإقامة Les Pavillons Verts (رافينا عين السبع)",
+    openBulletinBoard: "فتح لوحة الإعلانات",
+    printAllPosters: "طباعة الإعلانات",
+    shareOnWhatsApp: "مشاركة الإعلان",
+    todayBadge: "اليوم",
+    liveStatus: "مباشر",
+    gymScheduleTitle: "القاعة الرياضية (06:30 - 22:30)",
+    kidsClubWidgetTitle: "نادي الأطفال (≤ 6 سنوات)",
+    parkingWidgetTitle: "المرور والسرعة (10 كم/س)",
+    quietWidgetTitle: "الهدوء والنظافة العامة",
+    callHotline: "الاتصال بنقطة الحراسة",
+    openResidentSpace: "فضاء الساكنة والتحميلات",
+    tabKidsClub: "نادي الأطفال (≤ 6 سنوات)",
+    tabParkingCirculation: "المرور بالمرآب (10 كم/س)",
+    tabGym: "القاعة الرياضية (البرنامج)",
+    tabHygiene: "النظافة وحاويات النفايات",
+    tabTravaux: "أوقات الأشغال",
 
     // Quick Live Status Widget
     gymTodayTitle: "برنامج القاعة الرياضية اليوم",
-    kidsClubStatusTitle: "نادي الأطفال (فضاء اللعب)",
-    reportIncidentBtn: "إبلاغ السنديك بمخالفة / مشكل",
+    kidsClubStatusTitle: "فضاء نادي الأطفال",
+    reportIncidentBtn: "إبلاغ السنديك عن حادث أو عطب",
 
-    // Categories
-    catAll: "جميع المواد (18 مادة)",
-    catSecurity: "الأمن والولوج",
-    catAdmin: "الإدارة والواجبات",
-    catParking: "السير والمواقف",
-    catCadre: "العيش المشترك والواجهات",
-    catTravaux: "الأشغال والضوضاء",
-    catHygiene: "النظافة والبيئة",
-    catSports: "القاعة الرياضية",
-    catKids: "نادي الأطفال",
+    // Categories (8 Titres Officiels)
+    catAll: "جميع المواد (39 مادة)",
+    catTitre1: "الباب 1: التقديم والوصف",
+    catTitre2: "الباب 2: الأجزاء المفرزة",
+    catTitre3: "الباب 3: مقتضيات خاصة والأشغال",
+    catTitre4: "الباب 4: تسيير الإقامة والمرافق",
+    catTitre5: "الباب 5: تدبير الولوج والمرور",
+    catTitre6: "الباب 6: إجراءات الطوارئ",
+    catTitre7: "الباب 7: المرآب والسطوح والشواحن",
+    catTitre8: "الباب 8: تكاليف التسيير والصيانة",
 
     // Main Section
-    sectionTitle: "بنود النظام الداخلي (18 مادة)",
-    sectionSub: "النص الرسمي المنظم للحياة المشتركة لـ 209 شقة بإقامة رافينا عين السبع",
+    sectionTitle: "النص الكامل للنظام الداخلي (39 مادة)",
+    sectionSub: "اطلع على الأبواب الثمانية الرسمية لإقامة Les Pavillons Verts — رافينا عين السبع",
     emergencyTitle: "في حالة الطوارئ",
     emergencyPhone: "06 00 00 24 7/7",
-    noRulesFound: "لم يتم العثور على أي مادة تطابق بحثك",
+    noRulesFound: "لا توجد أي مادة مطابقة لبحثك",
     resetFilters: "إعادة ضبط البحث",
-    viewAllRules: "عرض جميع المواد",
+    viewAllRules: "عرض جميع المواد الـ 39",
 
     // Cards & Modals
-    details: "قراءة البند الكامل",
+    details: "الاطلاع على النص الكامل للمادة",
     share: "مشاركة عبر واتساب",
-    back: "العودة للمواد",
-    stricteHeader: "مقتضى صارم / تعليمات معلقة",
-    signalisationHeader: "تعليمات التطبيق",
+    back: "العودة إلى الفهرس",
+    stricteHeader: "المقتضى الصارم / الالتزام القانوني",
+    signalisationHeader: "تعليمات التطبيق الميداني",
     objectiveHeader: "الهدف التنظيمي",
-    goodPracticesHeader: "الممارسات الحسنة الموصى بها",
-    docsHeader: "الوثيقة الرسمية المرفقة",
-    shareRuleHeader: "مشاركة هذا البند مع السكان",
+    goodPracticesHeader: "الممارسات الفضلى الموصى بها",
+    docsHeader: "الوثيقة الرسمية المرجعية",
+    shareRuleHeader: "مشاركة هذه المادة مع الجيران",
     prevRule: "المادة السابقة",
     nextRule: "المادة التالية",
-    needAssistance: "هل تحتاج إلى مساعدة عاجلة؟",
-    teamAvailable: "فريق الأمن والحراسة والسنديك في خدمتكم على مدار 24 ساعة",
-    urgencySecurity: "الطوارئ والأمن بالإقامة",
-    pdfDefault: "النظام الداخلي الكامل لإقامة رافينا",
+    needAssistance: "هل تحتاج إلى مساعدة فورية؟",
+    teamAvailable: "فريق الحراسة والسنديك في خدمتكم على مدار الساعة 24/7",
+    urgencySecurity: "طوارئ وأمن الإقامة",
+    pdfDefault: "النظام الداخلي — Les Pavillons Verts رافينا",
 
     // Features
-    feat1Title: "تبليغ سريع وسهل",
-    feat1Desc: "أبلغ السنديك عن أي خلل أو مشكلة بنقرة واحدة",
-    feat2Title: "حراسة وأمن 24/7",
-    feat2Desc: "فريق حراسة مؤهل مع كاميرات مراقبة متطورة",
-    feat3Title: "مطابقة للقانون 18-00",
-    feat3Desc: "تسيير شفاف واجتماعات دورية لمجلس الملكية المشتركة",
-    feat4Title: "209 مالك مشترك",
-    feat4Desc: "معاً للحفاظ على قيمة إقامتنا وراحة بال الجميع",
+    feat1Title: "الإطار القانوني (القانون 18-00 و 106-12)",
+    feat1Desc: "تنظيم قانوني رسمي لحماية الملكية العقارية وحسن الجوار",
+    feat2Title: "حراسة وأمن على مدار الساعة 24/7",
+    feat2Desc: "نقطة مراقبة دائمة، تنظيم المداخل ونظام كاميرات مراقبة متكامل",
+    feat3Title: "مرافق وتجهيزات راقية",
+    feat3Desc: "قاعة رياضة، نادي أطفال، مرآب تحت أرضي، مساحات خضراء ومسجد",
+    feat4Title: "تسيير شفاف واحترافي",
+    feat4Desc: "مجلس الملكية المشتركة، جموع عامة منتظمة وصيانة مستمرة للأجنحة الخمسة",
 
     // Footer
-    footerAbout: "إقامة رافينا عين السبع — مجمع سكني راقٍ بـ 209 شقة حيث يتكامل الأمان والنظافة وحسن الجوار يومياً لراحة وسعادة كل عائلة.",
+    footerAbout: "إقامة Les Pavillons Verts (رافينا عين السبع) — مجمع سكني راقٍ مكون من 5 أجنحة سكنية مجهزة. بيئة عيش هادئة وآمنة في قلب عين السبع.",
     navHeader: "التصفح",
-    infoHeader: "معلومات عملية",
+    infoHeader: "فهرس النظام الداخلي",
     contactHeader: "الاتصال والطوارئ",
-    newsletterHeader: "نشرة الإقامة",
-    newsletterDesc: "اشترك للحصول على البلاغات والإشعارات الرسمية من السنديك",
-    emailPlaceholder: "البريد الإلكتروني الخاص بك",
-    copyright: "© 2026 إقامة رافينا — Les Pavillons Verts. جميع الحقوق محفوظة.",
+    newsletterHeader: "بلاغات السنديك",
+    newsletterDesc: "توصل بالإشعارات والبلاغات الرسمية لاتحاد الملاك",
+    emailPlaceholder: "بريدك الإلكتروني",
+    copyright: "© 2026 إقامة Les Pavillons Verts — رافينا عين السبع (مجموعة رافينا). جميع الحقوق محفوظة.",
     legal: "الشروط القانونية",
     privacy: "سياسة الخصوصية",
   }
 };
 
 export const arabicRulesContent: Record<string, RuleTranslation> = {
+  // TITRE I
   'rule-01': {
     tag: "الباب الأول — المادة 1",
-    title: "المادة 1 : مراقبة الولوج وإغلاق الأبواب",
-    summary: "التزام صارم على جميع الملاك والسكان بإغلاق الباب الرئيسي للإقامة وأبواب المشاة لكل جناح تلقائياً. يُمنع منعاً باتاً عرقلة إغلاق الأبواب عمداً.",
-    stricteRule: "أولوية قصوى: حماية الأشخاص والممتلكات. يمنع تعطيل الأبواب بواسطة أوتاد أو أجسام غريبة.",
-    highlightText: "الإغلاق التلقائي: تأكد من إغلاق الباب بإحكام خلفك عند كل دخول أو خروج.",
-    targetTag: "سلامة الولوج",
-    objective: "حماية محيط الإقامة ومنع دخول الأشخاص غير الترخيص لهم.",
+    title: "المادة 1 : التمهيد والإطار القانوني (القانون 18-00 و 106-12)",
+    summary: "يهدف هذا النظام الداخلي إلى تكميل نظام الملكية المشتركة لإقامة رافينا عين السبع وتوضيح التزامات مختلف المتدخلين وشروط استغلال الأجزاء المشتركة والخاصة.",
+    stricteRule: "المطابقة القانونية: يحدد واجبات التسيير والصيانة وقواعد الأمن والعيش المشترك طبقاً للقانون رقم 18-00 المعدل بالقانون رقم 106-12.",
+    highlightText: "القانون 18-00 / 106-12: النظام الأساسي للملكية المشتركة للعقارات المبنية.",
+    targetTag: "الإطار التنظيمي",
+    objective: "إرساء الأسس القانونية والتنظيمية للعيش المشترك وضمان إدارة محكمة ومستدامة للإقامة.",
     goodPractices: [
-      "تأكد من إغلاق الباب الرئيسي تماماً قبل الابتعاد.",
-      "لا تضع أي عوائق لفتح الأبواب أثناء نقل الأغراض.",
-      "أبلغ الحارس فوراً في حالة وجود عطب بالمفتاح الإلكتروني."
+      "اطلع على كافة مقتضيات هذا النظام الداخلي المعمول به.",
+      "احترم القرارات المصادق عليها في الجمع العام للملاك المشتركين.",
+      "استشر السنديك في أي مسألة تتعلق بتطبيق القوانين المنظمة."
     ],
-    pdfName: "النظام الداخلي — الباب 1 المادة 1"
+    pdfName: "النظام الداخلي — الباب 1 المادة 1 (تمهيد)"
   },
   'rule-02': {
     tag: "الباب الأول — المادة 2",
-    title: "المادة 2 : المراقبة بالفيديو وحماية البيانات",
-    summary: "الإقامة محمية بنظام كاميرات مراقبة مغلق تحت المسؤولية الحصرية للسنديك. يُمنع حجب رؤية الكاميرات أو إتلاف التجهيزات تحت طائلة المتابعة.",
-    stricteRule: "كل إتلاف أو تخريب لمعدات المراقبة يتعرض صاحبه للمتابعة القانونية والتعويض.",
-    highlightText: "كاميرات 24/7: مراقبة مستمرة للمداخل والممرات والمواقف والمصاعد.",
-    targetTag: "الحماية بالفيديو",
-    objective: "ضمان أمن السكان والممتلكات والحد من أعمال التخريب.",
+    title: "المادة 2 : وصف الموقع وتجهيزات الإقامة",
+    summary: "إقامة رافينا عين السبع مجمع عقاري مخصص حصرياً للسكن الراقي، يتكون من شقق موزعة على 5 أجنحة سكنية، إضافة إلى مرآب تحت أرضي، مساحات خضراء، قاعة رياضة، نادي للأطفال ومسجد.",
+    stricteRule: "تخصيص حصري للسكن الراقي مع مرافق ترفيهية وخدماتية مخصصة لساكنة الإقامة.",
+    highlightText: "5 أجنحة سكنية، مرآب تحت أرضي، حدائق، قاعة رياضة، نادي أطفال ومسجد.",
+    targetTag: "وصف الإقامة",
+    objective: "تحديد المجمع العقاري وأجنحته الخمسة ومرافقه المشتركة الملحقة.",
     goodPractices: [
-      "احترم جميع أجهزة المراقبة والإنذار بالمسطحات المشتركة.",
-      "وجه طلبات مراجعة تسجيلات الكاميرات كتابياً للسنديك حصراً.",
-      "أبلغ الأمن فور ملاحظة أي تصرف مشبوه أو تخريب."
+      "حافظ على جودة التجهيزات والمساحات الخضراء المشتركة.",
+      "احرص على احترام المظهر الجمالي العام للأجنحة الخمسة.",
+      "استخدم المرافق المشتركة بطريقة حضارية تحافظ على استدامتها."
     ],
-    pdfName: "النظام الداخلي — الباب 1 المادة 2"
+    pdfName: "النظام الداخلي — الباب 1 المادة 2 (وصف الموقع)"
   },
+
+  // TITRE II
   'rule-03': {
-    tag: "الباب الأول — المادة 3",
-    title: "المادة 3 : تنظيم دخول الموزعين وعمال التوصيل",
-    summary: "يُمنع منعاً باتاً صعود عمال التوصيل (الوجبات، الطرود، البريد السريع) إلى الطوابق. يتم استلام الطلبيات حصرياً عند المدخل الرئيسي للإقامة.",
-    stricteRule: "استثناء: يُسمح بصعود الموزعين فقط للحالات الخاصة بالمرض أو عدم القدرة على التنقل بعد إشعار مسبق لرجال الأمن.",
-    highlightText: "نقطة الاستلام: استقبال الموزعين واستلام الطرود عند نقطة الحراسة بالمدخل الرئيسي.",
-    targetTag: "ضبط حركة الغرباء",
-    objective: "منع تجول الغرباء داخل الممرات والحفاظ على سكينة وأمن الساكنة.",
+    tag: "الباب الثاني — المادة 3",
+    title: "المادة 3 : تعريف الأجزاء المفرزة (الخاصة)",
+    summary: "تعتبر أجزاء مفرزة خاصة كل من الشقق، المحلات، الأقبية، المرائب وأماكن ركن السيارات المحجوزة، المبنية أو غير المبنية، التابعة لكل مالك للانتفاع بها فردياً وشخصياً.",
+    stricteRule: "ملكية خالصة وحصرية لكل مالك مشترك للانتفاع بها بشكل فردي وشخصي.",
+    highlightText: "الشقق، الأقبية، الصناديق وأماكن ركن السيارات المرقمة هي أجزاء مفرزة خاصة.",
+    targetTag: "الأجزاء المفرزة",
+    objective: "تحديد نطاق الملكية وحق الانتفاع الخاص لكل مالك داخل الإقامة.",
     goodPractices: [
-      "انزل إلى نقطة الحراسة بالمدخل الرئيسي لاستلام وجباتك وطرودك.",
-      "أبلغ رجال الأمن مسبقاً إذا كنت بحاجة لرخصة صعود لظروف صحية.",
-      "لا تشارك الرموز الإلكترونية لدخول المشاة مع شركات التوصيل."
+      "حدد بدقة حدود ممتلكاتك الخاصة (الشقة، القبو، مكان الركن).",
+      "احرص على الصيانة الدورية لتجهيزات شقتك لتفادي أي أضرار للجيران.",
+      "اكتتب تأميناً شاملاً للمسكن يغطي أجزاءك الخاصة."
     ],
-    pdfName: "النظام الداخلي — الباب 1 المادة 3"
+    pdfName: "النظام الداخلي — الباب 2 المادة 3 (الأجزاء الخاصة)"
   },
   'rule-04': {
     tag: "الباب الثاني — المادة 4",
-    title: "المادة 4 : الالتزام بأداء واجبات السنديك (واجبات الاشتراك)",
-    summary: "وفقاً للقانون رقم 18-00، يلتزم كل مالك بأداء حصته الشهرية من الواجبات في تاريخ الاستحقاق المحدد من طرف السنديك لضمان استمرار الخدمات المشتركة.",
-    stricteRule: "الواجبات الشهرية ضرورية لتمويل الحراسة، النظافة، المصاعد، الكهرباء، القاعة الرياضية، المسجد، ونادي الأطفال.",
-    highlightText: "القانون 18-00: الأداء المنتظم يضمن جودة وسير جميع خدمات ومرافق الإقامة.",
-    targetTag: "التسيير المالي",
-    objective: "الحفاظ على الملاءة المالية للإقامة وضمان الاستمرارية العالية لكافة الخدمات.",
+    title: "المادة 4 : استعمال الأجزاء الخاصة ومنع الأنشطة التجارية",
+    summary: "لكل مالك حق التصرف في أجزائه الخاصة شرط عدم الإضرار بالآخرين أو بالسكينة العامة أو بسلامة البناء. الشقق مخصصة حصرياً للسكن ويمنع فيها أي نشاط تجاري أو مهني.",
+    stricteRule: "منع قاطع: ممارسة أي نشاط تجاري، صناعي، حرفي أو مهني داخل الشقق ممنوعة منعاً كلياً.",
+    highlightText: "وجهة سكنية بحتة: يمنع فتح أي مكتب أو عيادة أو نشاط تجاري في الشقق.",
+    targetTag: "استعمال الشقق",
+    objective: "الحفاظ على الطابع السكني الهادئ والآمن للجميع.",
     goodPractices: [
-      "فضل التحويل البنكي التلقائي للالتزام بتاريخ الاستحقاق الشهري.",
-      "احتفظ بتوصيلات وسندات الأداء الصادرة عن مكتب السنديك.",
-      "اطلع على التقرير المالي السنوي المعروض في الجمع العام للملاك."
+      "خصص شقتك حصرياً للاستعمال السكني العائلي.",
+      "تأكد من أن استعمال الشقة لا يسبب أي إزعاج للجيران.",
+      "التزم بالحفاظ على متانة البنايات والمعايير التقنية."
     ],
-    pdfName: "النظام الداخلي — الباب 2 المادة 4"
+    pdfName: "النظام الداخلي — الباب 2 المادة 4 (منع التجارة)"
   },
   'rule-05': {
     tag: "الباب الثاني — المادة 5",
-    title: "المادة 5 : البيع والكراء وتنظيم الإيجار",
-    summary: "البيع: إبراء الذمة (Quitus) من السنديك إجباري قبل البيع لدى الموثق. الكراء طويل الأمد: موافاة السنديك ببيانات الكاري، عقد الكراء المسجل، وشهادة الإقامة للأجانب.",
-    stricteRule: "يُحظر الكراء الفرعي والاهتظاظ. في حالة عدم سداد الواجبات، يتخذ السنديك إجراءات قانونية قد تصل لإنهاء الكراء أو منع البيع.",
-    highlightText: "مسؤولية المالك: المالك مسؤول قانونياً ومالياً عن أي أضرار أو إزعاج يسببه المكتري.",
-    targetTag: "تنظيم العقار",
-    objective: "ضمان الشفافية الإدارية، منع الاكتظاظ السكني وتفادي النزاعات اللوجستية.",
+    title: "المادة 5 : شروط الإقامة ومنع الكراء القصير (Airbnb)",
+    summary: "يلتزم كل مقيم بالسكينة العامة. في حالة الكراء طويل الأمد، يجب إرسال هوية المكتري، بطاقة تعريفه / إقامته وعقد الكراء المسجل للسنديك. يمنع الكراء المفروش وقصير الأمد كلياً.",
+    stricteRule: "منع كلي: الكراء المفروش، الكراء من الباطن أو الكراء اليومي/قصير الأمد (مثل Airbnb) ممنوع تماماً.",
+    highlightText: "كراء طويل الأمد بعقد مسجل فقط — منع قاطع للكراء اليومي والفرعي وAirbnb.",
+    targetTag: "شروط الكراء",
+    objective: "حماية أمن الساكنة ومنع توافد غرباء غير مسجلين داخل الإقامة.",
     goodPractices: [
-      "سلم ملف المكتري كاملاً للسنديك قبل تسليمه مفاتيح الشقة.",
-      "قم بتسوية كافة ديون الواجبات لدى السنديك قبل عقد البيع.",
-      "أرفق نسخة من النظام الداخلي كملحق إجباري لعقد الكراء."
+      "وافي السنديك بملف المكتري كاملاً قبل تسليمه مفاتيح الشقة.",
+      "أرفق نسخة من هذا النظام الداخلي بعقد الكراء المبرم.",
+      "ذكر المكتري بوجوب احترام قواعد حسن الجوار والإقامة."
     ],
-    pdfName: "النظام الداخلي — الباب 2 المادة 5"
+    pdfName: "النظام الداخلي — الباب 2 المادة 5 (الكراء وAirbnb)"
   },
+
+  // TITRE III
   'rule-06': {
-    tag: "الباب الثاني — المادة 6",
-    title: "المادة 6 : صفة العضو المستفيد في اتحاد الملاك",
-    summary: "كل مقيم فعلي (مالك، مكتري شرعي، وكيل) يعتبر عضواً مستفيداً شرط تقديم الوثائق للإدارة (شهادة الملكية، عقد كراء مسجل، أو اشتراك SRM/ONEE باسمه).",
-    stricteRule: "الاستفادة من مرافق وخدمات الإقامة مشروطة بتسوية الوضعية الإدارية للقاطن.",
-    highlightText: "إثبات السكن: تقديم عقد اشتراك عداد الماء (SRM) والكهرباء (ONEE) باسم القاطن.",
-    targetTag: "سجل الساكنة",
-    objective: "تحيين السجل الرسمي للمقيمين المترخيص لهم باستعمال المرافق الجماعية.",
+    tag: "الباب الثالث — المادة 6",
+    title: "المادة 6 : الحيوانات الأليفة والكلاب الخطيرة",
+    summary: "تربية حيوانات المزرعة أو الحيوانات الخطيرة ممنوعة تماماً. يسمح بالقطط والكلاب الأليفة شرط عدم إحداث إزعاج، مع إلزامية الربط بالرسن والكمامة للكلاب الكبيرة، ومنع قضاء الحاجة بالمشترك.",
+    stricteRule: "إلزامية التنظيف الفوري لأي اتساخ. في حالة العود، يُمنع الحيوان نهائياً من دخول الإقامة.",
+    highlightText: "الرسن إجباري، الكمامة للكلاب الكبيرة، ومنع قضاء الحاجة بالممرات نهائياً.",
+    targetTag: "الحيوانات الأليفة",
+    objective: "ضمان النظافة والسلامة العامة لجميع الساكنة والأطفال في الممرات والحدائق.",
     goodPractices: [
-      "قدم شواهد الاشتراك في عدادات الماء والكهرباء فور انتقالك للشقة.",
-      "جدد بيانات هاتفك وبريدك الإلكتروني لدى مكتب السنديك.",
-      "أبرز الوكالة الرسمية إذا كنت تنوب عن المالك الأصلي."
+      "اربط حيوانك دائماً برسن قصير في المداخل والممرات والمصاعد.",
+      "اجمع فوراً أي مخلفات ونظف المكان المصاب.",
+      "احرص على ألا تصدر الحيوانات نباحاً مستمراً يزعج راحة الجيران."
     ],
-    pdfName: "النظام الداخلي — الباب 2 المادة 6"
+    pdfName: "النظام الداخلي — الباب 3 المادة 6 (الحيوانات)"
   },
   'rule-07': {
-    tag: "الباب الثاني — المادة 7",
-    title: "المادة 7 : الوساطة وحل النزاعات وطرق الطعن",
-    summary: "أي مخالفة للنظام الداخلي تتم معالجتها أولاً عبر الوساطة الودية مع مجلس السنديك. وفي حالة عدم التوصل لحل، يُحال الملف على السلطات المختصة أو القضاء.",
-    stricteRule: "أولوية قصوى للحوار والوساطة الودية داخل مجلس الملكية المشتركة.",
-    highlightText: "طرق الطعن: مسطرة متدرجة من الصلح الداخلي إلى السلطات المحلية والمحاكم.",
-    targetTag: "الوساطة والصلح",
-    objective: "الحفاظ على أواصر حسن الجوار وحل النزاعات بطرق سلمية ومباشرة.",
+    tag: "الباب الثالث — المادة 7",
+    title: "المادة 7 : ترتيبات عيد الأضحى المبارك",
+    summary: "يخصص فضاء مشترك لذبح الأضاحي يوم العيد للمقيمين الدائمين، مع التزام المستفيد بالتنظيف والتطهير الفوري وإخلاء المخلفات والسقط دون تأخير.",
+    stricteRule: "يمنع كلياً تعليق الذبائح أو الجلود بالبالكونات أو النوافذ. ويمنع دخول المواشي للمرائب أو الأسطح أو الحدائق.",
+    highlightText: "إشعار السنديك أسبوعاً قبل العيد — الذبح حصرياً في الفضاء المشترك المخصص.",
+    targetTag: "عيد الأضحى",
+    objective: "تنظيم شعيرة الأضحى في إطار صحي منظم يحافظ على النظافة والمظهر العام.",
     goodPractices: [
-      "وجه شكاية كتابية موضوعية للسنديك تشرح فيها طبيعة المشكل.",
-      "شارك بفعالية في جلسات الصلح التي ينظمها مكتب السنديك.",
-      "احترم الحلول والتسويات الودية المصادق عليها."
+      "أبلغ السنديك قبل أسبوع على الأقل برغبتك في الاحتفال داخل الإقامة.",
+      "اذبح حصرياً داخل الفضاء المهيأ لذلك ولا تستعمل الممرات.",
+      "نظف وعقم المكان فور الانتهاء وضع المخلفات في أكياس محكمة الإغلاق."
     ],
-    pdfName: "النظام الداخلي — الباب 2 المادة 7"
+    pdfName: "النظام الداخلي — الباب 3 المادة 7 (عيد الأضحى)"
   },
   'rule-08': {
     tag: "الباب الثالث — المادة 8",
-    title: "المادة 8 : التخصيص الحصري للشقق (السكن فقط)",
-    summary: "شقق إقامة رافينا مخصصة حصرياً للسكن. يُمنع منعاً باتاً ممارسة أي نشاط تجاري أو مهني أو حرفي غير مرخص به داخل الشقق السكنية.",
-    stricteRule: "يُحظر تماماً تحويل الشقة إلى مكتب تجاري، عيادة طبية، ورشة، أو محل استقبال زبناء.",
-    highlightText: "استعمال سكني محض: الحفاظ على سكينة وطبيعة المجمع السكني الراقية.",
-    targetTag: "تخصيص العقار",
-    objective: "الحفاظ على الطابع السكني المحض والهدوء لكافة العائلات والقاطنين.",
+    title: "المادة 8 : استعمال النوافذ والشرفات ونشر الغسيل",
+    summary: "يمنع منعاً باتاً نشر الغسيل أو الزرابي أو وضع أشياء غير لائقة بالشرفات والنوافذ. يجب الحفاظ على المظهر الخارجي وتفادي إزعاج الجيران بالشواء الكثيف أو الضجيج.",
+    stricteRule: "نشر الغسيل الظاهر بالواجهات ممنوع — الحفاظ على التناسق المعماري للإقامة إجباري.",
+    highlightText: "يمنع نشر الغسيل المرئي على الشرفات، وتمنع روائح الشواء المزعجة.",
+    targetTag: "الشرفات والنوافذ",
+    objective: "الحفاظ على المظهر الراقي لواجهات الإقامة وراحة الجيران.",
     goodPractices: [
-      "خصص شقتك حصرياً لسكنك الشخصي أو العائلي.",
-      "لا تستقبل أي زبناء أو موظفين في إطار نشاط تجاري بالشقة.",
-      "أبلغ السنديك فور ملاحظة تغيير غير قانوني لنشاط إحدى الشقق."
+      "انشر الغسيل بالسطوح المهيأة أو داخل منشرات داخلية غير مرئية.",
+      "حافظ على نظافة وترتيب الشرفات وتناسق نباتات الزينة.",
+      "تجنب استعمال الشوايات التقليدية التي تصدر دخاناً كثيفاً للجيران."
     ],
-    pdfName: "النظام الداخلي — الباب 3 المادة 8"
+    pdfName: "النظام الداخلي — الباب 3 المادة 8 (الشرفات والغسيل)"
   },
   'rule-09': {
     tag: "الباب الثالث — المادة 9",
-    title: "المادة 9 : الحفاظ على الواجهات والجمالية العامة",
-    summary: "للحفاظ على التناسق المعماري للإقامة، يُمنع منعاً باتاً تثبيت الصواري أو الهوائيات المقعرة (البارابول) على الشرفات أو النوافذ أو الواجهات.",
-    stricteRule: "لا يُقبل أي تغيير للمظهر الخارجي للمبنى دون موافقة كتابية صريحة من السنديك.",
-    highlightText: "تناسق المعمار: الشرفات والنوافذ خالية تماماً من البارابول والتغييرات العشوائية.",
-    targetTag: "الجمالية المعمارية",
-    objective: "الرفع من القيمة العقارية لـ 209 شقة والحفاظ على واجهات أنيقة وموحدة.",
+    title: "المادة 9 : الواجهات واللوحات الإشهارية",
+    summary: "يمنع منعاً باتاً تثبيت أي لوحة إشهارية، ملصق، لافتة، شباك حديدي غير مصادق عليه أو أي تعديل يغير المظهر الخارجي للواجهات وواقيات الشرفات.",
+    stricteRule: "منع كلي لتغيير المظهر الخارجي للواجهات أو واقيات الشرفات دون ترخيص رسمي.",
+    highlightText: "لا لافتات إشهارية ولا شبابيك غير متطابقة على الواجهات الخارجية.",
+    targetTag: "جمالية الواجهات",
+    objective: "حماية التناسق المعماري والهوية البصرية الراقية لـ Les Pavillons Verts.",
     goodPractices: [
-      "ربط أجهزة التلفاز حصرياً بالشبكة المقعرة الجماعية للإقامة.",
-      "تجنب إعادة صباغة أو تغيير لون الستائر والشرفات والمشربيات.",
-      "اطلب موافقة كتابية من السنديك قبل أي تهيئة مرئية من الخارج."
+      "لا تضع أي ملصقات أو لافتات إعلانية على شرفتك أو واجهتك.",
+      "استشر السنديك كتابياً قبل أي تغيير مطابق للزجاج أو الستائر.",
+      "احترم ألوان وتشطيبات واقيات الشرفات الأصلية."
     ],
-    pdfName: "النظام الداخلي — الباب 3 المادة 9"
+    pdfName: "النظام الداخلي — الباب 3 المادة 9 (الواجهات)"
   },
   'rule-10': {
     tag: "الباب الثالث — المادة 10",
-    title: "المادة 10 : استعمال المرائب الخاصة ومنع الوقوف بأماكن الغير",
-    summary: "أماكن التوقف بالقبو مخصصة حصرياً لسيارات السكان حسب عقود الملكية الموثقة. يُمنع منعاً باتاً الركن في الأماكن المخصصة للجيران أو بالسطح التجاري.",
-    stricteRule: "إعلان معلق بالقبو: احترام رقم المكان المخصص. يمنع منعاً باتاً الركن في مكان غير مكانك.",
-    highlightText: "مرآب خاص: يمنع الركن في أماكن السكان الآخرين تحت طائلة التثبيت بالقفل أو السحب.",
-    targetTag: "احترام الأماكن المخصصة",
-    objective: "ضمان حق الاستغلال الحصري لكل مالك لمكانه المسجل بالعقد.",
+    title: "المادة 10 : لوحات التعريف بالأبواب",
+    summary: "لا يجوز للملاك أو المكترين وضع أي لوحة تعريفية على باب الشقة تخالف النموذج الموحد والمصادق عليه من طرف السنديك.",
+    stricteRule: "إلزامية توحيد لوحات الأبواب طبقاً للنموذج المعتمد من إدارة الإقامة.",
+    highlightText: "لوحة تعريفية موحدة ومصادق عليها من السنديك فقط.",
+    targetTag: "لوحات الأبواب",
+    objective: "ضمان الأناقة والتناسق البصري داخل ممرات وردهات الطوابق.",
     goodPractices: [
-      "اركن سيارتك حصرياً في رقم المكان الخاص بشقتك.",
-      "أخبر زوارك باستخدام مواقف السيارات الخارجية خارج الإقامة.",
-      "لا تخزن مواد قابلة للاشتعال أو بضائع داخل مرأبك بالقبو."
+      "احتفظ بلوحة الباب الرسمية الموحدة المسلمة من الإقامة.",
+      "اطلب نموذجاً رسمياً من السنديك في حال الحاجة للتجديد.",
+      "لا تلصق ملصقات أو كتابات عشوائية على باب شقتك."
     ],
-    pdfName: "النظام الداخلي — الباب 3 المادة 10"
+    pdfName: "النظام الداخلي — الباب 3 المادة 10 (لوحات الأبواب)"
   },
   'rule-11': {
-    tag: "الباب الرابع — المادة 11",
-    title: "المادة 11 : محاربة الضوضاء والإزعاج الصوتي",
-    summary: "يُمنع أي ضجيج أو إزعاج ليلي أو نهاراً يمس بسكينة السكان (إغلاق الأبواب بقوة، أصوات المحركات المرتفعة بالقبو، التلفاز المرتفع، أو نقل الأثاث المزعج).",
-    stricteRule: "راحة يومية: احترام هدوء وراحة الجيران على مدار 24 ساعة وفي جميع الأوقات.",
-    highlightText: "سكينة جماعية: خفض مستوى الصوت في الأجهزة وتجنب أي صدمات صوتية مفاجئة.",
-    targetTag: "الهدوء والراحة",
-    objective: "ضمان الطمأنينة وراحة النوم والسكينة لكل العائلات بالإقامة.",
+    tag: "الباب الثالث — المادة 11",
+    title: "المادة 11 : استعمال أجهزة الصوت والتلفزيون",
+    summary: "يجب استعمال أجهزة التلفاز، المذياع ومكبرات الصوت باعتدال، بحيث لا يصل أي صوت مزعج إلى خارج الشقة الخاصة ولا يعكر صفو الجيران.",
+    stricteRule: "يمنع صدور أي أصوات مرتفعة أو مزعجة نحو الشقق المجاورة أو الممرات المشتركة.",
+    highlightText: "اعتدال مستوى الصوت في جميع الأوقات لضمان راحة وهدوء الجيران.",
+    targetTag: "السكينة والهدوء",
+    objective: "الحفاظ على السكينة وراحة البال لكل أسرة داخل الإقامة.",
     goodPractices: [
-      "اخفض صوت التلفاز والأجهزة الصوتية ابتداءً من الساعة 10 مساءً.",
-      "تجنب تشغيل محركات السيارات بضغط مرتفع أو إغلاق الأبواب بعنف بالقبو.",
-      "ضع منصات مطاطية تحت أرجل الطاولات والكراسي لمنع الاحتكاك."
+      "اضبط مستوى صوت التلفاز ومكبرات الصوت في حدود الاستماع الفردي.",
+      "استعمل سماعات الأذن عند الاستماع للموسيقى في أوقات متأخرة.",
+      "تجنب وضع مكبرات الصوت القوية بمحاذاة الجدران الفاصلة مع الجيران."
     ],
-    pdfName: "النظام الداخلي — الباب 4 المادة 11"
+    pdfName: "النظام الداخلي — الباب 3 المادة 11 (أجهزة الصوت)"
   },
   'rule-12': {
-    tag: "الباب الرابع — المادة 12",
-    title: "المادة 12 : تنظيم الأشغال ومنعها منعاً باتاً يوم الأحد",
-    summary: "يجب إشعار السنديك مسبقاً بكل ورش إصلاح. أوقات العمل: من الاثنين إلى الجمعة (09:00 إلى 18:00)، والسبت (10:00 إلى 16:00). يُمنع العمل تماماً يوم الأحد.",
-    stricteRule: "أوقات مسموحة: الاثنين-الجمعة (09h-18h) والسبت (10h-16h). يُمنع منعاً باتاً القيام بأعمال البناء أو التثقيب يوم الأحد والعياد.",
-    highlightText: "راحة يوم الأحد: تُمنع أشغال Bricolage والتثقيب والإصلاحات المزعجة يوم الأحد حفاظاً على راحة الجيران.",
-    targetTag: "أوقات الإصلاحات والورشات",
-    objective: "الحفاظ على الراحة المشروعة لكل العائلات يوم الأحد والأعياد.",
+    tag: "الباب الثالث — المادة 12",
+    title: "المادة 12 : تعديلات الأجزاء الخاصة وأوقات الأشغال",
+    summary: "الأشغال الخاصة لا يجب أن تمس الأجزاء المشتركة أو الهياكل الحاملة (أعمدة، كمرات، جدران خرسانية). أوقات الأشغال المزعجة: من الإثنين إلى الجمعة (08:30-13:00 و 14:30-18:00)، والسبت (10:00-16:00). يمنع منعاً كلياً أيام الأحد والأعياد.",
+    stricteRule: "منع قاطع لأي أشغال مزعجة أيام الأحد والعطل الرسمية — الالتزام الصارم بالساعات المحددة.",
+    highlightText: "الإثنين-الجمعة (08:30-13h و 14:30-18h) / السبت (10h-16h) — ممنوع الأحد والأعياد.",
+    targetTag: "أوقات الأشغال",
+    objective: "تنظيم أشغال الإصلاحات لحماية متانة البناية وضمان راحة وهدوء الساكنة.",
     goodPractices: [
-      "برمج أشغال شقتك حصرياً خلال أيام الأسبوع أو يوم السبت.",
-      "ضع إشعاراً ودياً بالمدخل قبل 48 ساعة من انطلاق أشغال الهدم أو الحفر.",
-      "نظف المصعد والممرات يومياً بعد مغادرة العمال للورش."
+      "صرح بأي ورش إصلاح داخلي لدى مكتب السنديك مسبقاً.",
+      "أشعر جيرانك في الطابق قبل بدء الأشغال المزعجة المصرح بها.",
+      "ألزم عمالك باحترام المواعيد المحددة ونظافة الممرات."
     ],
-    pdfName: "النظام الداخلي — الباب 4 المادة 12"
+    pdfName: "النظام الداخلي — الباب 3 المادة 12 (أوقات الأشغال)"
   },
+
+  // TITRE IV
   'rule-13': {
     tag: "الباب الرابع — المادة 13",
-    title: "المادة 13 : نظافة موقف السيارات وتوصيات حاويات النفايات",
-    summary: "نظافة ممتازة واجابة بالقبو. 4 توصيات رئيسية: 1) إغلاق أكياس القمامة بإحكام، 2) يمنع رمي النفايات بالارض، 3) يمنع تفريغ السوائل (الحساء/الصلصات)، 4) طي الصناديق والكرتون.",
-    stricteRule: "4 توصيات رئيسية: 1) إغلاق الأكياس بإحكام، 2) عدم إيداع الأزبال على الأرض، 3) التسيير الصارم للسوائل، 4) طي الكرتون.",
-    highlightText: "مرآب نظيف وبدون روائح: عدم احترام هذه التوصيات يتسبب في روائح كريهة وانتشار الحشرات بالقبو.",
-    targetTag: "إدارة النفايات والنظافة",
-    objective: "القضاء التام على الروائح الكريهة بالقبو والحفاظ على بيئة صحية ونظيفة.",
+    title: "المادة 13 : مهام مستخدمي وشركات الإقامة",
+    summary: "يمنع منعاً باتاً على الملاك أو المقيمين تشغيل عمال ومستخدمي شركات الأمن، النظافة أو الصيانة في مهام وأشغال خاصة خلال ساعات عملهم الرسمية بالإقامة.",
+    stricteRule: "عمال الإقامة مكرسون حصرياً لخدمة المصلحة العامة والمرافق المشتركة للإقامة.",
+    highlightText: "يمنع تكليف حراس الأمن أو عمال النظافة بأي خدمات خاصة أثناء دوامهم.",
+    targetTag: "مستخدمو الإقامة",
+    objective: "ضمان تفرغ العمال الدائم لمهام الحراسة والنظافة وصيانة المرافق المشتركة.",
     goodPractices: [
-      "أربط أكياس القمامة جيداً قبل وضعها داخل الحاوية.",
-      "لا تفرغ إطلاقاً بقايا السوائل أو الصلصات داخل الحاويات.",
-      "قم بضغط وطي الكرتون الكبير قبل رميه لتوفير المساحة."
+      "دع أعوان الأمن والنظافة يقومون بمهامهم دون تعطيلهم لخدمات شخصية.",
+      "وجه أي طلب تدخل إلى مكتب السنديك أو المسؤول التقني.",
+      "عامل جميع مستخدمي الإقامة باحترام وتقدير متبادل."
     ],
-    pdfName: "النظام الداخلي — الباب 4 المادة 13"
+    pdfName: "النظام الداخلي — الباب 4 المادة 13 (المستخدمون)"
   },
   'rule-14': {
     tag: "الباب الرابع — المادة 14",
-    title: "المادة 14 : تنظيم الولوج للسطح ونشر الغسيل",
-    summary: "الولوج للسطح مؤطر ويجب إبقاء الباب مغلقاً بالمفتاح. يُسمح بنشر الغسيل حصرياً في الحبال والأسلاك المخصصة بالسطح.",
-    stricteRule: "يُمنع منعاً باتاً تعليق الغسيل على واجهات الشرفات أو النوافذ. يُمنع دخول الغرباء للسطح.",
-    highlightText: "تنشيف الملابس: حبال السطح المخصصة هي الفضاء الوحيد المسموح به.",
-    targetTag: "استعمال السطح",
-    objective: "تفادي تشويه واجهة العمارة بالغسيل وضمان أمن وسلامة السطح.",
+    title: "المادة 14 : مهام واختصاصات السنديك (القانون 18-00)",
+    summary: "تحدد مهام السنديك وفق القانون 18-00/106-12 وعقد التسيير: حفظ الأجزاء المشتركة، الإصلاحات المستعجلة، إعداد الميزانية، استخلاص الواجبات، تسليم إبراء الذمة (Quitus)، مسك المحاسبة، وتنظيم الجموع العامة.",
+    stricteRule: "السنديك هو الممثل القانوني لاتحاد الملاك أمام القضاء وفي جميع المعاملات المدنية.",
+    highlightText: "تسيير إداري، مالي، تقني وقانوني شامل للإقامة.",
+    targetTag: "مهام السنديك",
+    objective: "ضمان إدارة محكمة وشفافة ومطابقة للقوانين المغربية المنظمة للملكية المشتركة.",
     goodPractices: [
-      "تأكد من إغلاق باب السطح بالمفتاح بعد كل استخدام.",
-      "اجمع غسيلك فور جفافه لترك المجال لباقي الجيران.",
-      "لا تترك الأطفال يصعدون للسطح بدون مرافقة شخص بالغ."
+      "احتفظ بجميع وصولات أداء واجبات الاشتراك الشهري.",
+      "احرص على حضور الجمع العام السنوي والمشاركة في التصويت.",
+      "اطلب شهادة إبراء الذمة من السنديك قبل إتمام أي بيع لدى الموثق."
     ],
-    pdfName: "النظام الداخلي — الباب 4 المادة 14"
+    pdfName: "النظام الداخلي — الباب 4 المادة 14 (مهام السنديك)"
   },
   'rule-15': {
     tag: "الباب الرابع — المادة 15",
-    title: "المادة 15 : تنظيم تربية وحركة الحيوانات بالأجزاء المشتركة",
-    summary: "يُمنع تربية حيوانات المزرعة أو الدواجن. يُمنع التواجد المطول للحيوانات الأليفة في الممرات والسلالم والسطح والحدائق.",
-    stricteRule: "يجب إبقاء الحيوانات الأليفة (الكلاب، القطط) مقيدة بالرباط (Laisse) أثناء المرور وعدم التسبب في أي إزعاج.",
-    highlightText: "الرباط إجباري: مرور الحيوانات مسموح فقط لخروجها ودخولها برفقة صاحبها.",
-    targetTag: "الحيوانات الأليفة",
-    objective: "ضمان نظافة وسلامة وسكينة جميع القاطنين بالمساحات المشتركة.",
+    title: "المادة 15 : الحراسة، المراقبة بالكاميرات 24/7 والتدخل",
+    summary: "15.1 الخدمات: حراسة ومراقبة الموقع 24/24 و 7/7، مراقبة المداخل والموزعين، إدارة كاميرات المراقبة، والتدخل الفوري عند الطوارئ. 15.2 نطاق التدخل: جميع الأجزاء المشتركة، المداخل، المرائب والأسطح.",
+    stricteRule: "نقطة حراسة ومراقبة دائمة 24/7 لضمان أمن وسلامة الأشخاص والممتلكات.",
+    highlightText: "حراسة أمنية مستمرة 24/7، كاميرات مراقبة وضبط مداخل الإقامة.",
+    targetTag: "الأمن والحراسة",
+    objective: "حماية الإقامة من أي تسلل وضمان طمأنينة الساكنة في جميع الأجنحة.",
     goodPractices: [
-      "امسك كلبك برباط قصير داخل المصاعد والممرات والسلالم.",
-      "اجمع فوراً أي فضلات غير مقصودة بالمساحات الخضراء.",
-      "احرص على ألا يزعج نباح الكلاب نوم وراحة الجيران."
+      "تعاون مع رجال الأمن أثناء التحقق من الهويات عند المدخل الرئيسي.",
+      "أبلغ نقطة الحراسة فور ملاحظة أي عطب أو سلوك غير عادي.",
+      "احترم جميع كاميرات وأجهزة المراقبة الموضوعة بالمجمع."
     ],
-    pdfName: "النظام الداخلي — الباب 4 المادة 15"
+    pdfName: "النظام الداخلي — الباب 4 المادة 15 (الحراسة 24/7)"
   },
   'rule-16': {
-    tag: "الباب الخامس — المادة 16",
-    title: "المادة 16 : تعليمات السير الرئيسية بموقف السيارات (القبو)",
-    summary: "3 تعليمات سير إجبارية: 1) يمنع الخروج من باب الدخول، 2) يمنع الدخول من باب الخروج، 3) يمنع الدخول للقبو الثاني في اتجاه ممنوع. السرعة محددة في 10 كلم/س.",
-    stricteRule: "اتجاه واحد إجباري: يمنع السياقة عكس الاتجاه في منحدرات القبو الأول والثاني. التوقف والانتباه إجباري عند المرآة المقعرة.",
-    highlightText: "سلامة حركة السيارات: احترم بدقة الإشارات بالمدخل والمخرج لتفادي الاصطدام المباشر.",
-    targetTag: "سلامة منحدرات القبو",
-    objective: "منع حوادث الاصطدام بالقبو والمنحدرات وضعيفة الرؤية.",
+    tag: "الباب الرابع — المادة 16",
+    title: "المادة 16 : النظافة وإخلاء مخلفات الأشغال (الرديم)",
+    summary: "16.1 النظافة: كنس، غسل وتنظيف مستمر للمداخل، السلالم، المصاعد، المرائب وغرف النفايات. 16.2 الرديم: يمنع رمي مخلفات البناء في غرف القمامة، ويجب إخلاؤها فوراً خارج الإقامة على نفقة المالك.",
+    stricteRule: "إلزامية نقل مخلفات البناء خارج الإقامة فوراً مع تنظيف الممرات المستعملة في النقل.",
+    highlightText: "مخلفات الأشغال ممنوعة في القمامة — الإخلاء الفوري والتنظيف على نفقة المالك.",
+    targetTag: "النظافة والرديم",
+    objective: "المحافظة على نظافة تامة وصورة مشرقة لجميع المرافق المشتركة.",
     goodPractices: [
-      "ادخل حصرياً من المنحدر المخصص للدخول واخرج من المنحدر الخاص بالخروج.",
-      "انظر جيدا في المرآة المقعرة عند ملتقى القبو 1 والقبو 2.",
-      "ابق أضواء السيارة مشتعلة وسر بأقل من 10 كلم في الساعة."
+      "نسق لنقل مخلفات البناء والأتربة مباشرة إلى المطرح العمومي.",
+      "احم أرضيات المصاعد والممرات بأغطية واقية أثناء نقل الأثاث والمواد.",
+      "نظف فوراً أي آثار للغبار أو الجبس ناتجة عن حركة العمال."
     ],
-    pdfName: "النظام الداخلي — الباب 5 المادة 16"
+    pdfName: "النظام الداخلي — الباب 4 المادة 16 (النظافة والرديم)"
   },
   'rule-17': {
-    tag: "الباب الخامس — المادة 17",
-    title: "المادة 17 : القاعة الرياضية (جدول الأيام والقانون الداخلي)",
-    summary: "القاعة مفتوحة من 6:30 صباحاً إلى 10:30 ليلاً. الأيام: الاثنين/الأربعاء/الجمعة (نساء) | الثلاثاء/الخميس/السبت (رجال) | الأحد (مختلط). السن الأدنى 18 سنة والزي الرياضي إجباري.",
-    stricteRule: "جدول صارم: دخول النساء (L/M/V)، دخول الرجال (M/J/S)، دخول مختلط (الأحد). السن الأدنى 18 سنة وترتيب المعدات إجباري.",
-    highlightText: "البرنامج المعلق رسمياً: احترام جدول أيام الدخول وإعادة الأثقال والمعدات لمكانها بعد الحصة.",
-    targetTag: "القاعة الرياضية والياقة",
-    objective: "توفير فضاء رياضي نظيف، محترم للقيم ومريح لجميع سكان الإقامة.",
+    tag: "الباب الرابع — المادة 17",
+    title: "المادة 17 : الصيانة اليومية والتدخلات المتخصصة",
+    summary: "يوفر السنديك مسؤول موقع للمتابعة اليومية للمنشآت. بالنسبة للتدخلات المعقدة أو الطارئة (المصاعد، المضخات، الكهرباء)، يتم الاستعانة بشركات الصيانة المتخصصة المعتمدة.",
+    stricteRule: "صيانة تقنية دورية عبر عقود صيانة معتمدة لضمان سلامة التجهيزات المشتركة.",
+    highlightText: "مسؤول موقع متواجد وعقود صيانة معتمدة للمصاعد والمضخات والشبكات.",
+    targetTag: "الصيانة التقنية",
+    objective: "ضمان الاستمرارية التشغيلية للتجهيزات والحد من الأعطال المفاجئة.",
     goodPractices: [
-      "تأكد من اليوم المخصص (نساء/رجال/مختلط) قبل توجهك للقاعة.",
-      "استخدم منشفة شخصية وقم بتعقيم الأجهزة بعد تمارينك.",
-      "أعد الأثقال والأجهزة لمكانها فور انتهائك من التمرين."
+      "أبلغ مسؤول الموقع فور ملاحظة أي عطب بالإنارة أو المصعد.",
+      "لا تتدخل بنفسك في لوحات الكهرباء أو التجهيزات التقنية المشتركة.",
+      "سهل عمل التقنيين المعتمدين أثناء زياراتهم الدورية للصيانة."
     ],
-    pdfName: "النظام الداخلي — الباب 5 المادة 17"
+    pdfName: "النظام الداخلي — الباب 4 المادة 17 (الصيانة التقنية)"
   },
   'rule-18': {
-    tag: "الباب الخامس — المادة 18",
-    title: "المادة 18 : قانون نادي الأطفال Kids Club (السلامة والنظافة)",
-    summary: "فضاء اللعب مفتوح يومياً للأطفال حتى 6 سنوات كحد أقصى. الحضور والمراقبة المستمرة للوالدين إجبارية (بدون منشط). خلع الأحذية، يمنع الأكل والشرب.",
-    stricteRule: "تعليمات نادي الأطفال: 1) السن الأقصى 6 سنوات، 2) مرافقة ومراقبة أولياء الأمور مستمرة، 3) خلع الأحذية، 4) يمنع الأكل والشرب بالداخل، 5) ترتيب اللعب.",
-    highlightText: "مسؤولية الوالدين: السنديك غير مسؤول عن أي حادث. راقب طفلك طيلة تواجده بمركز اللعب.",
-    targetTag: "فضاء لعب الأطفال",
-    objective: "ضمان أمن ونظافة ومتعة الأطفال الصغار تحت مراقبة أوليائهم.",
+    tag: "الباب الرابع — المادة 18",
+    title: "المادة 18 : معالجة الصحة ومحاربة الحشرات والقوارض",
+    summary: "18.1 العلاج: حملات دورية لإبادة القوارض، الصراصير، البعوض والزواحف الضارة. 18.2 مناطق التدخل: الأجزاء المشتركة، ممرات الكابلات، الأقبية، المساحات الخضراء وغرف النفايات.",
+    stricteRule: "حملات صحية دورية مبرمجة لضمان بيئة صحية خالية من الآفات والحشرات.",
+    highlightText: "معالجة دورية لممرات التقنية، غرف النفايات والأقبية المشتركة.",
+    targetTag: "الصحة والبيئة",
+    objective: "حماية الصحة العامة لجميع السكان والمحافظة على النظافة البيئية للمجمع.",
     goodPractices: [
-      "لا تترك طفلك بمفرده إطلاقاً داخل نادي الأطفال Kids Club.",
-      "احرص على خلع أحذية الأطفال عند مدخل فضاء اللعب.",
-      "أعد ترتيب الألعاب والوحدات السفنجية قبل مغادرة المكان."
+      "تجنب ترك المياه الراكدة في أحواض النباتات بالشرفات.",
+      "تأكد من إغلاق أغطية الممرات التقنية بعد أي تدخل مصرح به.",
+      "أشعر السنديك في حال ظهور حشرات غير معتادة للتدخل الموجه."
     ],
-    pdfName: "النظام الداخلي — الباب 5 المادة 18"
+    pdfName: "النظام الداخلي — الباب 4 المادة 18 (محاربة الحشرات)"
+  },
+  'rule-19': {
+    tag: "الباب الرابع — المادة 19",
+    title: "المادة 19 : جمع النفايات، الحاويات ومنع رمي أعقاب السجائر",
+    summary: "توضع النفايات المنزلية في أكياس بلاستيكية محكمة الإغلاق قبل وضعها في الحاويات المشتركة. يجب ضغط الكراتين. يمنع منعاً باتاً رمي الأوساخ أو أعقاب السجائر في الممرات أو الأسطح.",
+    stricteRule: "أكياس القمامة محكمة الإغلاق إجبارية — يمنع رمي أعقاب السجائر أو الأوساخ بالمشترك.",
+    highlightText: "أكياس محكمة الإغلاق داخل الحاويات — منع وضع القمامة أمام أبواب الشقق.",
+    targetTag: "تدبير النفايات",
+    objective: "منع انبعاث الروائح الكريهة وتسرب السوائل وتفادي مخاطر الحرائق.",
+    goodPractices: [
+      "أحكم إغلاق أكياس النفايات قبل وضعها في الحاويات المخصصة.",
+      "قم بطي وضغط الكراتين لعدم ملء الحاويات بسرعة.",
+      "لا تترك أبداً أكياس القمامة أمام باب شقتك في الممر المشترك."
+    ],
+    pdfName: "النظام الداخلي — الباب 4 المادة 19 (جمع النفايات)"
+  },
+  'rule-20': {
+    tag: "الباب الرابع — المادة 20",
+    title: "المادة 20 : الحيوانات بالمشترك ومنع إطعام الحيوانات الضالة",
+    summary: "يمنع منعاً باتاً إطعام الحيوانات، الضالة أو الأليفة، في الأجزاء المشتركة ومحيط الإقامة. يجب جمع فضلات الكلاب واستعمال الكمامة للكلاب الكبيرة لضمان سلامة الجميع.",
+    stricteRule: "أي إخلال بقواعد النظافة والسلامة يحمل صاحبه المسؤولية القانونية والمادية المباشرة.",
+    highlightText: "يمنع إطعام الحيوانات الضالة داخل الإقامة وفي محيط المداخل المشتركة.",
+    targetTag: "الحيوانات بالمشترك",
+    objective: "منع تجمع الحيوانات الضالة وحماية نظافة وأمان الحدائق والممرات.",
+    goodPractices: [
+      "لا تضع بقايا الطعام أو أواني الأكل في الحدائق أو الممرات المشتركة.",
+      "احمل معك دائماً كيساً لجمع الفضلات عند مرافقة كلبك.",
+      "احرص على سلامة الأطفال الصغار بإحكام مراقبة حيوانك."
+    ],
+    pdfName: "النظام الداخلي — الباب 4 المادة 20 (الحيوانات والحدائق)"
+  },
+  'rule-21': {
+    tag: "الباب الرابع — المادة 21",
+    title: "المادة 21 : منع الضجيج الليلي والهدوء من 22:00 إلى 08:00",
+    summary: "الحفاظ على السكينة إلزامي. يمنع أي ضجيج مزعج ليلاً أو نهاراً. يفرض الهدوء التام والصمت الصارم ما بين الساعة 22:00 ليلاً و 08:00 صباحاً ويمنع تشغيل الأجهزة المزعجة ليلاً.",
+    stricteRule: "صمت تام ما بين 22:00 و 08:00 — تمنع التجمعات الصاخبة واستعمال الأجهزة المزعجة ليلاً.",
+    highlightText: "هدوء صارم بين 22h00 و 08h00 لضمان النوم والراحة التامة للجميع.",
+    targetTag: "الهدوء الليلي",
+    objective: "توفير بيئة نوم هادئة ومريحة لجميع الأسر والأطفال داخل الإقامة.",
+    goodPractices: [
+      "اخفض صوتك وصوت خطواتك في السلالم والممرات أثناء الليل.",
+      "تجنب تشغيل الأجهزة المنزلية المهتزة (الغسالة، المكنسة) بعد العاشرة ليلاً.",
+      "أغلق الأبواب بهدوء دون صفقها بعنف."
+    ],
+    pdfName: "النظام الداخلي — الباب 4 المادة 21 (الضجيج الليلي)"
+  },
+  'rule-22': {
+    tag: "الباب الرابع — المادة 22",
+    title: "المادة 22 : القاعة الرياضية (الكبار +18) ونادي الأطفال (≤ 6 سنوات)",
+    summary: "القاعة الرياضية مخصصة للبالغين (+18 سنة). التوقيت: 06:30 إلى 22:30. البرنامج: النساء (الإثنين، الأربعاء، الجمعة)، الرجال (الثلاثاء، الخميس، السبت)، ومختلط (الأحد). نادي الأطفال مخصص للصغار حتى 6 سنوات بمرافقة ومراقبة ولي الأمر حصراً.",
+    stricteRule: "يمنع دخول القاصرين للقاعة الرياضية منعاً باتاً. نادي الأطفال يتطلب مرافقة مستمرة من الوالدين.",
+    highlightText: "القاعة الرياضية 06:30-22:30 (برنامج مخصص) — نادي الأطفال ≤ 6 سنوات مع ولي الأمر.",
+    targetTag: "الرياضة ونادي الأطفال",
+    objective: "توفير فضاء رياضي مريح للكبار ومساحة ألعاب آمنة ومراقبة للأطفال الصغار.",
+    goodPractices: [
+      "اطلع على البرنامج الأسبوعي قبل التوجه إلى القاعة الرياضية.",
+      "ارتد ملابس وحذاء رياضي مخصص للداخل، واستعمل منشفة على الأجهزة دائماً.",
+      "رافق طفلك دون سن 6 سنوات باستمرار داخل فضاء الألعاب واجمع الألعاب قبل المغادرة."
+    ],
+    pdfName: "النظام الداخلي — الباب 4 المادة 22 (الرياضة والأطفال)"
+  },
+  'rule-23': {
+    tag: "الباب الرابع — المادة 23",
+    title: "المادة 23 : توزيع البريد والرسائل المضمونة",
+    summary: "يوضع البريد العادي في الصناديق الفردية. ليس من اختصاص حراس الأمن أو مستخدمي الموقع التوقيع أو استلام الرسائل المضمونة، الطرود ذات التوقيع، الإشعارات القضائية أو إنذارات المفوضين القضائيين.",
+    stricteRule: "الرسائل المضمونة والإشعارات القانونية يجب استلامها وتوقيعها شخصياً من المعني بالأمر.",
+    highlightText: "صناديق بريد فردية — لا توكيل للحراس لاستلام الإشعارات المضمونة أو المفوضين.",
+    targetTag: "البريد والطرود",
+    objective: "حماية السرية والمسؤولية القانونية المتعلقة بالتبليغات الرسمية.",
+    goodPractices: [
+      "تفقد صندوق بريدك الفردي بالمدخل بصفة منتظمة.",
+      "تأكد من وضوح اسمك ورقم شقتك وجناحك على صندوق البريد.",
+      "اتخذ ترتيباتك الشخصية لاستلام طرودك المضمونة أو استدعاءاتك القانونية."
+    ],
+    pdfName: "النظام الداخلي — الباب 4 المادة 23 (توزيع البريد)"
+  },
+
+  // TITRE V
+  'rule-24': {
+    tag: "الباب الخامس — المادة 24",
+    title: "المادة 24 : قواعد السير وتحديد السرعة في 10 كم/س",
+    summary: "تحدد السرعة القصوى لجميع المركبات (سيارات، دراجات نارية، كواد) بـ 10 كم/س داخل جميع الطرق والمسالك والمرائب الداخلية للإقامة. احترام اتجاه السير والمنحدرات إلزامي.",
+    stricteRule: "سرعة محددة بـ 10 كم/س كحد أقصى مع احترام إشارات واتجاهات السير داخل المرآب.",
+    highlightText: "السرعة 10 كم/س كحد أقصى — الأولوية المطلقة لسلامة الراجلين والأطفال.",
+    targetTag: "السير بالمرآب",
+    objective: "ضمان السلامة الطرقية داخل المرائب والممرات المشتركة المزدحمة بالمارة.",
+    goodPractices: [
+      "قد سيارتك بسرعة المشي (≤ 10 كم/س) بمجرد تجاوز حاجز الأمن.",
+      "شغل أضواء التقاطع داخل المرآب تحت الأرضي.",
+      "التزم التزاماً دقيقاً بالتشوير الأرضي واتجاهات منحدرات الدخول والخروج."
+    ],
+    pdfName: "النظام الداخلي — الباب 5 المادة 24 (السرعة 10 كم/س)"
+  },
+  'rule-25': {
+    tag: "الباب الخامس — المادة 25",
+    title: "المادة 25 : مراقبة الزوار وموافقة الساكن المسبقة",
+    summary: "يجب على أعوان الأمن التحقق من هوية ووجهة كل زائر، والحصول على موافقة المقيم المسبقة عبر الهاتف أو الاتصال الداخلي قبل السماح له بالدخول إلى الإقامة.",
+    stricteRule: "لا يسمح لأي زائر غريب بالدخول إلى الأجنحة السكنية دون تأكيد صريح ومباشر من مضيفه.",
+    highlightText: "التحقق من الهوية وموافقة الساكن شرطان أساسيان لدخول أي زائر.",
+    targetTag: "مراقبة الزوار",
+    objective: "منع تسلل الغرباء والحفاظ على أعلى مستويات الأمان والخصوصية.",
+    goodPractices: [
+      "أبلغ مكتب الأمن مسبقاً بموعد وصول ضيوفك لتسهيل دخولهم.",
+      "رد بسرعة على اتصال حارس الأمن لتأكيد استقبال زائرك.",
+      "رافق زوارك حتى مخرج الإقامة عند مغادرتهم."
+    ],
+    pdfName: "النظام الداخلي — الباب 5 المادة 25 (استقبال الزوار)"
+  },
+  'rule-26': {
+    tag: "الباب الخامس — المادة 26",
+    title: "المادة 26 : الموزعون : الاستلام عند الباب الرئيسي واستثناء ذوي الاحتياجات",
+    summary: "يمنع صعود عمال التوصيل (الوجبات، الطرود السريعة) إلى الطوابق والأجنحة. يتم الاستلام بالمدخل الرئيسي. يستثنى ذوو الاحتياجات الخاصة (PMR) بعد إشعار مسبق لرجال الأمن.",
+    stricteRule: "توصيل الأثاث والمواد الثقيلة يخضع لنفس أوقات الأشغال المصرح بها.",
+    highlightText: "استلام الوجبات والطرود عند المدخل الرئيسي — يمنع صعود الموزعين للطوابق.",
+    targetTag: "الموزعون والطرود",
+    objective: "حماية خصوصية وسكينة الممرات وطوابق الأجنحة السكنية.",
+    goodPractices: [
+      "انزل إلى نقطة الحراسة بالباب الرئيسي لاستلام طلبياتك من الأكل والطرود.",
+      "أشعر حراس الأمن مسبقاً إذا كانت حالتك الصحية تتطلب استثناءً مؤقتاً.",
+      "برمج استلام الأثاث والتجهيزات الكبيرة خلال ساعات العمل القانونية فقط."
+    ],
+    pdfName: "النظام الداخلي — الباب 5 المادة 26 (الموزعون وPMR)"
+  },
+
+  // TITRE VI
+  'rule-27': {
+    tag: "الباب السادس — المادة 27",
+    title: "المادة 27 : إجراءات الطوارئ عند نشوب حريق (المشترك والخاص)",
+    summary: "27.1 المشترك: إشعار فوري لمسؤول الأمن والسنديك، تدخل عاجل بمطفآت الإقامة، وإشعار الوقاية المدنية (15) والأمن الوطني (19). 27.2 الخاص: تقديم المساعدة، الاتصال بالنجدة وتدوين الحادث بسجل الأمن.",
+    stricteRule: "إعادة ملء المطفآت فوراً والتصريح بالتأمين من طرف السنديك دون أي تأخير.",
+    highlightText: "إشعار فوري للأمن، استعمال مطفآت الحريق والاتصال بالوقاية المدنية (15).",
+    targetTag: "طوارئ الحريق",
+    objective: "التدخل السريع عند بداية الحريق لحماية الأرواح والممتلكات من الانتشار.",
+    goodPractices: [
+      "تعرف على مواقع مطفآت الحريق وأزرار الإنذار في طابقك.",
+      "في حالة الدخان، اخرج بهدوء عبر السلالم ولا تستعمل المصعد إطلاقاً.",
+      "لا تغلق أبداً مسالك النجاة أو الممرات بأغراضك الخاصة."
+    ],
+    pdfName: "النظام الداخلي — الباب 6 المادة 27 (إجراءات الحريق)"
+  },
+  'rule-28': {
+    tag: "الباب السادس — المادة 28",
+    title: "المادة 28 : تسربات المياه وإغلاق الصمامات التقنية",
+    summary: "28.1 المشترك: إبلاغ السنديك لقطع الصمام الرئيسي فوراً وإصلاح العطب. 28.2 الخاص: في حال تسرب بشقة غائبة، يرخص لأعوان الأمن إغلاق صمام المياه المتواجد بالخزانة التقنية بالطابق.",
+    stricteRule: "تسوية الأضرار الخاصة تتم عبر شركات التأمين الفردية للأطراف المعنية.",
+    highlightText: "إغلاق صمام المياه الموجود في الخزانة التقنية بالطابق عند الطوارئ.",
+    targetTag: "تسربات المياه",
+    objective: "وقف تدفق المياه فوراً لتفادي غمر الشقق وتضرر الجدران والأسقف.",
+    goodPractices: [
+      "أغلق صمام المياه الرئيسي لشقتك قبل السفر أو الغياب الطويل.",
+      "افحص بانتظام سلامة الأنابيب المرنة وصنابير المياه داخل منزلك.",
+      "أبلغ السنديك فور ملاحظة أي تسرب مائي أو رطوبة في ممرات الطابق."
+    ],
+    pdfName: "النظام الداخلي — الباب 6 المادة 28 (تسربات المياه)"
+  },
+  'rule-29': {
+    tag: "الباب السادس — المادة 29",
+    title: "المادة 29 : الفيضانات ومضخات تصريف المياه بالقبو",
+    summary: "في حال هطول أمطار طوفانية أو فيضان بالمرآب، يخطر مسؤول الأمن السنديك الذي يشغل فوراً مضخات الرفع ويطلب دعم الوقاية المدنية عند الاقتضاء.",
+    stricteRule: "جاهزية دائمة لمضخات تصريف مياه الأمطار وقنوات الصرف بالمرائب.",
+    highlightText: "تشغيل مضخات الرفع التلقائية والتدخل الفوري عند غزارة الأمطار.",
+    targetTag: "مياه الأمطار",
+    objective: "حماية المرائب تحت الأرضية والسيارات من تجمع مياه الأمطار الغزيرة.",
+    goodPractices: [
+      "لا ترم أي مخلفات أو أوساخ في مجاري وقنوات صرف مياه المنحدرات.",
+      "اتبع تعليمات أعوان الأمن عند صدور نشرات جوية إنذارية.",
+      "اركن سيارتك حصراً في مكانك المخصص دون عرقلة مسارات التصريف."
+    ],
+    pdfName: "النظام الداخلي — الباب 6 المادة 29 (تصريف الأمطار)"
+  },
+  'rule-30': {
+    tag: "الباب السادس — المادة 30",
+    title: "المادة 30 : السرقات، محاولات الاقتحام وتسجيلات الكاميرات",
+    summary: "تدون أي سرقة أو محاولة اقتحام في سجل الأمن وتبلغ للسنديك. يقدم السنديك الدعم لمجلس الملكية المشتركة ويسلم تسجيلات الكاميرات للجهات الأمنية ويضع شكاية باسم الاتحاد.",
+    stricteRule: "تسليم التسجيلات الفيديو للشرطة القضائية المختصة وفق المساطر القانونية.",
+    highlightText: "التدوين بسجل الأمن، تسليم الفيديوهات للسلطات وتقديم شكاية رسمية.",
+    targetTag: "مكافحة السرقات",
+    objective: "تسهيل التحقيقات الأمنية وضمان المتابعة القانونية الصارمة لأي اعتداء.",
+    goodPractices: [
+      "أحكم إغلاق باب شقتك ونوافذ سيارتك عند مغادرتها.",
+      "أبلغ الأمن فوراً عند ملاحظة أي تحركات مشبوهة أو محاولة كسر.",
+      "قدم شكاية فردية لدى الدائرة الأمنية في حال وقوع ضرر خاص بك."
+    ],
+    pdfName: "النظام الداخلي — الباب 6 المادة 30 (السرقات والتحقيقات)"
+  },
+  'rule-31': {
+    tag: "الباب السادس — المادة 31",
+    title: "المادة 31 : قراءة عدادات الماء والكهرباء (SRM / ONEE / Lydec)",
+    summary: "لا يسمح لمستخدمي شركات التوزيع بالدخول إلا بعد الإدلاء ببطاقتهم المهنية. يرافقهم وجوباً عون أمن أثناء قراءة عدادات الماء والكهرباء بالممرات التقنية.",
+    stricteRule: "مرافقة إجبارية من عون الأمن خلال كامل فترة تواجد أعوان التوزيع بالقنوات التقنية.",
+    highlightText: "الإدلاء بالبطاقة المهنية ومرافقة أمنية مشددة أثناء فحص العدادات.",
+    targetTag: "قراءة العدادات",
+    objective: "حماية التجهيزات التقنية والتأكد من هوية المتدخلين بشبكات التوزيع.",
+    goodPractices: [
+      "تأكد من خلو أبواب الممرات التقنية من أي عوائق أو أثاث يحجبها.",
+      "راقب مؤشرات الاستهلاك في فواتيرك الشهرية للتأكد من مطابقتها.",
+      "اتصل بالسنديك في حال ملاحظة أي عطب أو تسرب بعدادك الفردي."
+    ],
+    pdfName: "النظام الداخلي — الباب 6 المادة 31 (قراءة العدادات)"
+  },
+
+  // TITRE VII
+  'rule-32': {
+    tag: "الباب السابع — المادة 32",
+    title: "المادة 32 : المرآب تحت الأرضي ومنع التخزين وغسل السيارات",
+    summary: "أماكن الركن والصناديق مخصصة حصرياً لركن السيارات والدراجات النارية الموثقة. يمنع منعاً كلياً تخزين البضائع التجارية أو المحروقات والمواد القابلة للاشتعال، ويمنع غسل السيارات بالماء الغزير واستعمال المنبه الصوتي.",
+    stricteRule: "تنظيم تفريغ شاحنات المحلات التجارية بالطابق السفلي الثاني تحت إشراف السنديك.",
+    highlightText: "ركن السيارات فقط — يمنع التخزين التجاري، البنزين، الغسيل بالماء واستعمال المنبه.",
+    targetTag: "المرآب والصناديق",
+    objective: "الحفاظ على سلامة الوقاية من الحرائق ونظافة الأرضيات وانسيابية الحركة.",
+    goodPractices: [
+      "اركن مركبتك بدقة وسط الخطوط المحددة لمكانك الخاص.",
+      "لا تخزن أي عجلات أو أثاث أو سوائل قابلة للاشتعال بصندوق الركن.",
+      "أوقف تشغيل المحرك فور التوقف لتفادي تراكم غازات العادم."
+    ],
+    pdfName: "النظام الداخلي — الباب 7 المادة 32 (المرآب والتخزين)"
+  },
+  'rule-33': {
+    tag: "الباب السابع — المادة 33",
+    title: "المادة 33 : الهوائيات واللاقط الهوائي الجماعي (Parabole)",
+    summary: "نظراً لتجهيز الإقامة بنظام لاقط فضائي جماعي، يمنع منعاً باتاً تثبيت أي صحن أو هوائي فردي على الشرفات أو الواجهات أو النوافذ.",
+    stricteRule: "في حال المخالفة، إنذار بـ 48 ساعة للإزالة، وبعدها يقوم السنديك بالإزالة التلقائية على نفقة المخالف.",
+    highlightText: "لاقط فضائي جماعي مركب — منع قاطع للهوائيات الفردية المشوهة للواجهات.",
+    targetTag: "الهوائي الجماعي",
+    objective: "حماية المظهر المعماري الأنيق للواجهات وتفادي مخاطر سقوط اللواقط الفردية.",
+    goodPractices: [
+      "اربط أجهزة التلفاز مباشرة بمقابس الهوائي الجماعي المثبتة بشقتك.",
+      "استعن بتقني الإقامة في حالة انقطاع إشارة القنوات الفضائية.",
+      "لا تثبت أي سلك أو صحن لاقط مرئي على الواجهة الخارجية."
+    ],
+    pdfName: "النظام الداخلي — الباب 7 المادة 33 (اللاقط الجماعي)"
+  },
+  'rule-34': {
+    tag: "الباب السابع — المادة 34",
+    title: "المادة 34 : أسطح العمارات : نشر الغسيل وإغلاق الأبواب",
+    summary: "الاستعمال الرئيسي للسطح: التجهيزات التقنية والمكيفات ونشر الغسيل على الحوامل المخصصة تحت إشراف السنديك. تظل أبواب الأسطح مقفلة بالمفتاح لأسباب أمنية ويمنع ولوج الغرباء.",
+    stricteRule: "أبواب الأسطح مقفلة بالمفتاح دائماً — الولوج مخصص للساكنة المصرح لهم والتقنيين فقط.",
+    highlightText: "نشر الغسيل في الحوامل المخصصة بالسطح — إغلاق أبواب السطح بالمفتاح بعد الاستعمال.",
+    targetTag: "أسطح العمارات",
+    objective: "حماية عزل الأسطح وضمان السلامة ومنع أي حوادث سقوط.",
+    goodPractices: [
+      "استعمل حصرياً الحبال والحوامل المعتمدة لنشر الغسيل بالسطح.",
+      "أقفل باب السطح بالمفتاح فور دخولك أو خروجك منه.",
+      "لا تقترب من حواف الأسطح أو غرف التجهيزات التقنية الحساسة."
+    ],
+    pdfName: "النظام الداخلي — الباب 7 المادة 34 (أسطح العمارات)"
+  },
+  'rule-35': {
+    tag: "الباب السابع — المادة 35",
+    title: "المادة 35 : شواحن السيارات الكهربائية والمعايير التقنية (IRVE)",
+    summary: "35.1 حق الشحن متاح على نفقة المقيم مع إشعار كتابي وموافقة مسبقة من السنديك. 35.2 التركيب إلزامي بواسطة مهني معتمد (IRVE) وفق معايير السلامة ومكافحة الحرائق، ويمنع استعمال الأسلاك غير المطابقة. 35.3 عداد فردي للكهرباء (منع الربط بالمشترك). 35.4 التأمين والصيانة على نفقة المالك.",
+    stricteRule: "يمنع ربط أي شاحن خاص بإنارة أو مقابس المشترك بدون عداد معتمد ومصادق عليه من السنديك.",
+    highlightText: "تقني معتمد IRVE، عداد كهربائي مخصص، وتأمين مسؤولية مدنية إجباري.",
+    targetTag: "شواحن السيارات",
+    objective: "تشجيع النقل المستدام مع ضمان السلامة الكهربائية وفردية استهلاك الطاقة.",
+    goodPractices: [
+      "قدم الملف التقني للتركيب (المخطط والشاحن المعتمد) للسنديك قبل البدء.",
+      "صرح بتركيب الشاحن لدى شركة التأمين الخاصة بمسكنك.",
+      "لا تمدد أي أسلاك كهربائية عشوائية عبر مسارات الراجلين أو السيارات."
+    ],
+    pdfName: "النظام الداخلي — الباب 7 المادة 35 (شواحن السيارات)"
+  },
+  'rule-36': {
+    tag: "الباب السابع — المادة 36",
+    title: "المادة 36 : تنظيم الحفلات والمناسبات الخاصة بالمشترك",
+    summary: "تنظيم المناسبات الخاصة (أعراس، عقيقة، مآتم) بالأجزاء المشتركة يخضع لموافقة السنديك الكتابية المسبقة مع تحديد المساحة والمدة، مع الحفاظ على الممرات وسلامة التجهيزات والهدوء وإعادة المكان نظيفاً فوراً.",
+    stricteRule: "التزام منظم المناسبة بالحد من الصوت واحترام السكينة وإعادة الفضاء نظيفاً ومعقماً مباشرة بعد المناسبة.",
+    highlightText: "موافقة كتابية مسبقة من السنديك — احترام الهدوء وإعادة النظافة الفورية.",
+    targetTag: "المناسبات الخاصة",
+    objective: "مراعاة المناسبات الاجتماعية مع الحفاظ على راحة ونظافة الإقامة لجميع الجيران.",
+    goodPractices: [
+      "وجه طلباً كتابياً للسنديك 10 أيام قبل موعد المناسبة المرتقبة.",
+      "احم أرضيات وتجهيزات الفضاء المشترك المستعمل.",
+      "أوقف مكبرات الصوت في الوقت المتفق عليه مع السنديك."
+    ],
+    pdfName: "النظام الداخلي — الباب 7 المادة 36 (المناسبات الخاصة)"
+  },
+
+  // TITRE VIII
+  'rule-37': {
+    tag: "الباب الثامن — المادة 37",
+    title: "المادة 37 : واجبات الاشتراك المشتركة وتوزيعها حسب الحصص (Tantièmes)",
+    summary: "المصاريف الضرورية لحفظ، صيانة، تشغيل وإدارة الأجزاء المشتركة والتجهيزات الجماعية. مساهمة إجبارية تتناسب مع حصة كل جزء في الملكية، وتستحق في اليوم الأول من كل فترة يحددها الجمع العام.",
+    stricteRule: "الأقساط مستحقة الأداء في اليوم الأول من كل فترة يحددها الجمع العام.",
+    highlightText: "مساهمة إجبارية حسب الحصص المئوية — الاستحقاق في اليوم الأول من الفترة المحددة.",
+    targetTag: "واجبات السنديك",
+    objective: "تمويل الخدمات الأساسية وضمان استمرار تسيير وصيانة الإقامة.",
+    goodPractices: [
+      "أدِّ واجبات السنديك عبر الاقتطاع التلقائي أو التحويل في اليوم الأول من الشهر/الفصل.",
+      "اطلع على الكشوفات المالية والحسابات السنوية المقدمة من السنديك.",
+      "شارك في التصويت على الميزانية التقديرية أثناء الجمع العام."
+    ],
+    pdfName: "النظام الداخلي — الباب 8 المادة 37 (واجبات الاشتراك)"
+  },
+  'rule-38': {
+    tag: "الباب الثامن — المادة 38",
+    title: "المادة 38 : تفصيل النفقات العامة (الحفظ، الصيانة والإدارة)",
+    summary: "38.1 الحفظ: الهيكل (أسطح، واجهات، جدران)، صيانة الشبكات، المصاعد والإنارة. 38.2 الصيانة: مواد النظافة، عقود الحراسة، المساحات الخضراء، مكافحة الحشرات، ماء وكهرباء المشترك. 38.3 الإدارة: أتعاب السنديك، التأمين، الضرائب، الجموع العامة ومصاريف التقاضي.",
+    stricteRule: "توزيع مفصل وشفاف لجميع أبواب الميزانية المخصصة لحفظ وتسيير الإقامة.",
+    highlightText: "حفظ البناية، عقود الخدمات (الأمن والنظافة) والإدارة القانونية المنظمة.",
+    targetTag: "أبواب الميزانية",
+    objective: "ضمان الشفافية الكاملة في صرف كل درهم من واجبات الساكنة.",
+    goodPractices: [
+      "تفحص التقرير المالي التفصيلي المرفق باستدعاء الجمع العام.",
+      "اطلع على تقارير مراقب الحسابات ومجلس الملكية المشتركة.",
+      "اقترح أفكاراً لترشيد النفقات واستهلاك الطاقة خلال مناقشات الجمع العام."
+    ],
+    pdfName: "النظام الداخلي — الباب 8 المادة 38 (تفصيل النفقات 38.1/38.2/38.3)"
+  },
+  'rule-39': {
+    tag: "الباب الثامن — المادة 39",
+    title: "المادة 39 : النفقات الاستثنائية، أشغال الطوارئ ومساطر الاستخلاص",
+    summary: "المصاريف الاستثنائية غير المبرمجة في الميزانية العادية (أشغال مستعجلة، إصلاحات كبرى). يقرر الجمع العام طلب أموال استثنائي لمواجهتها. يطبق السنديك نفس مساطر الاستخلاص الودي والقضائي.",
+    stricteRule: "تطبيق مساطر الاستخلاص الودية والقضائية بحزم في حالة التأخر في سداد الواجبات.",
+    highlightText: "أموال استثنائية يقررها الجمع العام للأشغال الكبرى ومساطر استخلاص حازمة.",
+    targetTag: "النفقات الاستثنائية",
+    objective: "تمويل الإصلاحات الكبرى وحماية القيمة المالية والعقارية للمشروع.",
+    goodPractices: [
+      "التزم بسداد المساهمات الاستثنائية المصادق عليها في الجمع العام.",
+      "تواصل مع السنديك فوراً في حالة وجود صعوبة ظرفية للاتفاق على جدولة ودية.",
+      "سوِّ وضعيتك المالية بسرعة لتفادي أي متابعة قضائية ومصاريف إضافية."
+    ],
+    pdfName: "النظام الداخلي — الباب 8 المادة 39 (النفقات الاستثنائية)"
   }
 };

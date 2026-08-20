@@ -53,13 +53,13 @@ export const Header: React.FC<HeaderProps> = ({
         <nav className="hidden lg:flex items-center gap-5 xl:gap-7 text-xs sm:text-sm font-medium">
           <a href="#" className="text-slate-300 hover:text-white transition-colors">{t.navHome}</a>
           
-          <button
-            onClick={onOpenBulletinBoard}
-            className="text-teal-400 font-bold hover:text-teal-300 flex items-center gap-1 cursor-pointer"
+          <a
+            href="#dashboard-section"
+            className="text-teal-400 font-bold hover:text-teal-300 flex items-center gap-1.5 transition-colors"
           >
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Affiches Officielle</span>
-          </button>
+            <span>{currentLang === 'ar' ? 'لوحة القيادة والإعلانات' : 'Tableau d\'Affichage'}</span>
+          </a>
 
           <a href="#rules-section" className="text-slate-300 hover:text-white transition-colors">{t.navRules}</a>
 

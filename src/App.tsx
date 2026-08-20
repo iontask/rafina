@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
+import { ResidenceDashboard } from './components/ResidenceDashboard';
 import { CategoryTabs } from './components/CategoryTabs';
 import { RuleCard } from './components/RuleCard';
 import { RuleDetailModal } from './components/RuleDetailModal';
@@ -14,14 +15,14 @@ import { ResidentPortalModal } from './components/ResidentPortalModal';
 import { rulesData } from './data/rules';
 import { Rule, CategoryKey, Language } from './types';
 import { uiTranslations, arabicRulesContent } from './data/translations';
-import { PhoneCall, ChevronDown, Sparkles, Baby, Car, Dumbbell, Trash2, Clock, AlertTriangle } from 'lucide-react';
+import { PhoneCall, ChevronDown, Sparkles, AlertTriangle } from 'lucide-react';
 
 export function App() {
   const [currentLang, setCurrentLang] = useState<Language>('fr');
   const [activeCategory, setActiveCategory] = useState<CategoryKey | 'all'>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedRule, setSelectedRule] = useState<Rule | null>(null);
-  const [showAllRules, setShowAllRules] = useState<boolean>(false);
+  const [showAllRules, setShowAllRules] = useState<boolean>(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   
   // New Syndic Modals state
@@ -125,70 +126,14 @@ export function App() {
         onOpenReportModal={() => setIsReportOpen(true)}
       />
 
-      {/* SYNDIC DIGITAL BULLETIN BOARD FEATURE BANNER */}
-      <section className="bg-[#030a16] text-white py-6 border-b border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="p-5 rounded-2xl bg-gradient-to-r from-slate-900 via-[#07172e] to-slate-900 border border-teal-500/30 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-xl">
-            
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-teal-500/20 border border-teal-500/40 flex items-center justify-center text-teal-400 flex-shrink-0">
-                <Sparkles className="w-6 h-6" />
-              </div>
-              <div>
-                <div className="flex items-center gap-2">
-                  <span className="text-[10px] bg-teal-500/20 text-teal-300 font-extrabold px-2 py-0.5 rounded-full border border-teal-500/30 uppercase tracking-wider">
-                    {t.heroBadge}
-                  </span>
-                  <span className="text-[11px] text-slate-400 font-bold hidden sm:inline">
-                    5 Affiches Officiel
-                  </span>
-                </div>
-                <h3 className="text-base sm:text-lg font-extrabold text-white mt-1">
-                  {t.bulletinBoardTitle}
-                </h3>
-                <p className="text-xs text-slate-300 max-w-2xl leading-relaxed">
-                  {t.bulletinBoardSub}
-                </p>
-              </div>
-            </div>
-
-            {/* QUICK POSTER BADGES & TRIGGER BUTTON */}
-            <div className="flex flex-wrap items-center gap-2 w-full lg:w-auto justify-start lg:justify-end">
-              <button
-                onClick={() => setIsBulletinOpen(true)}
-                className="px-2.5 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-emerald-300 border border-emerald-500/30 text-xs font-bold flex items-center gap-1 cursor-pointer transition-colors"
-              >
-                <Baby className="w-3.5 h-3.5 text-emerald-400" />
-                <span>Kids Club</span>
-              </button>
-
-              <button
-                onClick={() => setIsBulletinOpen(true)}
-                className="px-2.5 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-amber-300 border border-amber-500/30 text-xs font-bold flex items-center gap-1 cursor-pointer transition-colors"
-              >
-                <Car className="w-3.5 h-3.5 text-amber-400" />
-                <span>Parking</span>
-              </button>
-
-              <button
-                onClick={() => setIsBulletinOpen(true)}
-                className="px-2.5 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-sky-300 border border-sky-500/30 text-xs font-bold flex items-center gap-1 cursor-pointer transition-colors"
-              >
-                <Dumbbell className="w-3.5 h-3.5 text-sky-400" />
-                <span>Salle de Sport</span>
-              </button>
-
-              <button
-                onClick={() => setIsBulletinOpen(true)}
-                className="px-4 py-2 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-xs transition-all shadow-lg shadow-teal-500/20 cursor-pointer flex items-center gap-2 flex-shrink-0"
-              >
-                <span>{t.openBulletinBoard}</span>
-              </button>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      {/* RESIDENCE DASHBOARD & BULLETIN BOARD (TABLEAU D'AFFICHAGE DE LA RÉSIDENCE) */}
+      <ResidenceDashboard
+        currentLang={currentLang}
+        onOpenReportModal={() => setIsReportOpen(true)}
+        onOpenResidentModal={() => setIsResidentOpen(true)}
+        onOpenServicesModal={() => setIsServicesOpen(true)}
+        onOpenBulletinModal={() => setIsBulletinOpen(true)}
+      />
 
       {/* CATEGORY TABS */}
       <CategoryTabs
