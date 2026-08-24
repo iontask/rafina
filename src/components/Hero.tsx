@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FileText, Shield, PhoneCall, Search, Maximize2, X, Sparkles, AlertTriangle } from 'lucide-react';
+import { FileText, Shield, PhoneCall, Search, Maximize2, X, Sparkles, AlertTriangle, Heart, Quote } from 'lucide-react';
 import { Language } from '../types';
 import { uiTranslations } from '../data/translations';
 
@@ -22,6 +22,7 @@ export const Hero: React.FC<HeroProps> = ({
 }) => {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const t = uiTranslations[currentLang];
+  const isAr = currentLang === 'ar';
 
   // High quality night architectural render URL for Les Pavillons Verts Aïn Sebaa
   const heroImageUrl = "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=85";
@@ -72,8 +73,8 @@ export const Hero: React.FC<HeroProps> = ({
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
-          {/* LEFT COLUMN: TEXT & ACTION CARDS */}
-          <div className="lg:col-span-7 space-y-6">
+          {/* LEFT COLUMN: TEXT, HADITH REMINDER & ACTION CARDS */}
+          <div className="lg:col-span-7 space-y-5">
             
             {/* PILL BADGE */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-500/15 border border-teal-500/30 text-teal-300 text-xs font-extrabold tracking-wider uppercase">
@@ -87,12 +88,41 @@ export const Hero: React.FC<HeroProps> = ({
             </h1>
 
             {/* SUBTITLE */}
-            <p className="text-slate-300 text-sm sm:text-base max-w-2xl leading-relaxed font-normal">
+            <p className="text-slate-300 text-xs sm:text-sm max-w-2xl leading-relaxed font-normal">
               {t.heroSubtitle}
             </p>
 
+            {/* HADITH PROPHÉTIQUE SUR LE BON VOISINAGE — RAPPEL ESSENTIEL */}
+            <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-emerald-950/70 via-[#07201e]/80 to-slate-950/90 border border-emerald-500/40 shadow-xl relative overflow-hidden backdrop-blur-md">
+              <div className="absolute -top-6 -right-6 w-24 h-24 bg-emerald-400/10 rounded-full blur-xl pointer-events-none"></div>
+              
+              <div className="flex items-center justify-between gap-2 mb-2.5">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] font-extrabold tracking-wide uppercase">
+                  <Heart className="w-3 h-3 text-emerald-400 fill-emerald-400/30" />
+                  <span>{t.hadithBadge}</span>
+                </span>
+                <span className="text-[10px] text-emerald-400/80 font-bold">
+                  {t.hadithSource}
+                </span>
+              </div>
+
+              <div className="space-y-2">
+                {/* HADITH TEXT IN ARABIC */}
+                <p className="text-sm sm:text-base font-bold text-amber-200/95 leading-relaxed text-right font-serif tracking-wide select-text">
+                  « {t.hadithArabic} »
+                </p>
+
+                {/* HADITH TRANSLATION IN FRENCH (WHEN FRENCH IS SELECTED) */}
+                {!isAr && (
+                  <p className="text-xs text-slate-300 italic leading-relaxed border-t border-emerald-500/20 pt-2 font-normal">
+                    {t.hadithText}
+                  </p>
+                )}
+              </div>
+            </div>
+
             {/* 3 QUICK ACTION GLASS CARDS */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
               
               {/* Card 1: Bulletin Board & Dashboard */}
               <a

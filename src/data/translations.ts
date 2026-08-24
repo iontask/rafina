@@ -30,6 +30,13 @@ export const uiTranslations = {
     heroBadge: "✦ SYNDIC & RÈGLEMENT OFFICIEL DE COPROPRIÉTÉ",
     heroTitle: "Règlement Intérieur Officiel — Résidence Les Pavillons Verts",
     heroSubtitle: "Document officiel régissant la vie commune, la sécurité, l'usage des équipements et la gestion des 5 pavillons de la Résidence Rafina Aïn Sebaa, conformément aux lois n° 18-00 et 106-12.",
+    
+    // Hadith Reminder Banner
+    hadithBadge: "✦ RAPPEL & ÉTHIQUE DU BON VOISINAGE",
+    hadithArabic: "قَالَ رَسُولُ اللَّهِ ﷺ: «مَا زَالَ جِبْرِيلُ يُوصِينِي بِالْجَارِ، حَتَّى ظَنَنْتُ أَنَّهُ سَيُوَرِّثُهُ»",
+    hadithText: "Le Messager d'Allah ﷺ a dit : « Gabriel n'a cessé de me recommander le voisin, au point que j'ai cru qu'il allait lui accorder une part d'héritage. »",
+    hadithSource: "Rapporté par Al-Bukhâri et Muslim — متفق عليه",
+
     cardRuleTitle: "39 Articles Officiels",
     cardRuleSub: "Règlement en 8 Titres",
     cardSecurityTitle: "Sécurité 24/7",
@@ -145,6 +152,13 @@ export const uiTranslations = {
     heroBadge: "✦ النظام الداخلي الرسمي لاتحاد الملاك المشتركين",
     heroTitle: "النظام الداخلي الرسمي — إقامة Les Pavillons Verts",
     heroSubtitle: "الوثيقة الرسمية المنظمة للحياة المشتركة، الأمن، استخدام المرافق وتسيير الأجنحة الخمسة لإقامة رافينا عين السبع، طبقاً لمقتضيات القانون 18-00 المعدل بالقانون 106-12.",
+    
+    // Hadith Reminder Banner
+    hadithBadge: "✦ تذكير نبوي شريف بحق الجار",
+    hadithArabic: "قَالَ رَسُولُ اللَّهِ ﷺ: «مَا زَالَ جِبْرِيلُ يُوصِينِي بِالْجَارِ، حَتَّى ظَنَنْتُ أَنَّهُ سَيُوَرِّثُهُ»",
+    hadithText: "قَالَ رَسُولُ اللَّهِ ﷺ: «مَا زَالَ جِبْرِيلُ يُوصِينِي بِالْجَارِ، حَتَّى ظَنَنْتُ أَنَّهُ سَيُوَرِّثُهُ»",
+    hadithSource: "متفق عليه — رواه البخاري ومسلم",
+
     cardRuleTitle: "39 مادة قانونية",
     cardRuleSub: "النظام في 8 أبواب",
     cardSecurityTitle: "حراسة 24/7",
