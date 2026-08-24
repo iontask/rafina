@@ -124,6 +124,7 @@ export function App() {
         onOpenBulletinBoard={() => setIsBulletinOpen(true)}
         onOpenServicesModal={() => setIsServicesOpen(true)}
         onOpenReportModal={() => setIsReportOpen(true)}
+        onSelectRule={(rule) => setSelectedRule(rule)}
       />
 
       {/* RESIDENCE DASHBOARD & BULLETIN BOARD (TABLEAU D'AFFICHAGE DE LA RÉSIDENCE) */}

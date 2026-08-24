@@ -1,7 +1,23 @@
-import React, { useState } from 'react';
-import { FileText, Shield, PhoneCall, Search, Maximize2, X, Sparkles, AlertTriangle, Heart, Quote } from 'lucide-react';
-import { Language } from '../types';
-import { uiTranslations } from '../data/translations';
+import React, { useState, useRef, useEffect } from 'react';
+import {
+  FileText,
+  Shield,
+  PhoneCall,
+  Search,
+  Maximize2,
+  X,
+  Sparkles,
+  AlertTriangle,
+  Heart,
+  ChevronRight,
+  ExternalLink,
+  Tag,
+  ArrowRight,
+  BookOpen
+} from 'lucide-react';
+import { Language, Rule } from '../types';
+import { uiTranslations, arabicRulesContent } from '../data/translations';
+import { rulesData } from '../data/rules';
 
 interface HeroProps {
   searchQuery: string;
@@ -10,6 +26,7 @@ interface HeroProps {
   onOpenBulletinBoard?: () => void;
   onOpenServicesModal?: () => void;
   onOpenReportModal?: () => void;
+  onSelectRule?: (rule: Rule) => void;
 }
 
 export const Hero: React.FC<HeroProps> = ({
@@ -19,16 +36,127 @@ export const Hero: React.FC<HeroProps> = ({
   onOpenBulletinBoard,
   onOpenServicesModal,
   onOpenReportModal,
+  onSelectRule,
 }) => {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const searchContainerRef = useRef<HTMLDivElement>(null);
+
   const t = uiTranslations[currentLang];
   const isAr = currentLang === 'ar';
 
   // High quality night architectural render URL for Les Pavillons Verts Aïn Sebaa
   const heroImageUrl = "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=85";
 
+  // Handle clicking outside to close search dropdown
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (searchContainerRef.current && !searchContainerRef.current.contains(event.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  // Quick suggestions
+  const quickKeywords = isAr
+    ? [
+        { label: 'الحيوانات والكلاب', query: 'حيوانات' },
+        { label: 'الأشغال والضجيج', query: 'أشغال' },
+        { label: 'المرآب والسرعة', query: 'مرآب' },
+        { label: 'القاعة الرياضية', query: 'رياضية' },
+        { label: 'نادي الأطفال', query: 'أطفال' },
+        { label: 'عيد الأضحى', query: 'الأضحى' },
+        { label: 'شواحن السيارات', query: 'شواحن' },
+        { label: 'الواجبات الشهرية', query: 'الواجبات' },
+      ]
+    : [
+        { label: 'Animaux & Chiens', query: 'animaux' },
+        { label: 'Travaux & Bruit', query: 'travaux' },
+        { label: 'Parking & Vitesse', query: 'parking' },
+        { label: 'Salle de Sport', query: 'sport' },
+        { label: 'Kids Club', query: 'kids' },
+        { label: 'Aïd El Kébir', query: 'aïd' },
+        { label: 'Bornes Électriques', query: 'bornes' },
+        { label: 'Charges & Impayés', query: 'charges' },
+      ];
+
+  // Matching rules calculation for search results
+  const queryTrimmed = searchQuery.toLowerCase().trim();
+  const matchingRules = queryTrimmed === '' ? [] : rulesData.filter((rule) => {
+    const ar = arabicRulesContent[rule.id];
+    const frTitle = rule.title.toLowerCase();
+    const frSummary = rule.summary.toLowerCase();
+    const frHighlight = (rule.highlightText || '').toLowerCase();
+    const frTag = rule.tag.toLowerCase();
+    const frStrict = (rule.stricteRule || '').toLowerCase();
+    
+    const arTitle = ar?.title.toLowerCase() || '';
+    const arSummary = ar?.summary.toLowerCase() || '';
+    const arHighlight = (ar?.highlightText || '').toLowerCase();
+    const arTag = ar?.tag.toLowerCase() || '';
+    const arStrict = (ar?.stricteRule || '').toLowerCase();
+
+    return (
+      frTitle.includes(queryTrimmed) ||
+      frSummary.includes(queryTrimmed) ||
+      frHighlight.includes(queryTrimmed) ||
+      frTag.includes(queryTrimmed) ||
+      frStrict.includes(queryTrimmed) ||
+      arTitle.includes(queryTrimmed) ||
+      arSummary.includes(queryTrimmed) ||
+      arHighlight.includes(queryTrimmed) ||
+      arTag.includes(queryTrimmed) ||
+      arStrict.includes(queryTrimmed) ||
+      rule.number.includes(queryTrimmed)
+    );
+  });
+
+  const handleSelectRuleItem = (rule: Rule) => {
+    if (onSelectRule) {
+      onSelectRule(rule);
+    }
+    setIsDropdownOpen(false);
+  };
+
+  const handleScrollToRules = () => {
+    setIsDropdownOpen(false);
+    const element = document.getElementById('rules-section');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  // Helper for tag colors
+  const getTagBadgeStyle = (color: string) => {
+    switch (color) {
+      case 'red':
+        return 'bg-rose-500/20 text-rose-300 border-rose-500/30';
+      case 'orange':
+        return 'bg-amber-500/20 text-amber-300 border-amber-500/30';
+      case 'blue':
+        return 'bg-sky-500/20 text-sky-300 border-sky-500/30';
+      case 'green':
+      case 'emerald':
+        return 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30';
+      case 'purple':
+        return 'bg-purple-500/20 text-purple-300 border-purple-500/30';
+      default:
+        return 'bg-teal-500/20 text-teal-300 border-teal-500/30';
+    }
+  };
+
   return (
-    <section className="bg-gradient-to-b from-[#030a16] via-[#071326] to-[#0b1c36] text-white pt-8 pb-10 px-4 sm:px-6 lg:px-8 border-b border-slate-800 relative overflow-hidden">
+    <section className="bg-gradient-to-b from-[#030a16] via-[#071326] to-[#0b1c36] text-white pt-8 pb-10 px-4 sm:px-6 lg:px-8 border-b border-slate-800 relative">
+      
+      {/* BACKGROUND DECORATIVE GLOW (CONTAINED) */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-10 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl"></div>
+      </div>
       
       {/* LIGHTBOX MODAL FOR HERO IMAGE */}
       {isLightboxOpen && (
@@ -65,10 +193,6 @@ export const Hero: React.FC<HeroProps> = ({
           </div>
         </div>
       )}
-
-      {/* BACKGROUND DECORATIVE GLOW */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-0 left-10 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -232,19 +356,209 @@ export const Hero: React.FC<HeroProps> = ({
 
         </div>
 
-        {/* SEARCH BAR CARD AT BOTTOM OF HERO */}
-        <div className="mt-8">
-          <div className="relative max-w-3xl mx-auto">
-            <div className="absolute inset-y-0 ltr:left-0 rtl:right-0 pl-4 rtl:pr-4 rtl:pl-0 flex items-center pointer-events-none text-slate-400">
-              <Search className="w-5 h-5" />
+        {/* ========================================================================= */}
+        {/* LIVE INTUITIVE SEARCH BAR WITH FLOATING MATCHING ARTICLES DROPDOWN */}
+        {/* ========================================================================= */}
+        <div className="mt-8 relative z-30" ref={searchContainerRef}>
+          <div className="max-w-3xl mx-auto space-y-2.5">
+            
+            {/* INPUT FIELD */}
+            <div className="relative">
+              <div className="absolute inset-y-0 ltr:left-0 rtl:right-0 pl-4 rtl:pr-4 rtl:pl-0 flex items-center pointer-events-none text-slate-400">
+                <Search className="w-5 h-5 text-teal-500" />
+              </div>
+
+              <input
+                type="text"
+                value={searchQuery}
+                onFocus={() => setIsDropdownOpen(true)}
+                onChange={(e) => {
+                  onSearchChange(e.target.value);
+                  setIsDropdownOpen(true);
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === 'Escape') {
+                    setIsDropdownOpen(false);
+                  }
+                }}
+                placeholder={t.searchPlaceholder}
+                className="w-full ltr:pl-11 ltr:pr-12 rtl:pr-11 rtl:pl-12 py-3.5 bg-white text-slate-900 rounded-2xl shadow-2xl placeholder-slate-400 font-medium text-sm border-2 border-transparent focus:border-teal-500 focus:ring-4 focus:ring-teal-500/20 outline-none transition-all"
+              />
+
+              {/* CLEAR BUTTON */}
+              {searchQuery.trim().length > 0 && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    onSearchChange('');
+                    setIsDropdownOpen(false);
+                  }}
+                  title={t.clearSearch}
+                  className="absolute inset-y-0 ltr:right-0 rtl:left-0 pr-3 rtl:pl-3 rtl:pr-0 flex items-center text-slate-400 hover:text-slate-700 transition-colors cursor-pointer"
+                >
+                  <span className="p-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600">
+                    <X className="w-4 h-4" />
+                  </span>
+                </button>
+              )}
             </div>
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => onSearchChange(e.target.value)}
-              placeholder={t.searchPlaceholder}
-              className="w-full ltr:pl-11 ltr:pr-4 rtl:pr-11 rtl:pl-4 py-3.5 bg-white text-slate-900 rounded-2xl shadow-xl placeholder-slate-400 font-medium text-sm border-0 focus:ring-2 focus:ring-teal-500 outline-none transition-all"
-            />
+
+            {/* QUICK SUGGESTION PILLS (ALWAYS HELPFUL & DISCOVERABLE) */}
+            <div className="flex items-center gap-1.5 flex-wrap px-1 text-xs text-slate-400">
+              <span className="font-semibold text-slate-300 flex items-center gap-1 text-[11px]">
+                <Sparkles className="w-3 h-3 text-teal-400" />
+                <span>{t.quickKeywordsTitle}</span>
+              </span>
+              {quickKeywords.map((k, idx) => (
+                <button
+                  key={idx}
+                  type="button"
+                  onClick={() => {
+                    onSearchChange(k.query);
+                    setIsDropdownOpen(true);
+                  }}
+                  className="px-2.5 py-0.5 rounded-full bg-slate-800/80 hover:bg-teal-500/20 text-slate-300 hover:text-teal-300 border border-slate-700 hover:border-teal-500/40 text-[11px] font-medium transition-all cursor-pointer whitespace-nowrap"
+                >
+                  {k.label}
+                </button>
+              ))}
+            </div>
+
+            {/* ========================================================================= */}
+            {/* INTUITIVE SEARCH RESULTS PANEL (ALWAYS VISIBLE & HIGH CONTRAST) */}
+            {/* ========================================================================= */}
+            {(isDropdownOpen || searchQuery.trim().length > 0) && searchQuery.trim().length > 0 && (
+              <div className="relative mt-3 bg-[#07172e] border-2 border-teal-500/60 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] overflow-hidden z-40 text-white flex flex-col animate-fadeIn">
+                
+                {/* TOP BAR: COUNT & CLEAR */}
+                <div className="p-3.5 bg-slate-950/95 border-b border-teal-500/30 flex items-center justify-between gap-3 text-xs">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-teal-400 animate-pulse"></span>
+                    <span className="font-extrabold text-white text-xs sm:text-sm">
+                      {matchingRules.length} {t.searchFoundCount}
+                    </span>
+                    <span className="px-2.5 py-0.5 rounded-full bg-teal-500/20 text-teal-300 border border-teal-500/40 text-xs font-black">
+                      « {searchQuery.trim()} »
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        onSearchChange('');
+                        setIsDropdownOpen(false);
+                      }}
+                      className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white text-[11px] font-bold transition-colors cursor-pointer flex items-center gap-1"
+                    >
+                      <X className="w-3.5 h-3.5" />
+                      <span>{t.clearSearch}</span>
+                    </button>
+                  </div>
+                </div>
+
+                {/* RESULTS BODY: LIST OF ARTICLES */}
+                <div className="max-h-[380px] overflow-y-auto divide-y divide-slate-800/80 p-2.5 space-y-2">
+                  {matchingRules.length > 0 ? (
+                    matchingRules.map((rule) => {
+                      const arContent = isAr ? arabicRulesContent[rule.id] : null;
+                      const title = arContent?.title || rule.title;
+                      const summary = arContent?.summary || rule.summary;
+                      const highlight = arContent?.highlightText || rule.highlightText;
+                      const tag = arContent?.tag || rule.tag;
+
+                      return (
+                        <div
+                          key={rule.id}
+                          onClick={() => handleSelectRuleItem(rule)}
+                          className="p-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-700/80 hover:border-teal-400 transition-all cursor-pointer group flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-md"
+                        >
+                          <div className="space-y-1.5 flex-1">
+                            <div className="flex items-center gap-2 flex-wrap">
+                              {/* ARTICLE NUMBER BADGE */}
+                              <span className="px-2.5 py-0.5 rounded-md bg-teal-500 text-slate-950 text-[11px] font-black tracking-wider uppercase shadow-sm">
+                                {isAr ? `المادة ${rule.number}` : `Article ${rule.number}`}
+                              </span>
+
+                              {/* TAG BADGE */}
+                              <span className={`px-2.5 py-0.5 rounded-md text-[10px] font-bold border ${getTagBadgeStyle(rule.tagColor)}`}>
+                                {tag}
+                              </span>
+
+                              {/* TITRE REFERENCE */}
+                              {rule.titreLabel && (
+                                <span className="text-[11px] text-teal-300/80 hidden md:inline truncate max-w-[280px]">
+                                  • {rule.titreLabel}
+                                </span>
+                              )}
+                            </div>
+
+                            {/* ARTICLE TITLE */}
+                            <h4 className="text-sm font-extrabold text-white group-hover:text-teal-300 transition-colors leading-snug">
+                              {title}
+                            </h4>
+
+                            {/* SNIPPET PREVIEW */}
+                            <p className="text-xs text-slate-300 leading-relaxed font-normal">
+                              {summary}
+                            </p>
+
+                            {/* HIGHLIGHT TEXT SNIPPET */}
+                            {highlight && (
+                              <div className="text-[11px] text-amber-300/95 font-medium italic bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-lg inline-block">
+                                ✦ {highlight}
+                              </div>
+                            )}
+                          </div>
+
+                          {/* ACTION BUTTON */}
+                          <div className="flex items-center gap-1.5 text-xs font-bold text-teal-400 group-hover:text-teal-300 flex-shrink-0 self-end sm:self-center">
+                            <span className="px-3 py-1.5 rounded-xl bg-teal-500/20 group-hover:bg-teal-500 group-hover:text-slate-950 transition-all flex items-center gap-1.5">
+                              <span>{t.viewArticleDetail}</span>
+                              <ChevronRight className="w-4 h-4 rtl:rotate-180" />
+                            </span>
+                          </div>
+                        </div>
+                      );
+                    })
+                  ) : (
+                    <div className="py-8 px-4 text-center space-y-2">
+                      <div className="w-10 h-10 rounded-full bg-slate-800 text-slate-400 flex items-center justify-center mx-auto">
+                        <Search className="w-5 h-5" />
+                      </div>
+                      <div className="text-xs font-bold text-slate-200">
+                        {isAr
+                          ? `لم يتم العثور على أي مادة مطابقة لـ "${searchQuery}"`
+                          : `Aucun article ne correspond à "${searchQuery}"`}
+                      </div>
+                      <p className="text-[11px] text-slate-400 max-w-sm mx-auto">
+                        {isAr
+                          ? 'جرب البحث بكلمات عامة مثل: الحيوانات، الأشغال، المرآب، القاعة، السنديك، الواجبات...'
+                          : 'Essayez avec un mot-clé plus simple : animaux, travaux, parking, sport, syndic, charges, ascenseur...'}
+                      </p>
+                    </div>
+                  )}
+                </div>
+
+                {/* FOOTER BAR: SCROLL TO FULL RULES */}
+                {matchingRules.length > 0 && (
+                  <div className="p-3 bg-slate-950/90 border-t border-teal-500/30 flex items-center justify-between gap-2 text-xs">
+                    <span className="text-[11px] text-slate-400 font-medium">
+                      {isAr ? 'اضغط على أي مادة لفتح التفاصيل والمشاركة' : 'Cliquez sur un article pour voir les détails et partager'}
+                    </span>
+                    <button
+                      onClick={handleScrollToRules}
+                      className="px-3.5 py-1.5 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-extrabold text-[11px] flex items-center gap-1.5 transition-all shadow-md cursor-pointer"
+                    >
+                      <BookOpen className="w-3.5 h-3.5" />
+                      <span>{t.viewAllResults} ({matchingRules.length})</span>
+                    </button>
+                  </div>
+                )}
+
+              </div>
+            )}
+
           </div>
         </div>
 

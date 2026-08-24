@@ -44,6 +44,11 @@ export const uiTranslations = {
     cardReportTitle: "Signaler un Incident",
     cardReportSub: "Informer le Syndic",
     searchPlaceholder: "Rechercher un article, un mot-clé (ex: travaux bruyants, parking sous-sol, salle de sport, kids club, Aïd, bornes électriques, charges)...",
+    searchFoundCount: "article(s) trouvé(s)",
+    viewArticleDetail: "Consulter l'article",
+    viewAllResults: "Voir tous les résultats dans le règlement",
+    quickKeywordsTitle: "Recherches fréquentes :",
+    clearSearch: "Effacer la recherche",
     securedBadge: "Résidence Sécurisée 24h/24 & 7j/7",
     cityBadge: "Aïn Sebaa — Casablanca",
 
@@ -166,6 +171,11 @@ export const uiTranslations = {
     cardReportTitle: "الإبلاغ عن حادث",
     cardReportSub: "إشعار السنديك فوراً",
     searchPlaceholder: "ابحث عن مادة، كلمة مفتاحية (مثل: الأشغال المزعجة، المرآب، القاعة الرياضية، نادي الأطفال، عيد الأضحى، شواحن السيارات، الواجبات)...",
+    searchFoundCount: "مادة متطابقة",
+    viewArticleDetail: "عرض نص المادة",
+    viewAllResults: "عرض جميع النتائج في النظام الداخلي",
+    quickKeywordsTitle: "عمليات البحث الشائعة :",
+    clearSearch: "مسح البحث",
     securedBadge: "إقامة محروسة 24/24 و 7/7",
     cityBadge: "عين السبع — الدار البيضاء",
 
